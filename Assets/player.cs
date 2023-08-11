@@ -1,36 +1,53 @@
 using UnityEngine;
+using Mirror;
 
-public class player : MonoBehaviour
+public class Player : NetworkBehaviour
 {
-    public GameObject rotatingObject; // Reference to the object you want to rotate
-    public float moveSpeed = 5.0f;
+
+    [SyncVar]
+    public float moveSpeed = 100f;
+    [SyncVar]
     public float sprintMultiplier = 1.5f;
+
+    public int movingTo; // 0 - idle | 1 - left | 2 - right | 4 - down | 8 - up | 5 - left + down | 6 - right + down | 9 - left + up | 10 - right + up
+    public bool isSprinting;
+
 
     private void Update()
     {
-        // Movement of the entire player object
+        if (!isLocalPlayer) return;
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+
+        movingTo = 0;
+        if (horizontalInput < 0) movingTo += 1; // Left
+        if (horizontalInput > 0) movingTo += 2; // Right
+        if (verticalInput < 0) movingTo += 4; // Down
+        if (verticalInput > 0) movingTo += 8; // Up
+
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
+        Debug.Log(isSprinting);
+        Debug.Log(movingTo);
+    }
+
+    [Server]
+    public void HandleMovement()
+    {
+        Vector3 moveDirection = Vector3.zero;
+
+        if ((movingTo & 1) != 0) moveDirection.x -= 1; // Left
+        if ((movingTo & 2) != 0) moveDirection.x += 1; // Right
+        if ((movingTo & 4) != 0) moveDirection.z -= 1; // Down
+        if ((movingTo & 8) != 0) moveDirection.z += 1; // Up
+
+        moveDirection.Normalize();
+
+        if (isSprinting)
         {
             moveDirection *= sprintMultiplier;
         }
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime, Space.World);
 
-        // Rotation of the linked object only
-        if (rotatingObject != null)
-        {
-            Vector3 mousePosition = Input.mousePosition;
-            Vector3 objectScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
-            Vector3 directionToMouse = mousePosition - objectScreenPosition;
-
-            float angle = Mathf.Atan2(directionToMouse.y, directionToMouse.x) * Mathf.Rad2Deg - 90;
-            rotatingObject.transform.rotation = Quaternion.Euler(0, -angle, 0);
-        }
-        else
-        {
-            Debug.LogWarning("Rotating object is not assigned. Please link the object you want to rotate in the Inspector.");
-        }
+        transform.Translate(moveDirection * moveSpeed, Space.World);
     }
 }
