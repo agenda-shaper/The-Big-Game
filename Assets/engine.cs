@@ -20,12 +20,11 @@ public class Engine : NetworkBehaviour
   }
 
   void Tick(){
-    //networkManager.GetComponents<Player>;
-    // foreach (Player player in networkManager.GetComponents<>)
-    // {
-    //   player.HandleMovement(); // You would define this method in your Player class
-    //   Debug.Log("updating movement");
-    // }
+    foreach (Player player in playerList)
+    {
+      player.HandleMovement(); // You would define this method in your Player class
+      Debug.Log("updating movement");
+    }
   }
 
   void Start(){
