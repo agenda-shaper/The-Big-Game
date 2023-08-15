@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using NativeWebSocket;
 using Mirror;
-
 public class Engine : NetworkBehaviour
 {
 
-  public List<Player> playerList = new List<Player>();
-  public NetworkManager networkManager; // Assign in the Inspector
+  public List<Character> playerList = new List<Character>();
+  public CustomNetworkManager networkManager; // Assign in the Inspector
+  public Vector3 spawnPoint = new Vector3(0, 5, 0);
 
+
+  public void AddPlayer(Character player){
+    playerList.Add(player);
+  }
 
   void FixedUpdate()
   {
@@ -20,10 +24,9 @@ public class Engine : NetworkBehaviour
   }
 
   void Tick(){
-    foreach (Player player in playerList)
+    foreach (Character player in playerList)
     {
       player.HandleMovement(); // You would define this method in your Player class
-      Debug.Log("updating movement");
     }
   }
 

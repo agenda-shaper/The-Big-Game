@@ -1,13 +1,15 @@
 using UnityEngine;
 using Mirror;
 
-public class Player : NetworkBehaviour
+public class Character : NetworkBehaviour
 {
 
     [SyncVar]
-    public float moveSpeed = 100f;
+    public float movementSpeed = 0.01f;
     [SyncVar]
     public float sprintMultiplier = 1.5f;
+
+    public float rotation;
 
     public int movingTo; // 0 - idle | 1 - left | 2 - right | 4 - down | 8 - up | 5 - left + down | 6 - right + down | 9 - left + up | 10 - right + up
     public bool isSprinting;
@@ -27,8 +29,18 @@ public class Player : NetworkBehaviour
         if (verticalInput > 0) movingTo += 8; // Up
 
         isSprinting = Input.GetKey(KeyCode.LeftShift);
-        Debug.Log(isSprinting);
-        Debug.Log(movingTo);
+        //Debug.Log(isSprinting);
+        //Debug.Log(movingTo);
+        Vector3 mousePosition = Input.mousePosition;
+        Vector3 centerScreenPosition = new Vector3(Screen.width / 2, Screen.height / 2, 0);
+        Vector3 direction = mousePosition - centerScreenPosition;
+
+        rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Debug.Log(rotation);
+        transform.rotation = Quaternion.Euler(0, -rotation, 0);
+
+
+
     }
 
     [Server]
@@ -48,6 +60,6 @@ public class Player : NetworkBehaviour
             moveDirection *= sprintMultiplier;
         }
 
-        transform.Translate(moveDirection * moveSpeed, Space.World);
+        transform.Translate(moveDirection * movementSpeed, Space.World);
     }
 }
