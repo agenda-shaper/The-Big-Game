@@ -21,7 +21,7 @@ public class DroppedItem : MonoBehaviour
     {
         //image.texture = tex;
         quadRenderer.material.mainTexture = tex;
-
+        quadRenderer.material.shader = Shader.Find("Sprites/Diffuse");
         //image.rectTransform.sizeDelta = new Vector2(tex.width, tex.height);
     }
 }

@@ -99,7 +99,12 @@ public class Inventory : NetworkBehaviour
     public void DropItem(int slotNumber){
         SlotItem slotItem = slots[slotNumber];
 
-        GameObject droppedItem = Instantiate(droppedItemPrefab, player.transform.position, Quaternion.identity);
+        Vector3 startPosition = new Vector3(player.transform.position.x,0.6f,player.transform.position.z);
+
+        // add end position for animations
+        // or setup some unity thing
+
+        GameObject droppedItem = Instantiate(droppedItemPrefab, startPosition, Quaternion.identity);
         DroppedItem script = droppedItem.GetComponent<DroppedItem>();
         script.count = slotItem.count;
         script.item = slotItem.item;

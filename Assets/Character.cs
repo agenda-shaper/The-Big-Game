@@ -12,6 +12,8 @@ public class Character : NetworkBehaviour
     public Inventory inventory;
 
 
+    public CharacterController controller;
+
 
 
     public Camera playerCamera;
@@ -94,6 +96,6 @@ public class Character : NetworkBehaviour
             moveDirection *= sprintMultiplier;
         }
 
-        character.transform.Translate(moveDirection * movementSpeed, Space.World);
+        controller.Move(moveDirection * movementSpeed);
     }
 }
