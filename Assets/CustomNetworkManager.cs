@@ -14,7 +14,7 @@ public class CustomNetworkManager : NetworkManager
 
         // Once the player is added, add it to your engine
         Character playerComponent = player.GetComponent<Character>();
-        engine.playerList.Add(playerComponent);
+        engine.AddPlayer(playerComponent);
 
     }
 

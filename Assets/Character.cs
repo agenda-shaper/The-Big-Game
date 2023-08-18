@@ -1,11 +1,28 @@
 using UnityEngine;
 using Mirror;
 
+
 public class Character : NetworkBehaviour
 {
 
     [SyncVar]
-    public float movementSpeed = 0.01f;
+    public GameObject character;
+
+    [SyncVar]
+    public Inventory inventory;
+
+
+
+
+    public Camera playerCamera;
+
+    [SyncVar]
+    public Vector3 cameraOffset = new Vector3(0, 15, 0); // Adjust this for your desired offset
+
+
+    [SyncVar]
+    public float movementSpeed = 0.05f;
+    
     [SyncVar]
     public float sprintMultiplier = 1.5f;
 
@@ -14,11 +31,28 @@ public class Character : NetworkBehaviour
     public int movingTo; // 0 - idle | 1 - left | 2 - right | 4 - down | 8 - up | 5 - left + down | 6 - right + down | 9 - left + up | 10 - right + up
     public bool isSprinting;
 
+    private void Start()
+    {
+        if(playerCamera) playerCamera.enabled = false;
+
+    }
 
     private void Update()
     {
-        if (!isLocalPlayer) return;
+        if (!isLocalPlayer) 
+        {
+            // Disable the stuff for non-local players
 
+            if(playerCamera) playerCamera.enabled = false;
+            inventory.gameObject.SetActive(false);
+            return;
+        }
+        if(playerCamera && !playerCamera.enabled)
+        {
+            playerCamera.enabled = true;
+        }
+
+        playerCamera.transform.position = character.transform.position + cameraOffset;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -36,8 +70,8 @@ public class Character : NetworkBehaviour
         Vector3 direction = mousePosition - centerScreenPosition;
 
         rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Debug.Log(rotation);
-        transform.rotation = Quaternion.Euler(0, -rotation, 0);
+        //Debug.Log(rotation);
+        character.transform.rotation = Quaternion.Euler(0, -rotation, 0);
 
 
 
@@ -60,6 +94,6 @@ public class Character : NetworkBehaviour
             moveDirection *= sprintMultiplier;
         }
 
-        transform.Translate(moveDirection * movementSpeed, Space.World);
+        character.transform.Translate(moveDirection * movementSpeed, Space.World);
     }
 }
