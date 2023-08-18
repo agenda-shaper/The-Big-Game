@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
+
+[System.Serializable]
+public class ItemDatabaseWrapper
+{
+  public Item[] items;
+}
+
 public class BlockManager : NetworkBehaviour
 {
 
@@ -41,31 +48,16 @@ public class BlockManager : NetworkBehaviour
         // Assuming you are using a simple texture to represent the block's appearance
         Texture2D texture = LoadTextureFromPath(item.putableimg.source);
 
-        // Now let's create a material to apply this texture
-        Material newMat = new Material(Shader.Find("Standard"));
+        
 
         if(texture != null)
         {
-            newMat.mainTexture = texture;
+            blockInstance.GetComponent<Block>().LoadImage(texture);
         }
         else
         {
             Debug.LogError("Texture not loaded!");
             return;
-        }
-
-
-        // Finally, apply this material to the block's MeshRenderer
-        MeshRenderer meshRenderer = blockInstance.GetComponent<MeshRenderer>();
-        if(meshRenderer != null)
-        {
-            meshRenderer.material = newMat;
-            meshRenderer.enabled = true;  // Explicitly enable the MeshRenderer.
-
-        }
-        else
-        {
-            Debug.LogError("No MeshRenderer found on block instance!");
         }
                 
         

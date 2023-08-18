@@ -16,6 +16,7 @@ public class Item
     public PutableImg putableimg;
     public NonPutableImg notputableimg;
     public bool isDoor;
+    public string ground_img;
 
 
 

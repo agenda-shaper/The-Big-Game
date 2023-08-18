@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2805872726898938747}
   - component: {fileID: 2805872726898938748}
+  - component: {fileID: 7707938333397433747}
   m_Layer: 0
   m_Name: DroppedItem
   m_TagString: Untagged
@@ -61,9 +62,27 @@ MonoBehaviour:
     notputableimg:
       source: 
     isDoor: 0
+    ground_img: 
   count: 0
   despawnTimeLeft: 0
   quadRenderer: {fileID: 1678294766306748791}
+--- !u!114 &7707938333397433747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2805872726898938749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  _assetId: 419246726
+  serverOnly: 0
+  visible: 2
+  hasSpawned: 0
 --- !u!1 &4649116854558151876
 GameObject:
   m_ObjectHideFlags: 0

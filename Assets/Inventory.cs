@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 using Mirror.Examples.Basic;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public class SlotItem
@@ -36,7 +37,7 @@ public class Inventory : NetworkBehaviour
 
     public void SpawnNewSlot()
     {
-        Debug.Log("spwaning");
+        Debug.Log("spawning");
         GameObject newSlotGO = Instantiate(slotPrefab, centerSlots);
         SlotHandler slotScript = newSlotGO.GetComponent<SlotHandler>();
         slotScript.slotNumber = slots.Count; // Using the current count of slots as the next slot number.
@@ -82,48 +83,35 @@ public class Inventory : NetworkBehaviour
         return texture;
     }
 
-    public void changeInventoryImage(SlotItem slotItem, string image_source){
-        Texture2D loadedTexture = LoadTextureFromPath(image_source);
-        if (loadedTexture != null)
-        {
-            slotItem.slotHandler.slotImage.texture = loadedTexture;
-            slotItem.slotHandler.slotImage.gameObject.SetActive(true); // Ensure it's visible
-        }
-            else
-        {
-            Debug.LogError($"Failed to load texture from path: {image_source}");
-        }
-    }
 
     [Server]
-    public void DropItem(int slotNumber){
-        SlotItem slotItem = slots[slotNumber];
+    public void DropItemInMap(Item item, int count) {
 
         Vector3 startPosition = new Vector3(player.transform.position.x,0.6f,player.transform.position.z);
 
         // add end position for animations
         // or setup some unity thing
 
-        GameObject droppedItem = Instantiate(droppedItemPrefab, startPosition, Quaternion.identity);
+        GameObject droppedItem = Instantiate(droppedItemPrefab, startPosition, player.transform.rotation);
         DroppedItem script = droppedItem.GetComponent<DroppedItem>();
-        script.count = slotItem.count;
-        script.item = slotItem.item;
-        script.LoadImage(LoadTextureFromPath(slotItem.item.img.source[0]));
+        script.count = count;
+        script.item = item;
+        script.LoadImage(LoadTextureFromPath(item.ground_img));
+
+        NetworkServer.Spawn(droppedItem);
+        // add the night day switching
 
     }
 
     [Server]
-    public void AddItemToSlot(int slotNumber, Item item)
+    public void AddItemToSlot(int slotNumber, Item item, int count)
     {
         if (slots.ContainsKey(slotNumber))
         {
             slots[slotNumber].item = item;
+            slots[slotNumber].count = count;
+            LoadSlotItemImage(slotNumber,item.img.source[0]);
 
-            changeInventoryImage(slots[slotNumber],item.img.source[0]);
-
-            
-            
-            // handle if theres existing items switch their places or drop it
         }
         else
         {
@@ -131,13 +119,47 @@ public class Inventory : NetworkBehaviour
         }
     }
 
-    [Server]
-    public void RemoveItemFromSlot(int slotNumber)
+
+    public void LoadSlotItemImage(int slotNumber, string image_source)
+    {
+
+        Texture2D loadedTexture = LoadTextureFromPath(image_source);
+        if (loadedTexture != null)
+        {
+            slots[slotNumber].slotHandler.slotImage.texture = loadedTexture;
+            slots[slotNumber].slotHandler.emptyImage.enabled = false;
+            slots[slotNumber].slotHandler.slotImage.enabled = true;
+        }
+            else
+        {
+            Debug.LogError($"Failed to load texture from path: {image_source}");
+        }
+
+
+    }
+
+    public void EmptySlotImage(int slotNumber) {
+        if (slots.ContainsKey(slotNumber))
+        {
+            slots[slotNumber].slotHandler.emptyImage.enabled = true;
+            slots[slotNumber].slotHandler.slotImage.enabled = false;
+        }
+    }
+
+
+    [Command]
+    public void DropItemFromSlot(int slotNumber)
     {
         if (slots.ContainsKey(slotNumber))
         {
-            slots[slotNumber].item = null;
+            
             // drop it in map
+
+            DropItemInMap(slots[slotNumber].item,slots[slotNumber].count);
+
+            slots[slotNumber].item = null;
+            slots[slotNumber].count = 0;
+            EmptySlotImage(slotNumber);
         }
         else
         {
@@ -159,19 +181,56 @@ public class Inventory : NetworkBehaviour
     }
 
 
+    public void HandleItemDrag(int slotNumber,PointerEventData eventData)
+    {
+        slots[slotNumber].slotHandler.emptyImage.enabled = true;
+         // Move the image with the mouse
+        // slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition = new Vector3(eventData.position.x, eventData.position.y, 0);
+        // Debug.Log(slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition);
 
+        RectTransform centerSlotsRect = slots[slotNumber].slotHandler.slotImage.transform.parent.parent.GetComponent<RectTransform>();
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(centerSlotsRect, eventData.position, eventData.pressEventCamera, out localPoint);
+
+        // Get the local position of the slot to subtract its offset
+        Vector3 slotOffset = slots[slotNumber].slotHandler.transform.localPosition;
+
+        // Set the local position of the image after negating the slot's offset
+        slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition = new Vector3(localPoint.x - slotOffset.x, localPoint.y - slotOffset.y, 0);
+
+
+    }
+
+
+
+    public void HandleItemDragBegin(int slotNumber)
+    {
+        // Enable the empty-inv image
+        slots[slotNumber].slotHandler.emptyImage.enabled = true;
+    }
+
+    public void HandleItemDragEnd(int slotNumber)
+    {
+        // Disable the empty-inv image
+        slots[slotNumber].slotHandler.emptyImage.enabled = false;
+
+        // Move the main image to the local position (0,0,0)
+        slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition = Vector3.zero;
+
+        DropItemFromSlot(slotNumber);
+    }
 
     public void HandleItemEnter(int slotNumber)
     {
         // highlight item
-        changeInventoryImage(slots[slotNumber],slots[slotNumber].item.img.source[1]);
+        LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[1]);
         // Logic for when the mouse pointer enters an item in slotNumber.
     }
 
     public void HandleItemExit(int slotNumber)
     {
         // unhighlight item
-        changeInventoryImage(slots[slotNumber],slots[slotNumber].item.img.source[0]);
+        LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[0]);
         // Logic for when the mouse pointer exits an item in slotNumber.
     }
 
@@ -180,13 +239,13 @@ public class Inventory : NetworkBehaviour
         // Logic for when an item in slotNumber is pressed.
 
         // select pressed item
-        changeInventoryImage(slots[slotNumber],slots[slotNumber].item.img.source[2]);
+        LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[2]);
     }
 
     public void HandleItemUp(int slotNumber)
     {
         // unselect item back to simple highlight
-        changeInventoryImage(slots[slotNumber],slots[slotNumber].item.img.source[1]);
+        LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[1]);
         // Logic for when an item in slotNumber is released.
 
         // do the selection

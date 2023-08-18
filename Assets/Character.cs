@@ -14,7 +14,7 @@ public class Character : NetworkBehaviour
 
     public CharacterController controller;
 
-
+    public LocalPlayer localPlayer;
 
     public Camera playerCamera;
 
@@ -35,6 +35,8 @@ public class Character : NetworkBehaviour
 
     private void Start()
     {
+        playerCamera = localPlayer.playerCamera;
+        inventory.centerSlots = localPlayer.centerSlots;
         if(playerCamera) playerCamera.enabled = false;
 
     }
@@ -46,7 +48,6 @@ public class Character : NetworkBehaviour
             // Disable the stuff for non-local players
 
             if(playerCamera) playerCamera.enabled = false;
-            inventory.gameObject.SetActive(false);
             return;
         }
         if(playerCamera && !playerCamera.enabled)
@@ -55,7 +56,8 @@ public class Character : NetworkBehaviour
         }
 
         playerCamera.transform.position = character.transform.position + cameraOffset;
-        float horizontalInput = Input.GetAxis("Horizontal");
+
+        float horizontalInput = Input.GetAxis("Horizontal");    
         float verticalInput = Input.GetAxis("Vertical");
 
         movingTo = 0;

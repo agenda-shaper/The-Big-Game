@@ -4,11 +4,8 @@ using UnityEngine;
 using Mirror;
 using System.Threading;
 
-[System.Serializable]
-public class ItemDatabaseWrapper
-{
-  public Item[] items;
-}
+
+
 
 
 
@@ -17,8 +14,12 @@ public class Engine : NetworkBehaviour
 
   public List<Character> playerList = new List<Character>();
   public CustomNetworkManager networkManager; // Assign in the Inspector
-  public Vector3 spawnPoint = new Vector3(0, 5, 0);
+  public Vector3 spawnPoint = new Vector3(0, 1, 0);
   public BlockManager blockManager;
+
+  public GameObject localPlayerPrefab;
+
+
 
 
   public void AddPlayer(Character player) {
@@ -41,8 +42,8 @@ public class Engine : NetworkBehaviour
       player.HandleMovement(); // You would define this method in your Player class
       if (player.inventory.slots.Count < 8){
         player.inventory.SpawnNewSlot();
-        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+20));
-        player.inventory.DropItem(player.inventory.slots.Count-1);
+        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+20),1);
+        //player.inventory.DropItem(player.inventory.slots.Count-1);
       }
 
     }
