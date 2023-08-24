@@ -18,6 +18,8 @@ public class Item
     public bool isDoor;
     public string ground_img;
 
+    public Broken broken;
+    public Instiation instiation;
 
 
     // Start is called before the first frame update
@@ -53,4 +55,16 @@ public class DetailData
     public string name;
     public string description;
     public int level;
+}
+
+[System.Serializable]
+public class Broken
+{
+    public string source;
+}
+
+[System.Serializable]
+public class Instiation
+{
+    public string source;
 }

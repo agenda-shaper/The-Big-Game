@@ -57,5 +57,7 @@
     "Temp/": true
   },
   "omnisharp.enableRoslynAnalyzers": true,
-  "dotnet.defaultSolution": "The-Big-Game.sln"
+  "dotnet.defaultSolution": "The-Big-Game.sln",
+  "cSpell.words": ["notputableimg", "Putable"],
+  "cSpell.ignoreWords": ["putableimg"]
 }
