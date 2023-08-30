@@ -6,6 +6,8 @@ public class LocalPlayer : MonoBehaviour
 {
     public Camera playerCamera;
 
+    public VitalStatsUI vitalStatsUI;
+
     public Character player;
     public Transform centerSlots;
 

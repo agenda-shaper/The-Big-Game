@@ -74,7 +74,7 @@ public class BlockManager : NetworkBehaviour
     [Server]
     public void SetupBlock(Block block)
     {
-        Debug.Log(block.item);
+        //Debug.Log(block.item);
         // Set up collisions based on width and height
         SetupCollisions(block.blockInstance,block.item.width, block.item.height);
 
@@ -261,7 +261,7 @@ public class BlockManager : NetworkBehaviour
     void SetupCollisions(GameObject blockInstance, int[] widths, int[] heights)
     {
 
-        Debug.Log("collisions setuping");
+        //Debug.Log("collisions setuping");
 
 
         if (widths.Length != 4 || heights.Length != 4)

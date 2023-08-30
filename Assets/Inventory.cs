@@ -41,7 +41,7 @@ public class Inventory : NetworkBehaviour
 
     public void SpawnNewSlot()
     {
-        Debug.Log("spawning");
+        //Debug.Log("spawning");
         GameObject newSlotGO = Instantiate(slotPrefab, centerSlots);
         SlotHandler slotScript = newSlotGO.GetComponent<SlotHandler>();
         slotScript.slotNumber = slots.Count; // Using the current count of slots as the next slot number.

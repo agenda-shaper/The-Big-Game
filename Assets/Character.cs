@@ -2,16 +2,7 @@ using System.Reflection.Emit;
 using UnityEngine;
 using Mirror;
 
-public class PlayerStats : NetworkBehaviour {
-    [SyncVar] public int health;
-    [SyncVar] public int hunger;
-    [SyncVar] public int cold;
-    [SyncVar] public int radiation;
-    [SyncVar] public int energy;
-    [SyncVar] public int score;
-    [SyncVar] public int level;
-    [SyncVar] public int killCount;
-}
+
 
 
 public class Character : NetworkBehaviour
@@ -27,9 +18,7 @@ public class Character : NetworkBehaviour
     
     public CharacterController controller;
 
-    public PlayerStats stats;
-
-    
+    public VitalStats vitalStats;
 
     public LocalPlayer localPlayer;
 
@@ -40,7 +29,7 @@ public class Character : NetworkBehaviour
 
 
     [SyncVar]
-    public float movementSpeed = 0.05f;
+    public float movementSpeed = 0.04f;
     
     [SyncVar]
     public float sprintMultiplier = 1.5f;
@@ -136,6 +125,8 @@ public class Character : NetworkBehaviour
             // Code for right click
         }
 
+        
+
 
 
     }
@@ -149,7 +140,13 @@ public class Character : NetworkBehaviour
         // do all the inventory checking
     }
 
+    [Server]
+    public void HandlePlayer(){
+        vitalStats.HandleVitals();
+        HandleMovement();
+        
 
+    }
 
     [Server]
     public void HandleMovement()
@@ -165,7 +162,11 @@ public class Character : NetworkBehaviour
 
         if (isSprinting)
         {
-            moveDirection *= sprintMultiplier;
+            if (vitalStats.energy > 0){
+                moveDirection *= sprintMultiplier;
+                vitalStats.energy-=0.5f;
+            }
+            
         }
 
         float gravity = -50.0f;  // High negative value for gravity

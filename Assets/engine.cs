@@ -27,7 +27,7 @@ public class Engine : NetworkBehaviour
     Debug.Log("Player added. Total players: " + playerList.Count);
 
   }
-
+  [Server]
   void FixedUpdate()
   {
     // Check if this instance is running on the server
@@ -36,15 +36,25 @@ public class Engine : NetworkBehaviour
     Tick();
   }
 
+  [Server]
   void Tick(){
     foreach (Character player in playerList)
     {
-      player.HandleMovement(); // You would define this method in your Player class
+      player.HandlePlayer(); // You would define this method in your Player class
       if (player.inventory.slots.Count < 8){
         player.inventory.SpawnNewSlot();
         player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+20),1);
+
         //player.inventory.DropItem(player.inventory.slots.Count-1);
       }
+      player.vitalStats.cold -=0.03f;
+
+      player.vitalStats.hunger -=0.03f;
+
+
+      player.localPlayer.vitalStatsUI.UpdateVitalStats(player.vitalStats);
+      
+      //player.localPlayer.vitalStatsUI.UpdateVitalStats(player.vitalStats);
 
     }
   }
