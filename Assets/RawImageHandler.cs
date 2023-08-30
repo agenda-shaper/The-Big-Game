@@ -12,7 +12,7 @@ public class RawImageHandler : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        slotHandler.mainInventory.HandleItemDragEnd(slotHandler.slotNumber);
+        slotHandler.mainInventory.HandleItemDragEnd(slotHandler.slotNumber,eventData);
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -36,6 +36,6 @@ public class RawImageHandler : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        slotHandler.mainInventory.HandleItemUp(slotHandler.slotNumber);
+        slotHandler.mainInventory.HandleItemUp(slotHandler.slotNumber,eventData);
     }
 }

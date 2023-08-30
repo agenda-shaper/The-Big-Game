@@ -3,6 +3,7 @@ using UnityEngine;
 using Mirror;
 using Mirror.Examples.Basic;
 using UnityEngine.EventSystems;
+using UnityEngine.Networking;
 
 [System.Serializable]
 public class SlotItem
@@ -26,7 +27,9 @@ public class SlotItem
 public class Inventory : NetworkBehaviour
 {
     public Dictionary<int, SlotItem> slots = new Dictionary<int, SlotItem>();
+    public List<GameObject> actionSpaceObjects = new List<GameObject>();
 
+    int highlightedSlot;
     public Character player;
 
     public GameObject droppedItemPrefab;
@@ -34,6 +37,7 @@ public class Inventory : NetworkBehaviour
     public GameObject slotPrefab; // Drag your slot prefab here in the inspector.
 
     public Transform centerSlots; // Drag the centerSlots transform here in the inspector.
+
 
     public void SpawnNewSlot()
     {
@@ -111,6 +115,8 @@ public class Inventory : NetworkBehaviour
             slots[slotNumber].item = item;
             slots[slotNumber].count = count;
             LoadSlotItemImage(slotNumber,item.img.source[0]);
+            slots[slotNumber].slotHandler.emptyImage.enabled = false;
+            slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition = Vector3.zero;
 
         }
         else
@@ -119,6 +125,49 @@ public class Inventory : NetworkBehaviour
         }
     }
 
+    [Server]
+    public void PickUpItem(DroppedItem droppedObject) {
+        int slotNumber = FindEmptySlot();
+        if (slotNumber == -1) return;
+
+        AddItemToSlot(slotNumber,droppedObject.item,droppedObject.count);
+
+        NetworkServer.Destroy(droppedObject.gameObject);
+
+    }
+
+    public int FindEmptySlot()
+    {
+        foreach (var slot in slots)
+        {
+            if (slot.Value.item == null)
+            {
+                return slot.Key;
+            }
+        }
+        return -1; // Return -1 or any suitable value if no empty slot is found
+    }
+    [Command]
+    public void HandleActionSpace(int objectNumber)
+    {
+        if (objectNumber <= 0 || objectNumber > actionSpaceObjects.Count)
+        {
+            //Debug.LogError($"No object at position {objectNumber} in the action space.");
+            return;
+        }
+
+        GameObject objectToHandle = actionSpaceObjects[objectNumber - 1];
+
+        if (objectToHandle.GetComponent<DroppedItem>() != null){
+            PickUpItem(objectToHandle.GetComponent<DroppedItem>());
+
+            if (player.inventory.actionSpaceObjects.Contains(objectToHandle)){
+                actionSpaceObjects.Remove(objectToHandle);
+            }
+            
+        }
+        // Perform other actions with objectToHandle...
+    }
 
     public void LoadSlotItemImage(int slotNumber, string image_source)
     {
@@ -152,7 +201,10 @@ public class Inventory : NetworkBehaviour
     {
         if (slots.ContainsKey(slotNumber))
         {
-            
+            if (slots[slotNumber].item == null){
+                return;
+                // no item in slot
+            }
             // drop it in map
 
             DropItemInMap(slots[slotNumber].item,slots[slotNumber].count);
@@ -201,27 +253,93 @@ public class Inventory : NetworkBehaviour
 
     }
 
+    public void SwitchSlotItems(int fromSlot, int toSlot)
+    {
+        Debug.Log("switching");
+        Item tempItem = slots[toSlot].item;
+        int tempCount = slots[toSlot].count;
+
+        // Handle item swapping or moving
+        slots[toSlot].item = slots[fromSlot].item;
+        slots[toSlot].count = slots[fromSlot].count;
+
+        slots[fromSlot].item = tempItem;
+        slots[fromSlot].count = tempCount;
+
+        // Update UI for fromSlot
+        if (slots[fromSlot].item != null)
+        {
+            LoadSlotItemImage(fromSlot, slots[fromSlot].item.img.source[0]);
+        }
+        else
+        {
+            EmptySlotImage(fromSlot);
+            // Remove or hide image for empty slot
+        }
+
+        // Update UI for toSlot
+        if (slots[toSlot].item != null)
+        {
+            LoadSlotItemImage(toSlot, slots[toSlot].item.img.source[0]);
+        }
+        else
+        {
+            EmptySlotImage(toSlot);
+
+            // Remove or hide image for empty slot
+        }
+    }
+
+
+
 
 
     public void HandleItemDragBegin(int slotNumber)
     {
+        if (slots[slotNumber].item == null){
+            return;
+            // no item in slot
+        }
+
         // Enable the empty-inv image
         slots[slotNumber].slotHandler.emptyImage.enabled = true;
     }
 
-    public void HandleItemDragEnd(int slotNumber)
+    public void HandleItemDragEnd(int slotNumber, PointerEventData eventData)
     {
+        if (slots[slotNumber].item == null){
+            return;
+            // no item in slot
+        }       
+        Debug.Log("ended drag");
+        
         // Disable the empty-inv image
         slots[slotNumber].slotHandler.emptyImage.enabled = false;
 
         // Move the main image to the local position (0,0,0)
         slots[slotNumber].slotHandler.slotImage.rectTransform.localPosition = Vector3.zero;
 
-        DropItemFromSlot(slotNumber);
+
+
+        if (highlightedSlot != -1)
+        {
+            SwitchSlotItems(slotNumber, highlightedSlot);
+        }
+        else
+        {
+            DropItemFromSlot(slotNumber);
+        }
     }
 
     public void HandleItemEnter(int slotNumber)
     {
+        highlightedSlot = slotNumber;
+        if (slots[slotNumber].item == null){
+            return;
+            // no item in slot
+        }
+
+
         // highlight item
         LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[1]);
         // Logic for when the mouse pointer enters an item in slotNumber.
@@ -229,6 +347,12 @@ public class Inventory : NetworkBehaviour
 
     public void HandleItemExit(int slotNumber)
     {
+        highlightedSlot = -1;
+        if (slots[slotNumber].item == null){
+            return;
+            // no item in slot
+        }
+        
         // unhighlight item
         LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[0]);
         // Logic for when the mouse pointer exits an item in slotNumber.
@@ -236,20 +360,39 @@ public class Inventory : NetworkBehaviour
 
     public void HandleItemDown(int slotNumber)
     {
+        if (slots[slotNumber].item == null){
+            return;
+            // no item in slot
+        }
+
         // Logic for when an item in slotNumber is pressed.
 
         // select pressed item
         LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[2]);
     }
 
-    public void HandleItemUp(int slotNumber)
+    public void HandleItemUp(int slotNumber, PointerEventData eventData)
     {
-        // unselect item back to simple highlight
-        LoadSlotItemImage(slotNumber,slots[slotNumber].item.img.source[1]);
-        // Logic for when an item in slotNumber is released.
+        if (slots[slotNumber].item == null)
+        {
+            return; // No item in slot
+        }
 
-        // do the selection
+        // Unselect item back to simple highlight
+        LoadSlotItemImage(slotNumber, slots[slotNumber].item.img.source[1]);
+
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            
+            // Do the selection (Code for left-click functionality here)
+        }
+        else if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            // Logic for dropping item (Code for right-click functionality here)
+            DropItemFromSlot(slotNumber);
+        }
     }
+
 
     // Method to display the items in the inventory
     public void DisplayInventory()

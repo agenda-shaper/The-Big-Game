@@ -16,11 +16,13 @@ public class Item
     public PutableImg putableimg;
     public NonPutableImg notputableimg;
     public bool isDoor;
+    public Broken[] broken; 
+    public Instation[] instation; 
     public string ground_img;
 
-    public Broken broken;
-    public Instiation instiation;
+    public BlockMeshes blockMeshes;
 
+    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +32,17 @@ public class Item
 
 }
 
+
+
+[System.Serializable]
+public class BlockMeshes
+{
+    public string inward;
+    public string outward;
+    public string side;
+    public string enclosed;
+    public string building;
+}
 
 [System.Serializable]
 public class PutableImg
@@ -55,16 +68,17 @@ public class DetailData
     public string name;
     public string description;
     public int level;
+    public int skillCost;
 }
 
 [System.Serializable]
 public class Broken
 {
-    public string source;
+    public string source; // Changed to a string
 }
 
 [System.Serializable]
-public class Instiation
+public class Instation
 {
-    public string source;
+    public string source; // Changed to a string
 }

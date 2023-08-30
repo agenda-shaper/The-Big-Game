@@ -5,7 +5,22 @@ using Mirror;
 
 public class Block : NetworkBehaviour
 {
-    public Renderer blockRenderer; // Reference to the quad's renderer.
+    public MeshRenderer meshRenderer;
+
+    [SyncVar]
+    public GameObject blockInstance;
+
+    [SyncVar]
+    public Item item;
+
+    [SyncVar]
+    public int rotation;
+
+    [SyncVar]
+    public int health;
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -13,12 +28,13 @@ public class Block : NetworkBehaviour
         
     }
 
-    public void LoadImage(Texture2D tex)
+    public void LoadImageTexture(Texture2D tex)
     {
         //image.texture = tex;
-        blockRenderer.material.mainTexture = tex;
-        blockRenderer.material.shader = Shader.Find("Sprites/Diffuse");
-        blockRenderer.enabled = true;
+        meshRenderer.material.mainTexture = tex;
+        meshRenderer.material.shader = Shader.Find("Unlit/Transparent");
+        meshRenderer.enabled = true;
         //image.rectTransform.sizeDelta = new Vector2(tex.width, tex.height);
     }
+
 }

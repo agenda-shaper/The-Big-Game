@@ -18,7 +18,12 @@ public class CustomNetworkManager : NetworkManager
 
         GameObject LocalPlayer = Instantiate(engine.localPlayerPrefab, engine.spawnPoint, Quaternion.Euler(90, 0, 0));
 
+
+
         playerComponent.localPlayer = LocalPlayer.GetComponent<LocalPlayer>();
+        playerComponent.engine = engine;
+        playerComponent.localPlayer.player = playerComponent;
+
     }
 
     public override void OnServerDisconnect(NetworkConnectionToClient conn)

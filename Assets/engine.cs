@@ -57,6 +57,10 @@ public class Engine : NetworkBehaviour
     blockManager.SpawnBlock(2, 3, 29);
     blockManager.SpawnBlock(3, 2, 29);
     blockManager.SpawnBlock(3, 3, 29);
+    blockManager.SpawnBlock(4, 3, 29);
+    blockManager.SpawnBlock(5, 3, 29);
+    blockManager.SpawnBlock(6, 3, 29);
+    //blockManager.SpawnBlock(2, 2, 29);
 
 
     //networkManager.StartClient();

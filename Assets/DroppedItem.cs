@@ -11,6 +11,8 @@ public class DroppedItem : MonoBehaviour
     public float despawnTimeLeft;
     public Renderer quadRenderer; // Reference to the quad's renderer.
 
+    public GameObject droppedItem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,14 @@ public class DroppedItem : MonoBehaviour
     {
         //image.texture = tex;
         quadRenderer.material.mainTexture = tex;
-        quadRenderer.material.shader = Shader.Find("Sprites/Diffuse");
-        //image.rectTransform.sizeDelta = new Vector2(tex.width, tex.height);
+        quadRenderer.material.shader = Shader.Find("Unlit/Transparent");
+        float width = tex.width;
+        float height = tex.height;
+
+        // Scale the quad to match the texture's dimensions
+        float scalingFactor = 0.007f; // Adjust this to change the overall size of the quad
+        droppedItem.transform.localScale = new Vector3(width * scalingFactor, 1f, height * scalingFactor);
     }
+
+
 }
