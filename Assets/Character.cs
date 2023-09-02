@@ -1,9 +1,7 @@
 using System.Reflection.Emit;
 using UnityEngine;
 using Mirror;
-
-
-
+using System.Collections.Generic;
 
 public class Character : NetworkBehaviour
 {
@@ -23,6 +21,8 @@ public class Character : NetworkBehaviour
     public LocalPlayer localPlayer;
 
     public Camera playerCamera;
+
+    public List<Projectile> projectiles;
 
     [SyncVar]
     public Vector3 cameraOffset = new Vector3(0, 15, 0); // Adjust this for your desired offset

@@ -375,6 +375,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8532403184043677480}
+--- !u!1 &7830775240829835524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3200732949472401439}
+  - component: {fileID: 6386969768266345890}
+  m_Layer: 5
+  m_Name: ActionHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3200732949472401439
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830775240829835524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5725725731737121542}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6386969768266345890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830775240829835524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcde749bd4e7844f8144a7f9775a5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 6342244485227254222}
 --- !u!1 &8329535669590424373
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +568,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0014873053, y: 0.0014873054, z: 0.0014873054}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3200732949472401439}
   m_Father: {fileID: 1638349896201703190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -543,7 +593,43 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   actionSpaceObjects: []
+  highlightedSlot: 0
   player: {fileID: 8532403184043677480}
+  actionManager:
+    isActing: 0
+    currentSlotItem:
+      item:
+        id: 0
+        img:
+          source: []
+        detail:
+          name: 
+          description: 
+          level: 0
+          skillCost: 0
+        stack: 0
+        width: 
+        height: 
+        putableimg:
+          source: 
+        notputableimg:
+          source: 
+        isDoor: 0
+        broken: []
+        instation: []
+        ground_img: 
+        blockMeshes:
+          inward: 
+          outward: 
+          side: 
+          enclosed: 
+          building: 
+        health: 0
+        selection_type: 0
+      slotObject: {fileID: 0}
+      count: 0
+      slotHandler: {fileID: 0}
+  actionHandler: {fileID: 6386969768266345890}
   droppedItemPrefab: {fileID: 2805872726898938749, guid: 9612300d5c1192447a15b4f3e04b1fef, type: 3}
   slotPrefab: {fileID: 3525309122665591590, guid: 00456abb1834b934093bbbbf25514e70, type: 3}
   centerSlots: {fileID: 0}

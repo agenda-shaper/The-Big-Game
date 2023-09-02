@@ -50,7 +50,9 @@ public class Engine : NetworkBehaviour
       player.vitalStats.cold = Mathf.Max(0, player.vitalStats.cold - 0.03f);
       player.vitalStats.hunger = Mathf.Max(0, player.vitalStats.hunger - 0.03f);
 
-
+      foreach (Projectile projectile in player.projectiles) {
+        projectile.MoveProjectile();
+      }
 
       player.localPlayer.vitalStatsUI.UpdateVitalStats(player.vitalStats);
       
