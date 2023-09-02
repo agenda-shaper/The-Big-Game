@@ -23,14 +23,22 @@ public class SlotItem
     // Add more slot-specific data if needed.
 }
 
+[System.Serializable]
+public class ActionManager
+{
+    public bool isActing;
+    public SlotItem currentSlotItem;    
+}
 
 public class Inventory : NetworkBehaviour
 {
     public Dictionary<int, SlotItem> slots = new Dictionary<int, SlotItem>();
     public List<GameObject> actionSpaceObjects = new List<GameObject>();
 
-    int highlightedSlot;
+    public int highlightedSlot;
     public Character player;
+
+    public ActionManager actionManager;
 
     public GameObject droppedItemPrefab;
 
@@ -38,6 +46,16 @@ public class Inventory : NetworkBehaviour
 
     public Transform centerSlots; // Drag the centerSlots transform here in the inspector.
 
+
+    public void exitLastAction() {
+        switch (actionManager.currentSlotItem.item.selection_type) {
+            case 21:
+                player.localPlayer.buildingManager.exitBuilding();
+                break;
+            default:
+                break;
+        }
+    }
 
     public void SpawnNewSlot()
     {
@@ -383,7 +401,7 @@ public class Inventory : NetworkBehaviour
 
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            
+            HandleSelection(slots[slotNumber]);
             // Do the selection (Code for left-click functionality here)
         }
         else if (eventData.button == PointerEventData.InputButton.Right)
@@ -392,6 +410,38 @@ public class Inventory : NetworkBehaviour
             DropItemFromSlot(slotNumber);
         }
     }
+
+    public void HandleSelection(SlotItem slotItem)
+    {
+
+        if (actionManager.isActing) exitLastAction();
+
+        
+        if (actionManager.isActing && actionManager.currentSlotItem == slotItem){
+            // firstly deselect slotItem if its the same and in action
+            actionManager.isActing = false;
+            actionManager.currentSlotItem = null;
+            return;
+        }
+
+        switch (slotItem.item.selection_type) {
+            case 21:
+                player.localPlayer.buildingManager.startBuilding(slotItem);
+                break;
+            default:
+                // Handle default case
+                // for now exit
+                actionManager.isActing = false;
+                actionManager.currentSlotItem = null;
+                return;
+        }
+
+
+        actionManager.isActing = true;
+        actionManager.currentSlotItem = slotItem;
+
+    }
+
 
 
     // Method to display the items in the inventory

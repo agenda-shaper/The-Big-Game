@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour {
     public bool isBuilding;
-    public SlotItem item;
+    public SlotItem slotItem;
     public int rotation;
     public int x;
     public int y;
@@ -12,12 +12,17 @@ public class BuildManager : MonoBehaviour {
     public MeshRenderer meshRenderer;
     public MeshFilter meshFilter;
 
-    public void startBuilding(Item itemToBuild){
+    public void startBuilding(SlotItem item) {
+        // when building - just check if slotitem matches with server slotitem
+        // or just when a thing is called pass the slotitem and other info of building
+        // when actually building - then in server check if that slotitem exists - and update
+
+
         gameObject.SetActive(true);
         isBuilding = true;
-        item.item = itemToBuild;
+        slotItem = item;
 
-        string meshSource = "cube_block_building"; // item.item.blockMeshes.building;
+        string meshSource = "cube_block_building"; // item.item.blockMeshes.building;  
 
 
         // Load the mesh from Resources folder
@@ -34,7 +39,7 @@ public class BuildManager : MonoBehaviour {
 
     public void exitBuilding(){
         isBuilding = false;
-        item = null;
+        slotItem = null;
         gameObject.SetActive(false);
 
     }

@@ -12,7 +12,8 @@
       "detail": {
         "name": "Wood",
         "description": "Found in trees, or on the ground.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood.png"
@@ -29,7 +30,8 @@
       "detail": {
         "name": "Stone",
         "description": "Find it on the ground or on the rock.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-stone.png"
@@ -46,7 +48,8 @@
       "detail": {
         "name": "Iron",
         "description": "Melt it on a Firepit or a Smelter",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-steel.png"
@@ -63,7 +66,8 @@
       "detail": {
         "name": "Animal Fat",
         "description": "Useful to craft bullet and clothes",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-fat.png"
@@ -80,7 +84,8 @@
       "detail": {
         "name": "Animal Tendon",
         "description": "Useful to make string",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-tendon.png"
@@ -97,7 +102,8 @@
       "detail": {
         "name": "String",
         "description": "Useful to craft many items.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-string.png"
@@ -114,7 +120,8 @@
       "detail": {
         "name": "Leather",
         "description": "Useful to make clothes",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-leather-boar.png"
@@ -131,7 +138,8 @@
       "detail": {
         "name": "Shaped Metal",
         "description": "To craft improved items.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-metal.png"
@@ -148,10 +156,12 @@
       "detail": {
         "name": "Raw Steak",
         "description": "#Vegan",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 10,
-      "ground_img": "img/day-ground-raw-steak.png"
+      "ground_img": "img/day-ground-raw-steak.png",
+      "selection_type": 12
     },
     {
       "id": 10,
@@ -165,10 +175,12 @@
       "detail": {
         "name": "Cooked Steak",
         "description": "Rare or medium?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 10,
-      "ground_img": "img/day-ground-cooked-steak.png"
+      "ground_img": "img/day-ground-cooked-steak.png",
+      "selection_type": 13
     },
     {
       "id": 11,
@@ -182,10 +194,12 @@
       "detail": {
         "name": "Rotten Steak",
         "description": "Don't eat that.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 10,
-      "ground_img": "img/day-ground-rotten-steak.png"
+      "ground_img": "img/day-ground-rotten-steak.png",
+      "selection_type": 14
     },
     {
       "id": 12,
@@ -199,10 +213,12 @@
       "detail": {
         "name": "Orange",
         "description": "A little hungry?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-orange.png"
+      "ground_img": "img/day-ground-orange.png",
+      "selection_type": 15
     },
     {
       "id": 13,
@@ -216,10 +232,12 @@
       "detail": {
         "name": "Rotten Orange",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-orange.png"
+      "ground_img": "img/day-ground-rotten-orange.png",
+      "selection_type": 16
     },
     {
       "id": 14,
@@ -233,11 +251,22 @@
       "detail": {
         "name": "Orange Seed",
         "description": "Fill up on Vitame C?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 40,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-plant2-orange.png"
       },
@@ -262,7 +291,9 @@
           "source": "img/day-plant4-orange.png"
         }
       ],
-      "ground_img": "img/day-ground-orange-seed.png"
+      "ground_img": "img/day-ground-orange-seed.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 15,
@@ -276,10 +307,12 @@
       "detail": {
         "name": "Hatchet",
         "description": "Harvest Wood and Stone.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-hachet.png"
+      "ground_img": "img/day-ground-hachet.png",
+      "selection_type": 3
     },
     {
       "id": 16,
@@ -293,10 +326,12 @@
       "detail": {
         "name": "Stone Pickaxe",
         "description": "Mine Stone and Iron.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-stone-pickaxe.png"
+      "ground_img": "img/day-ground-stone-pickaxe.png",
+      "selection_type": 1
     },
     {
       "id": 17,
@@ -310,10 +345,12 @@
       "detail": {
         "name": "Metal Pickaxe",
         "description": "Mine also Sulfur",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-steel-pickaxe.png"
+      "ground_img": "img/day-ground-steel-pickaxe.png",
+      "selection_type": 2
     },
     {
       "id": 18,
@@ -327,10 +364,12 @@
       "detail": {
         "name": "Metal Axe",
         "description": "Harvest a lot of Wood",
-        "level": 5
+        "level": 5,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-stone-axe.png"
+      "ground_img": "img/day-ground-stone-axe.png",
+      "selection_type": 4
     },
     {
       "id": 19,
@@ -344,7 +383,8 @@
       "detail": {
         "name": "Workbench",
         "description": "Allow you to make new items.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "putableimg": {
@@ -354,7 +394,9 @@
         "source": "img/day-redprint-workbench.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-workbench.png"
+      "ground_img": "img/day-ground-workbench.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 20,
@@ -368,10 +410,12 @@
       "detail": {
         "name": "Wood Spear",
         "description": "Don't forget to pick it up.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-wood-spear.png"
+      "ground_img": "img/day-ground-wood-spear.png",
+      "selection_type": 5
     },
     {
       "id": 21,
@@ -385,10 +429,12 @@
       "detail": {
         "name": "Wood Bow",
         "description": "Where are the cowboys?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-wood-bow.png"
+      "ground_img": "img/day-ground-wood-bow.png",
+      "selection_type": 6
     },
     {
       "id": 22,
@@ -402,10 +448,12 @@
       "detail": {
         "name": "9MM",
         "description": "I hope you know how to aim.",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-9mm.png"
+      "ground_img": "img/day-ground-9mm.png",
+      "selection_type": 8
     },
     {
       "id": 23,
@@ -419,10 +467,12 @@
       "detail": {
         "name": "Desert Eagle",
         "description": "Pretty useful for self-defense.",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-desert-eagle.png"
+      "ground_img": "img/day-ground-desert-eagle.png",
+      "selection_type": 9
     },
     {
       "id": 24,
@@ -436,10 +486,12 @@
       "detail": {
         "name": "Shotgun",
         "description": "He's dead now, don't you think?",
-        "level": 11
+        "level": 11,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-shotgun.png"
+      "ground_img": "img/day-ground-shotgun.png",
+      "selection_type": 7
     },
     {
       "id": 25,
@@ -453,10 +505,12 @@
       "detail": {
         "name": "AK47",
         "description": "Revolution time",
-        "level": 12
+        "level": 12,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-ak47.png"
+      "ground_img": "img/day-ground-ak47.png",
+      "selection_type": 10
     },
     {
       "id": 26,
@@ -470,10 +524,12 @@
       "detail": {
         "name": "Sniper",
         "description": "For the very angry shy",
-        "level": 13
+        "level": 13,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-sniper.png"
+      "ground_img": "img/day-ground-sniper.png",
+      "selection_type": 11
     },
     {
       "id": 27,
@@ -487,11 +543,22 @@
       "detail": {
         "name": "Wooden Wall",
         "description": "Protected from the wind.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-wood-wall.png"
       },
@@ -658,8 +725,11 @@
         "inward": "cube_block_inward",
         "outward": "cube_block_outward",
         "side": "cube_block_side",
-        "enclosed": "cube_block_enclosed"
-      }
+        "enclosed": "cube_block_enclosed",
+        "building": "cube_block_building"
+      },
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 28,
@@ -673,11 +743,22 @@
       "detail": {
         "name": "Stone Wall",
         "description": "Saved the 3 little pigs.",
-        "level": 3
+        "level": 3,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-wall.png"
       },
@@ -844,8 +925,11 @@
         "inward": "cube_block_inward",
         "outward": "cube_block_outward",
         "side": "cube_block_side",
-        "enclosed": "cube_block_enclosed"
-      }
+        "enclosed": "cube_block_enclosed",
+        "building": "cube_block_building"
+      },
+      "health": 7000,
+      "selection_type": 21
     },
     {
       "id": 29,
@@ -859,11 +943,22 @@
       "detail": {
         "name": "Metal Wall",
         "description": "Afraid we'll find you?",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-wall.png"
       },
@@ -1030,8 +1125,11 @@
         "inward": "cube_block_inward",
         "outward": "cube_block_outward",
         "side": "cube_block_side",
-        "enclosed": "cube_block_enclosed"
-      }
+        "enclosed": "cube_block_enclosed",
+        "building": "cube_block_building"
+      },
+      "health": 15000,
+      "selection_type": 21
     },
     {
       "id": 30,
@@ -1045,11 +1143,22 @@
       "detail": {
         "name": "Wooden Low Door",
         "description": "You can shoot through it.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-wood-door.png"
       },
@@ -1068,7 +1177,9 @@
           "source": "img/day-wood-door-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-wood-door.png"
+      "ground_img": "img/day-ground-wood-door.png",
+      "health": 2000,
+      "selection_type": 21
     },
     {
       "id": 31,
@@ -1082,11 +1193,22 @@
       "detail": {
         "name": "Stone Low Door",
         "description": "You can shoot through it.",
-        "level": 3
+        "level": 3,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door.png"
       },
@@ -1105,7 +1227,9 @@
           "source": "img/day-stone-door-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-stone-door.png"
+      "ground_img": "img/day-ground-stone-door.png",
+      "health": 5000,
+      "selection_type": 21
     },
     {
       "id": 32,
@@ -1119,11 +1243,22 @@
       "detail": {
         "name": "Metal Low Door",
         "description": "Killing at home, for more comfort.",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door.png"
       },
@@ -1142,7 +1277,9 @@
           "source": "img/day-steel-door-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-steel-door.png"
+      "ground_img": "img/day-ground-steel-door.png",
+      "health": 10000,
+      "selection_type": 21
     },
     {
       "id": 33,
@@ -1156,11 +1293,22 @@
       "detail": {
         "name": "Campfire",
         "description": "Warm you when you're cold.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-campfire.png"
       },
@@ -1168,7 +1316,9 @@
         "source": "img/day-redprint-campfire.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-campfire.png"
+      "ground_img": "img/day-ground-campfire.png",
+      "health": 150,
+      "selection_type": 21
     },
     {
       "id": 34,
@@ -1182,7 +1332,8 @@
       "detail": {
         "name": "Bullet",
         "description": "For 9MM, Desert Eagle, and MP5 ",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-9mm.png"
@@ -1199,7 +1350,8 @@
       "detail": {
         "name": "Cartridge",
         "description": "For Shotgun",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-shotgun.png"
@@ -1216,7 +1368,8 @@
       "detail": {
         "name": "Heavy Bullet",
         "description": "For Sniper, and AK47",
-        "level": 11
+        "level": 11,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-sniper.png"
@@ -1233,10 +1386,12 @@
       "detail": {
         "name": "Medkit",
         "description": "Regenerate your life.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 2,
-      "ground_img": "img/day-ground-medikit.png"
+      "ground_img": "img/day-ground-medikit.png",
+      "selection_type": 17
     },
     {
       "id": 38,
@@ -1250,10 +1405,12 @@
       "detail": {
         "name": "Bandage",
         "description": "To heal the boo-boos.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-bandage.png"
+      "ground_img": "img/day-ground-bandage.png",
+      "selection_type": 18
     },
     {
       "id": 39,
@@ -1267,10 +1424,12 @@
       "detail": {
         "name": "Soda",
         "description": "Give energy.",
-        "level": 5
+        "level": 5,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-soda.png"
+      "ground_img": "img/day-ground-soda.png",
+      "selection_type": 19
     },
     {
       "id": 40,
@@ -1284,10 +1443,12 @@
       "detail": {
         "name": "MP5",
         "description": "Not bad.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-MP5.png"
+      "ground_img": "img/day-ground-MP5.png",
+      "selection_type": 20
     },
     {
       "id": 41,
@@ -1301,7 +1462,8 @@
       "detail": {
         "name": "Headscarf",
         "description": "Warm you up.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-headscarf.png"
@@ -1318,7 +1480,8 @@
       "detail": {
         "name": "Chapka",
         "description": "You look like a real woodcutter.",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-chapka.png"
@@ -1335,7 +1498,8 @@
       "detail": {
         "name": "Winter Coat",
         "description": "Is the weather really that cold?",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-coat.png"
@@ -1352,7 +1516,8 @@
       "detail": {
         "name": "Radiation Mask",
         "description": "Protect you from Radioactivity.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-mask.png"
@@ -1369,7 +1534,8 @@
       "detail": {
         "name": "Min. Radiation Suit",
         "description": "Previously, on Breaking Bad.",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-protection.png"
@@ -1386,7 +1552,8 @@
       "detail": {
         "name": "Radiation Suit",
         "description": "Let's not grow a second head.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-radiation-suit.png"
@@ -1403,7 +1570,8 @@
       "detail": {
         "name": "Wood Arrow",
         "description": "Needed to use bow.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-arrow.png"
@@ -1420,11 +1588,22 @@
       "detail": {
         "name": "Firepit",
         "description": "Warm up and melt iron slowly.",
-        "level": 3
+        "level": 3,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-campfire-bbq.png"
       },
@@ -1432,7 +1611,9 @@
         "source": "img/day-redprint-campfire-bbq.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-campfire-bbq.png"
+      "ground_img": "img/day-ground-campfire-bbq.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 49,
@@ -1446,11 +1627,22 @@
       "detail": {
         "name": "Smelter",
         "description": "Melt iron, uranium and alloys",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 260, 100, 260],
-      "height": [260, 100, 260, 100],
+      "width": [
+        100,
+        260,
+        100,
+        260
+      ],
+      "height": [
+        260,
+        100,
+        260,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-smelter.png"
       },
@@ -1472,7 +1664,9 @@
           "source": "img/day-smelter-light-down.png"
         }
       ],
-      "ground_img": "img/day-ground-smelter.png"
+      "ground_img": "img/day-ground-smelter.png",
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 50,
@@ -1486,11 +1680,22 @@
       "detail": {
         "name": "Wooden Door",
         "description": "Let's hope it holds.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-wood-door1.png"
       },
@@ -1509,7 +1714,9 @@
           "source": "img/day-wood-door1-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-wood-door1.png"
+      "ground_img": "img/day-ground-wood-door1.png",
+      "health": 2500,
+      "selection_type": 21
     },
     {
       "id": 51,
@@ -1523,11 +1730,22 @@
       "detail": {
         "name": "Stone Door",
         "description": "Not too heavy to open, I hope.",
-        "level": 3
+        "level": 3,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door1.png"
       },
@@ -1546,7 +1764,9 @@
           "source": "img/day-stone-door1-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-stone-door1.png"
+      "ground_img": "img/day-ground-stone-door1.png",
+      "health": 6000,
+      "selection_type": 21
     },
     {
       "id": 52,
@@ -1560,11 +1780,22 @@
       "detail": {
         "name": "Metal Door",
         "description": "I guess you're safe.",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door1.png"
       },
@@ -1583,7 +1814,9 @@
           "source": "img/day-steel-door1-broken2.png"
         }
       ],
-      "ground_img": "img/day-ground-steel-door1.png"
+      "ground_img": "img/day-ground-steel-door1.png",
+      "health": 12500,
+      "selection_type": 21
     },
     {
       "id": 53,
@@ -1597,7 +1830,8 @@
       "detail": {
         "name": "Sulfur",
         "description": "Sulfur in such a cold landscape?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-sulfur.png"
@@ -1614,7 +1848,8 @@
       "detail": {
         "name": "Shaped Uranium",
         "description": "Are you out of your mind?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-uranium.png"
@@ -1631,11 +1866,22 @@
       "detail": {
         "name": "Research Bench",
         "description": "Allow you to make new items",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 280, 100, 280],
-      "height": [280, 100, 280, 100],
+      "width": [
+        100,
+        280,
+        100,
+        280
+      ],
+      "height": [
+        280,
+        100,
+        280,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-workbench2.png"
       },
@@ -1643,7 +1889,9 @@
         "source": "img/day-redprint-workbench2.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-workbench2.png"
+      "ground_img": "img/day-ground-workbench2.png",
+      "health": 400,
+      "selection_type": 21
     },
     {
       "id": 56,
@@ -1657,7 +1905,8 @@
       "detail": {
         "name": "Uranium",
         "description": "Do you want to end up as Marie Curie?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-uranium.png"
@@ -1674,11 +1923,22 @@
       "detail": {
         "name": "Weaving Machine",
         "description": "Allow you to sew clothes",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-weaving-machine.png"
       },
@@ -1686,7 +1946,9 @@
         "source": "img/day-redprint-weaving-machine.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-weaving-machine.png"
+      "ground_img": "img/day-ground-weaving-machine.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 58,
@@ -1700,7 +1962,8 @@
       "detail": {
         "name": "Gasoline",
         "description": "Fuel for Smelter",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-gasoline.png"
@@ -1717,10 +1980,12 @@
       "detail": {
         "name": "Sulfur Pickaxe",
         "description": "Mine also Uranium",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-sulfur-pickaxe.png"
+      "ground_img": "img/day-ground-sulfur-pickaxe.png",
+      "selection_type": 22
     },
     {
       "id": 60,
@@ -1734,11 +1999,22 @@
       "detail": {
         "name": "Wood chest",
         "description": "You can't store food in.",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-chest.png"
       },
@@ -1746,7 +2022,9 @@
         "source": "img/day-redprint-chest.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-chest.png"
+      "ground_img": "img/day-ground-chest.png",
+      "health": 300,
+      "selection_type": 21
     },
     {
       "id": 61,
@@ -1760,11 +2038,22 @@
       "detail": {
         "name": "Fridge",
         "description": "Save your food.",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [50, 100, 50, 100],
-      "height": [100, 50, 100, 50],
+      "width": [
+        50,
+        100,
+        50,
+        100
+      ],
+      "height": [
+        100,
+        50,
+        100,
+        50
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-fridge.png"
       },
@@ -1772,7 +2061,9 @@
         "source": "img/day-redprint-fridge.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-fridge.png"
+      "ground_img": "img/day-ground-fridge.png",
+      "health": 300,
+      "selection_type": 21
     },
     {
       "id": 62,
@@ -1786,11 +2077,22 @@
       "detail": {
         "name": "Wood floor",
         "description": "Players can't spawn on it",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-wood-floor.png"
       },
@@ -1952,7 +2254,9 @@
           "source": "img/day-wood-floor-46.png"
         }
       ],
-      "ground_img": "img/day-ground-wood-floor.png"
+      "ground_img": "img/day-ground-wood-floor.png",
+      "health": 4000,
+      "selection_type": 21
     },
     {
       "id": 63,
@@ -1966,10 +2270,12 @@
       "detail": {
         "name": "Hammer",
         "description": "Destroy walls quickly.",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-hammer.png"
+      "ground_img": "img/day-ground-hammer.png",
+      "selection_type": 23
     },
     {
       "id": 64,
@@ -1983,11 +2289,22 @@
       "detail": {
         "name": "Sleeping Bag",
         "description": "Once dead, you keep your base",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-sleeping-bag.png"
       },
@@ -1995,7 +2312,9 @@
         "source": "img/day-redprint-sleeping-bag.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-sleeping-bag.png"
+      "ground_img": "img/day-ground-sleeping-bag.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 65,
@@ -2009,10 +2328,12 @@
       "detail": {
         "name": "Repair Hammer",
         "description": "Repair walls but require nails.",
-        "level": 5
+        "level": 5,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-repair-hammer.png"
+      "ground_img": "img/day-ground-repair-hammer.png",
+      "selection_type": 24
     },
     {
       "id": 66,
@@ -2026,7 +2347,8 @@
       "detail": {
         "name": "Nails",
         "description": "Needed to repair walls.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-nails.png"
@@ -2043,11 +2365,22 @@
       "detail": {
         "name": "Light Wood Floor",
         "description": "Players can't spawn on it",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-woodlight-floor.png"
       },
@@ -2209,7 +2542,9 @@
           "source": "img/day-wood-floor-light-46.png"
         }
       ],
-      "ground_img": "img/day-ground-wood-floor-light.png"
+      "ground_img": "img/day-ground-wood-floor-light.png",
+      "health": 4000,
+      "selection_type": 21
     },
     {
       "id": 68,
@@ -2223,11 +2558,22 @@
       "detail": {
         "name": "Wooden Low Wall",
         "description": "You can shoot through it.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-wood-smallwall.png"
       },
@@ -2368,7 +2714,9 @@
           "source": "img/day-wood-smallwalls-39.png"
         }
       ],
-      "ground_img": "img/day-ground-wood-smallwall.png"
+      "ground_img": "img/day-ground-wood-smallwall.png",
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 69,
@@ -2382,11 +2730,22 @@
       "detail": {
         "name": "Stone Low Wall",
         "description": "You can shoot through it.",
-        "level": 3
+        "level": 3,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-smallwalls.png"
       },
@@ -2527,7 +2886,9 @@
           "source": "img/day-stone-smallwalls-39.png"
         }
       ],
-      "ground_img": "img/day-ground-stone-smallwall.png"
+      "ground_img": "img/day-ground-stone-smallwall.png",
+      "health": 7000,
+      "selection_type": 21
     },
     {
       "id": 70,
@@ -2541,11 +2902,22 @@
       "detail": {
         "name": "Metal Low Wall",
         "description": "You can shoot through it.",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 35, 100, 35],
-      "height": [35, 100, 35, 100],
+      "width": [
+        100,
+        35,
+        100,
+        35
+      ],
+      "height": [
+        35,
+        100,
+        35,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-smallwalls.png"
       },
@@ -2686,7 +3058,9 @@
           "source": "img/day-steel-smallwalls-39.png"
         }
       ],
-      "ground_img": "img/day-ground-steel-smallwall.png"
+      "ground_img": "img/day-ground-steel-smallwall.png",
+      "health": 15000,
+      "selection_type": 21
     },
     {
       "id": 71,
@@ -2707,10 +3081,12 @@
       "detail": {
         "name": "Tomato Soup",
         "description": "Has not yet been opened.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-tomato-soup.png"
+      "ground_img": "img/day-ground-tomato-soup.png",
+      "selection_type": 25
     },
     {
       "id": 73,
@@ -2724,7 +3100,8 @@
       "detail": {
         "name": "Syringe",
         "description": "Useful to make drugs.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
       "ground_img": "img/day-ground-syringe.png"
@@ -2741,7 +3118,8 @@
       "detail": {
         "name": "Chemical Component",
         "description": "Useful to make a drugs.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
       "ground_img": "img/day-ground-chemical-component.png"
@@ -2758,10 +3136,12 @@
       "detail": {
         "name": "RadAway",
         "description": "Reduce your radioactivity a lot.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-radaway.png"
+      "ground_img": "img/day-ground-radaway.png",
+      "selection_type": 26
     },
     {
       "id": 76,
@@ -2775,11 +3155,22 @@
       "detail": {
         "name": "Tomato Seed",
         "description": "A fruit or vegetable?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 40,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-tomato.png"
       },
@@ -2804,7 +3195,9 @@
           "source": "img/day-plant4-tomato.png"
         }
       ],
-      "ground_img": "img/day-ground-tomato-seed.png"
+      "ground_img": "img/day-ground-tomato-seed.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 77,
@@ -2818,10 +3211,12 @@
       "detail": {
         "name": "Tomato",
         "description": "Why did the tomato blush?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-tomato.png"
+      "ground_img": "img/day-ground-tomato.png",
+      "selection_type": 27
     },
     {
       "id": 78,
@@ -2835,10 +3230,12 @@
       "detail": {
         "name": "Rotten Tomato",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-tomato.png"
+      "ground_img": "img/day-ground-rotten-tomato.png",
+      "selection_type": 28
     },
     {
       "id": 79,
@@ -2852,10 +3249,12 @@
       "detail": {
         "name": "Can",
         "description": "Useful to craft food can.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-can.png"
+      "ground_img": "img/day-ground-can.png",
+      "selection_type": 0
     },
     {
       "id": 80,
@@ -2869,10 +3268,12 @@
       "detail": {
         "name": "Wood Crossbow",
         "description": "Shoot faster, reload slower",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-wood-crossbow.png"
+      "ground_img": "img/day-ground-wood-crossbow.png",
+      "selection_type": 29
     },
     {
       "id": 81,
@@ -2886,7 +3287,8 @@
       "detail": {
         "name": "Crossbow Arrows",
         "description": "Needed to use crossbow.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-crossarrow.png"
@@ -2903,10 +3305,12 @@
       "detail": {
         "name": "Nail Gun",
         "description": "Repair walls from a distance",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-nail-gun.png"
+      "ground_img": "img/day-ground-nail-gun.png",
+      "selection_type": 30
     },
     {
       "id": 83,
@@ -2920,10 +3324,12 @@
       "detail": {
         "name": "Sawed Off",
         "description": "Shoot less far, do more damages",
-        "level": 13
+        "level": 13,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-sawed-off-shotgun.png"
+      "ground_img": "img/day-ground-sawed-off-shotgun.png",
+      "selection_type": 31
     },
     {
       "id": 84,
@@ -2937,11 +3343,22 @@
       "detail": {
         "name": "Stone floor",
         "description": "Players can't spawn on it",
-        "level": 4
+        "level": 4,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -3103,7 +3520,9 @@
           "source": "img/day-stone-floor-46.png"
         }
       ],
-      "ground_img": "img/day-ground-stone-floor.png"
+      "ground_img": "img/day-ground-stone-floor.png",
+      "health": 8000,
+      "selection_type": 21
     },
     {
       "id": 85,
@@ -3117,11 +3536,22 @@
       "detail": {
         "name": "Tiling floor",
         "description": "Players can't spawn on it",
-        "level": 4
+        "level": 4,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-tiling-floor.png"
       },
@@ -3283,7 +3713,9 @@
           "source": "img/day-tiling-floor-46.png"
         }
       ],
-      "ground_img": "img/day-ground-tiling-floor.png"
+      "ground_img": "img/day-ground-tiling-floor.png",
+      "health": 8000,
+      "selection_type": 21
     },
     {
       "id": 86,
@@ -3304,10 +3736,12 @@
       "detail": {
         "name": "Crisps",
         "description": "You salty?",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-chips.png"
+      "ground_img": "img/day-ground-chips.png",
+      "selection_type": 32
     },
     {
       "id": 88,
@@ -3321,10 +3755,12 @@
       "detail": {
         "name": "Expired Crisps",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-rotten-chips.png"
+      "ground_img": "img/day-ground-rotten-chips.png",
+      "selection_type": 33
     },
     {
       "id": 89,
@@ -3338,7 +3774,8 @@
       "detail": {
         "name": "Electronic Parts",
         "description": "Break TV's and Computers to find it",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-electronic-part.png"
@@ -3355,7 +3792,8 @@
       "detail": {
         "name": "Junk",
         "description": "Find it in houses",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-junk.png"
@@ -3372,7 +3810,8 @@
       "detail": {
         "name": "Big Wire",
         "description": "Break big computers in power station (in the city)",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wires.png"
@@ -3389,7 +3828,8 @@
       "detail": {
         "name": "Energy Cells",
         "description": "Used for energy weapons/buildings",
-        "level": 6
+        "level": 6,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-energy-cells.png"
@@ -3406,10 +3846,12 @@
       "detail": {
         "name": "Laser Pistol",
         "description": "Bullets are faster.",
-        "level": 14
+        "level": 14,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-laser-pistol.png"
+      "ground_img": "img/day-ground-laser-pistol.png",
+      "selection_type": 34
     },
     {
       "id": 94,
@@ -3423,11 +3865,22 @@
       "detail": {
         "name": "Tesla Bench",
         "description": "Allow you to make powerful items",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 260, 100, 260],
-      "height": [260, 100, 260, 100],
+      "width": [
+        100,
+        260,
+        100,
+        260
+      ],
+      "height": [
+        260,
+        100,
+        260,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-workbench3.png"
       },
@@ -3449,7 +3902,9 @@
           "source": "img/day-workbench3-3.png"
         }
       ],
-      "ground_img": "img/day-ground-workbench3.png"
+      "ground_img": "img/day-ground-workbench3.png",
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 95,
@@ -3463,7 +3918,8 @@
       "detail": {
         "name": "Alloys",
         "description": "To craft powerful items",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-alloys.png"
@@ -3480,10 +3936,12 @@
       "detail": {
         "name": "Sulfur Axe",
         "description": "You look cool with it.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-sulfur-axe.png"
+      "ground_img": "img/day-ground-sulfur-axe.png",
+      "selection_type": 35
     },
     {
       "id": 97,
@@ -3497,11 +3955,22 @@
       "detail": {
         "name": "Landmine",
         "description": "When you feel it, it's too late",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 20,
-      "width": [50, 50, 50, 50],
-      "height": [50, 50, 50, 50],
+      "width": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "height": [
+        50,
+        50,
+        50,
+        50
+      ],
       "putableimg": {
         "source": "img/clear-blue-landmine.png"
       },
@@ -3520,7 +3989,9 @@
           "source": "img/day-landmine-2.png"
         }
       ],
-      "ground_img": "img/day-ground-landmine.png"
+      "ground_img": "img/day-ground-landmine.png",
+      "health": 5,
+      "selection_type": 21
     },
     {
       "id": 98,
@@ -3534,11 +4005,22 @@
       "detail": {
         "name": "Dynamite",
         "description": "Get out of here, it gonna blow!",
-        "level": 9
+        "level": 9,
+        "skillCost": 1
       },
       "stack": 10,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-dynamite.png"
       },
@@ -3554,7 +4036,9 @@
           "source": "img/dynamite-yellow.png"
         }
       ],
-      "ground_img": "img/day-ground-dynamite.png"
+      "ground_img": "img/day-ground-dynamite.png",
+      "health": 100,
+      "selection_type": 21
     },
     {
       "id": 99,
@@ -3568,11 +4052,22 @@
       "detail": {
         "name": "C4",
         "description": "Explode when you hit the trigger!",
-        "level": 16
+        "level": 16,
+        "skillCost": 1
       },
       "stack": 5,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-C4.png"
       },
@@ -3588,7 +4083,9 @@
           "source": "img/C4-red.png"
         }
       ],
-      "ground_img": "img/day-ground-C4.png"
+      "ground_img": "img/day-ground-C4.png",
+      "health": 100,
+      "selection_type": 21
     },
     {
       "id": 100,
@@ -3602,10 +4099,12 @@
       "detail": {
         "name": "C4 Trigger",
         "description": "Don't press the button or else...",
-        "level": 16
+        "level": 16,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-joystick.png"
+      "ground_img": "img/day-ground-joystick.png",
+      "selection_type": 36
     },
     {
       "id": 101,
@@ -3619,11 +4118,22 @@
       "detail": {
         "name": "Compost",
         "description": "Allows to accelerate rotting",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-composter.png"
       },
@@ -3639,7 +4149,9 @@
           "source": "img/day-composter.png"
         }
       ],
-      "ground_img": "img/day-ground-composter.png"
+      "ground_img": "img/day-ground-composter.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 102,
@@ -3653,7 +4165,8 @@
       "detail": {
         "name": "Metal Helmet",
         "description": "Protects you from melee weapons",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-metal-helmet.png"
@@ -3670,7 +4183,8 @@
       "detail": {
         "name": "Welding Helmet",
         "description": "Protects you from melee weapons",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-welding-helmet.png"
@@ -3687,7 +4201,8 @@
       "detail": {
         "name": "Gladiator Helmet",
         "description": "Strength and honor.",
-        "level": 17
+        "level": 17,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-gladiator-helmet.png"
@@ -3704,7 +4219,8 @@
       "detail": {
         "name": "Leather Jacket",
         "description": "Protects you from guns",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-leather-jacket.png"
@@ -3721,7 +4237,8 @@
       "detail": {
         "name": "Kevlar Suit",
         "description": "Protects you from guns",
-        "level": 12
+        "level": 12,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-kevlar-suit.png"
@@ -3738,7 +4255,8 @@
       "detail": {
         "name": "SWAT Suit",
         "description": "Protects you from guns",
-        "level": 18
+        "level": 18,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-SWAT-suit.png"
@@ -3755,7 +4273,8 @@
       "detail": {
         "name": "Protective Suit",
         "description": "Protects you from explosives",
-        "level": 12
+        "level": 12,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-protective-suit.png"
@@ -3772,7 +4291,8 @@
       "detail": {
         "name": "Power Armor",
         "description": "Protects you from energy weapons",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-0.png"
@@ -3789,7 +4309,8 @@
       "detail": {
         "name": "Tesla Armor",
         "description": "Protects you from energy weapons",
-        "level": 18
+        "level": 18,
+        "skillCost": 3
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-armor.png"
@@ -3806,11 +4327,22 @@
       "detail": {
         "name": "Wooden Spike",
         "description": "Hurt and slow down",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 40,
-      "width": [50, 50, 50, 50],
-      "height": [50, 50, 50, 50],
+      "width": [
+        50,
+        50,
+        50,
+        50
+      ],
+      "height": [
+        50,
+        50,
+        50,
+        50
+      ],
       "putableimg": {
         "source": "img/clear-blue-wood-spike.png"
       },
@@ -3818,7 +4350,9 @@
         "source": "img/redprint-wood-spike.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wood-spike.png"
+      "ground_img": "img/day-ground-wood-spike.png",
+      "health": 200,
+      "selection_type": 21
     },
     {
       "id": 112,
@@ -3832,10 +4366,12 @@
       "detail": {
         "name": "Laser Submachine",
         "description": "It's the best weapon",
-        "level": 14
+        "level": 14,
+        "skillCost": 2
       },
       "stack": 1,
-      "ground_img": "img/day-ground-laser-submachine.png"
+      "ground_img": "img/day-ground-laser-submachine.png",
+      "selection_type": 37
     },
     {
       "id": 113,
@@ -3849,10 +4385,12 @@
       "detail": {
         "name": "Grenade",
         "description": "Explodes when you throw it away.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 10,
-      "ground_img": "img/day-ground-grenade.png"
+      "ground_img": "img/day-ground-grenade.png",
+      "selection_type": 38
     },
     {
       "id": 114,
@@ -3866,10 +4404,12 @@
       "detail": {
         "name": "Super Hammer",
         "description": "Destroy indestructible walls.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-super-hammer.png"
+      "ground_img": "img/day-ground-super-hammer.png",
+      "selection_type": 39
     },
     {
       "id": 115,
@@ -3883,7 +4423,8 @@
       "detail": {
         "name": "Ghoul Blood",
         "description": "Find it on speedy ghouls",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-ghoul-blood.png"
@@ -3900,7 +4441,8 @@
       "detail": {
         "name": "Camouflage Gear",
         "description": "Hide you in the forest",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 1,
       "ground_img": "img/day-ground-camouflage-gear.png"
@@ -3917,11 +4459,22 @@
       "detail": {
         "name": "Agitator",
         "description": "Allows to craft drugs",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-agitator.png"
       },
@@ -3943,7 +4496,9 @@
           "source": "img/day-agitator-2.png"
         }
       ],
-      "ground_img": "img/day-ground-agitator.png"
+      "ground_img": "img/day-ground-agitator.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 118,
@@ -3957,10 +4512,12 @@
       "detail": {
         "name": "Ghoul Drug",
         "description": "Ghouls does not attack you.",
-        "level": 10
+        "level": 10,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-ghoul-drug.png"
+      "ground_img": "img/day-ground-ghoul-drug.png",
+      "selection_type": 40
     },
     {
       "id": 119,
@@ -3974,10 +4531,12 @@
       "detail": {
         "name": "Amanita",
         "description": "Poisoned, really dangerous",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-mushroom1.png"
+      "ground_img": "img/day-ground-mushroom1.png",
+      "selection_type": 41
     },
     {
       "id": 120,
@@ -3991,10 +4550,12 @@
       "detail": {
         "name": "Boletus",
         "description": "Can be eaten.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-mushroom2.png"
+      "ground_img": "img/day-ground-mushroom2.png",
+      "selection_type": 42
     },
     {
       "id": 121,
@@ -4008,10 +4569,12 @@
       "detail": {
         "name": "Russula",
         "description": "Can be eaten.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-mushroom3.png"
+      "ground_img": "img/day-ground-mushroom3.png",
+      "selection_type": 43
     },
     {
       "id": 122,
@@ -4025,10 +4588,12 @@
       "detail": {
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-mushroom1.png"
+      "ground_img": "img/day-ground-rotten-mushroom1.png",
+      "selection_type": 44
     },
     {
       "id": 123,
@@ -4042,10 +4607,12 @@
       "detail": {
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-mushroom2.png"
+      "ground_img": "img/day-ground-rotten-mushroom2.png",
+      "selection_type": 45
     },
     {
       "id": 124,
@@ -4059,10 +4626,12 @@
       "detail": {
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-mushroom3.png"
+      "ground_img": "img/day-ground-rotten-mushroom3.png",
+      "selection_type": 46
     },
     {
       "id": 125,
@@ -4076,10 +4645,12 @@
       "detail": {
         "name": "Lapadone",
         "description": "You are faster a certain time.",
-        "level": 14
+        "level": 14,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-lapadoine.png"
+      "ground_img": "img/day-ground-lapadoine.png",
+      "selection_type": 47
     },
     {
       "id": 126,
@@ -4093,11 +4664,22 @@
       "detail": {
         "name": "LapaBot",
         "description": "Repair your base for you",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 5,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/clear-blue-lapabot.png"
       },
@@ -4122,7 +4704,9 @@
           "source": "img/lapabot4.png"
         }
       ],
-      "ground_img": "img/day-ground-lapabot.png"
+      "ground_img": "img/day-ground-lapabot.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 127,
@@ -4136,7 +4720,8 @@
       "detail": {
         "name": "Small Wire",
         "description": "Find it on TV's and computers in abandonned houses",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-wire.png"
@@ -4153,10 +4738,12 @@
       "detail": {
         "name": "Pumpkin",
         "description": "Eat it or craft a pumpkin ghoul",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-pumpkin.png"
+      "ground_img": "img/day-ground-pumpkin.png",
+      "selection_type": 48
     },
     {
       "id": 129,
@@ -4170,10 +4757,12 @@
       "detail": {
         "name": "Rotten Pumpkin",
         "description": "You should not click",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-pumpkin.png"
+      "ground_img": "img/day-ground-rotten-pumpkin.png",
+      "selection_type": 49
     },
     {
       "id": 130,
@@ -4187,11 +4776,22 @@
       "detail": {
         "name": "Ghoul Seed",
         "description": "Plant your pumpkin pet",
-        "level": 99
+        "level": 99,
+        "skillCost": 1
       },
       "stack": 40,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/clear-blue-root.png"
       },
@@ -4216,7 +4816,9 @@
           "source": "img/day-root4-ghoul.png"
         }
       ],
-      "ground_img": "img/day-ground-ghoul5.png"
+      "ground_img": "img/day-ground-ghoul5.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 131,
@@ -4230,11 +4832,22 @@
       "detail": {
         "name": "Extractor",
         "description": "Allows you to extract minerals from the ground",
-        "level": 12
+        "level": 12,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-extractor.png"
       },
@@ -4253,7 +4866,9 @@
           "source": "img/day-extractor-off.png"
         }
       ],
-      "ground_img": "img/day-ground-extractor.png"
+      "ground_img": "img/day-ground-extractor.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 132,
@@ -4267,10 +4882,12 @@
       "detail": {
         "name": "Antidote",
         "description": "Remove the withdrawal effects (pink skin)",
-        "level": 14
+        "level": 14,
+        "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-antidote.png"
+      "ground_img": "img/day-ground-antidote.png",
+      "selection_type": 50
     },
     {
       "id": 133,
@@ -4284,7 +4901,8 @@
       "detail": {
         "name": "Rare Flower",
         "description": "Use it to make an antidote",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote-flower.png"
@@ -4301,11 +4919,22 @@
       "detail": {
         "name": "Tree Seed",
         "description": "Plant your forest",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 100,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/clear-blue-plant-tree.png"
       },
@@ -4330,7 +4959,9 @@
           "source": "img/day-plant4-orange.png"
         }
       ],
-      "ground_img": "img/day-ground-seed-tree.png"
+      "ground_img": "img/day-ground-seed-tree.png",
+      "health": 150,
+      "selection_type": 21
     },
     {
       "id": 135,
@@ -4344,10 +4975,12 @@
       "detail": {
         "name": "Acorn",
         "description": "Eat it or plant a tree",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-acorn.png"
+      "ground_img": "img/day-ground-acorn.png",
+      "selection_type": 51
     },
     {
       "id": 136,
@@ -4361,10 +4994,12 @@
       "detail": {
         "name": "Rotten Acorn",
         "description": "Not really good",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-rotten-acorn.png"
+      "ground_img": "img/day-ground-rotten-acorn.png",
+      "selection_type": 52
     },
     {
       "id": 137,
@@ -4378,10 +5013,12 @@
       "detail": {
         "name": "Laser Sniper",
         "description": "Faster than a sniper",
-        "level": 14
+        "level": 14,
+        "skillCost": 2
       },
       "stack": 1,
-      "ground_img": "img/day-ground-laser-sniper.png"
+      "ground_img": "img/day-ground-laser-sniper.png",
+      "selection_type": 53
     },
     {
       "id": 138,
@@ -4395,11 +5032,22 @@
       "detail": {
         "name": "HAL Bot",
         "description": "Protect you",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "stack": 5,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/clear-blue-hal-bot.png"
       },
@@ -4424,7 +5072,9 @@
           "source": "img/hal-bot4.png"
         }
       ],
-      "ground_img": "img/day-ground-hal-bot.png"
+      "ground_img": "img/day-ground-hal-bot.png",
+      "health": 400,
+      "selection_type": 21
     },
     {
       "id": 139,
@@ -4438,11 +5088,22 @@
       "detail": {
         "name": "Tesla Bot",
         "description": "Protect you",
-        "level": 16
+        "level": 16,
+        "skillCost": 1
       },
       "stack": 5,
-      "width": [30, 30, 30, 30],
-      "height": [30, 30, 30, 30],
+      "width": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "height": [
+        30,
+        30,
+        30,
+        30
+      ],
       "putableimg": {
         "source": "img/clear-blue-tesla-bot.png"
       },
@@ -4467,7 +5128,9 @@
           "source": "img/tesla-bot4.png"
         }
       ],
-      "ground_img": "img/day-ground-tesla-bot.png"
+      "ground_img": "img/day-ground-tesla-bot.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 140,
@@ -4481,11 +5144,22 @@
       "detail": {
         "name": "Cable",
         "description": "Create automatic mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-wire0.png"
       },
@@ -4493,7 +5167,9 @@
         "source": "img/redprint-wire0.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wire0.png"
+      "ground_img": "img/day-ground-wire0.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 141,
@@ -4507,11 +5183,22 @@
       "detail": {
         "name": "Cable",
         "description": "Create automatic mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-wire1.png"
       },
@@ -4519,7 +5206,9 @@
         "source": "img/redprint-wire1.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wire1.png"
+      "ground_img": "img/day-ground-wire1.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 142,
@@ -4533,11 +5222,22 @@
       "detail": {
         "name": "Cable",
         "description": "Create automatic mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-wire2.png"
       },
@@ -4545,7 +5245,9 @@
         "source": "img/redprint-wire2.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wire2.png"
+      "ground_img": "img/day-ground-wire2.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 157,
@@ -4559,11 +5261,22 @@
       "detail": {
         "name": "Cable",
         "description": "Create automatic mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-wire3.png"
       },
@@ -4571,7 +5284,9 @@
         "source": "img/redprint-wire3.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wire3.png"
+      "ground_img": "img/day-ground-wire3.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 144,
@@ -4585,11 +5300,22 @@
       "detail": {
         "name": "Switch",
         "description": "Turn on/off mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-switch.png"
       },
@@ -4605,7 +5331,9 @@
           "source": "img/day-switch-on.png"
         }
       ],
-      "ground_img": "img/day-ground-switch.png"
+      "ground_img": "img/day-ground-switch.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 145,
@@ -4619,11 +5347,22 @@
       "detail": {
         "name": "Gate OR",
         "description": "Activate only if an entry is on.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-switch-or.png"
       },
@@ -4631,7 +5370,9 @@
         "source": "img/redprint-switch-or.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-switch-or.png"
+      "ground_img": "img/day-ground-switch-or.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 146,
@@ -4645,11 +5386,22 @@
       "detail": {
         "name": "Gate AND",
         "description": "Activate only if all entries are on.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-switch-and.png"
       },
@@ -4657,7 +5409,9 @@
         "source": "img/redprint-switch-and.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-switch-and.png"
+      "ground_img": "img/day-ground-switch-and.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 147,
@@ -4671,11 +5425,22 @@
       "detail": {
         "name": "Gate NOT",
         "description": "Activate only if no entry is on.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-switch-reverse.png"
       },
@@ -4683,7 +5448,9 @@
         "source": "img/redprint-switch-reverse.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-switch-reverse.png"
+      "ground_img": "img/day-ground-switch-reverse.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 148,
@@ -4697,11 +5464,22 @@
       "detail": {
         "name": "Lamp",
         "description": "Turn on when connected, damage ghoul",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-lamp.png"
       },
@@ -4709,7 +5487,9 @@
         "source": "img/redprint-lamp.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-lamp-white.png"
+      "ground_img": "img/day-ground-lamp-white.png",
+      "health": 600,
+      "selection_type": 21
     },
     {
       "id": 149,
@@ -4723,11 +5503,22 @@
       "detail": {
         "name": "Cable  - Wall",
         "description": "Wall that can be connected to a cable",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-cable-wall.png"
       },
@@ -4749,7 +5540,9 @@
           "source": "img/day-cable-wall3.png"
         }
       ],
-      "ground_img": "img/day-ground-cable-wall.png"
+      "ground_img": "img/day-ground-cable-wall.png",
+      "health": 15000,
+      "selection_type": 21
     },
     {
       "id": 150,
@@ -4763,11 +5556,22 @@
       "detail": {
         "name": "Automatic Door",
         "description": "Connect it to a switch to open and close it.",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-automatic-door.png"
       },
@@ -4775,8 +5579,13 @@
         "source": "img/redprint-automatic-door.png"
       },
       "isDoor": 0,
-      "instation": [{}, {}],
-      "ground_img": "img/day-ground-automatic-door.png"
+      "instation": [
+        {},
+        {}
+      ],
+      "ground_img": "img/day-ground-automatic-door.png",
+      "health": 15000,
+      "selection_type": 21
     },
     {
       "id": 151,
@@ -4790,11 +5599,22 @@
       "detail": {
         "name": "Platform",
         "description": "Weight detector",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-platform-off.png"
       },
@@ -4802,7 +5622,9 @@
         "source": "img/redprint-platform-off.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-platform.png"
+      "ground_img": "img/day-ground-platform.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 152,
@@ -4816,11 +5638,22 @@
       "detail": {
         "name": "Stone Cave",
         "description": "Build mountains.",
-        "level": 99
+        "level": 99,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-stone-cave.png"
       },
@@ -4982,7 +5815,9 @@
           "source": "img/day-stone-cave46.png"
         }
       ],
-      "ground_img": "img/day-ground-stone-cave.png"
+      "ground_img": "img/day-ground-stone-cave.png",
+      "health": 300,
+      "selection_type": 21
     },
     {
       "id": 153,
@@ -4996,11 +5831,22 @@
       "detail": {
         "name": "Bunker Wall",
         "description": "Good old memory of the wasteland.",
-        "level": 99
+        "level": 99,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-bunker-wall.png"
       },
@@ -5162,7 +6008,9 @@
           "source": "img/day-bunker-wall46.png"
         }
       ],
-      "ground_img": "img/day-ground-bunker-wall.png"
+      "ground_img": "img/day-ground-bunker-wall.png",
+      "health": 10000,
+      "selection_type": 21
     },
     {
       "id": 154,
@@ -5176,11 +6024,22 @@
       "detail": {
         "name": "Golden Floor",
         "description": "Players can't spawn on it",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -5342,7 +6201,9 @@
           "source": "img/day-mustard-floor-46.png"
         }
       ],
-      "ground_img": "img/day-ground-mustard-floor.png"
+      "ground_img": "img/day-ground-mustard-floor.png",
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 155,
@@ -5356,11 +6217,22 @@
       "detail": {
         "name": "Red floor",
         "description": "Players can't spawn on it",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -5522,7 +6394,9 @@
           "source": "img/day-red-floor-46.png"
         }
       ],
-      "ground_img": "img/day-ground-red-floor.png"
+      "ground_img": "img/day-ground-red-floor.png",
+      "health": 3000,
+      "selection_type": 21
     },
     {
       "id": 156,
@@ -5536,11 +6410,22 @@
       "detail": {
         "name": "Welding Machine",
         "description": "Allow you to make logic gates",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-welding-machine.png"
       },
@@ -5548,7 +6433,9 @@
         "source": "img/redprint-welding-machine.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-welding-machine.png"
+      "ground_img": "img/day-ground-welding-machine.png",
+      "health": 500,
+      "selection_type": 21
     },
     {
       "id": 157,
@@ -5562,11 +6449,22 @@
       "detail": {
         "name": "Cable  - Bridge",
         "description": "Create automatic mechanisms",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-wire4.png"
       },
@@ -5574,7 +6472,9 @@
         "source": "img/redprint-wire4.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-wire4.png"
+      "ground_img": "img/day-ground-wire4.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 158,
@@ -5588,11 +6488,22 @@
       "detail": {
         "name": "Gate Timer",
         "description": "Emit a signal regularly.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-timer.png"
       },
@@ -5614,7 +6525,9 @@
           "source": "img/day-timer-3.png"
         }
       ],
-      "ground_img": "img/day-ground-timer.png"
+      "ground_img": "img/day-ground-timer.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 159,
@@ -5628,11 +6541,22 @@
       "detail": {
         "name": "Gate Xor",
         "description": "Activate only if only one entry is on.",
-        "level": -1
+        "level": -1,
+        "skillCost": 1
       },
       "stack": 255,
-      "width": [100, 100, 100, 100],
-      "height": [100, 100, 100, 100],
+      "width": [
+        100,
+        100,
+        100,
+        100
+      ],
+      "height": [
+        100,
+        100,
+        100,
+        100
+      ],
       "putableimg": {
         "source": "img/clear-blue-xor.png"
       },
@@ -5640,7 +6564,9 @@
         "source": "img/redprint-xor.png"
       },
       "isDoor": 0,
-      "ground_img": "img/day-ground-xor.png"
+      "ground_img": "img/day-ground-xor.png",
+      "health": 250,
+      "selection_type": 21
     },
     {
       "id": 160,
@@ -5654,7 +6580,8 @@
       "detail": {
         "name": "Vision 1",
         "description": "Improve your vision",
-        "level": 0
+        "level": 0,
+        "skillCost": 1
       },
       "ground_img": "img/skill-eye1.png"
     },
@@ -5670,7 +6597,8 @@
       "detail": {
         "name": "Vision 2",
         "description": "Improve your vision",
-        "level": 5
+        "level": 5,
+        "skillCost": 1
       },
       "ground_img": "img/skill-eye2.png"
     },
@@ -5686,7 +6614,8 @@
       "detail": {
         "name": "Vision 3",
         "description": "Improve your vision",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "ground_img": "img/skill-eye3.png"
     },
@@ -5702,7 +6631,8 @@
       "detail": {
         "name": "Builder 1",
         "description": "Multiplies some craft by two",
-        "level": 6
+        "level": 6,
+        "skillCost": 2
       },
       "ground_img": "img/skill-builder1.png"
     },
@@ -5718,7 +6648,8 @@
       "detail": {
         "name": "Builder 2",
         "description": "Repair much faster",
-        "level": 18
+        "level": 18,
+        "skillCost": 1
       },
       "ground_img": "img/skill-builder2.png"
     },
@@ -5734,7 +6665,8 @@
       "detail": {
         "name": "Inventory 1",
         "description": "Add a slot in your inventory",
-        "level": 0
+        "level": 0,
+        "skillCost": 1
       },
       "ground_img": "img/skill-inv1.png"
     },
@@ -5750,7 +6682,8 @@
       "detail": {
         "name": "Inventory 2",
         "description": "Add a slot in your inventory",
-        "level": 5
+        "level": 5,
+        "skillCost": 1
       },
       "ground_img": "img/skill-inv2.png"
     },
@@ -5766,7 +6699,8 @@
       "detail": {
         "name": "Inventory 3",
         "description": "Add a slot in your bag",
-        "level": 7
+        "level": 7,
+        "skillCost": 1
       },
       "ground_img": "img/skill-inv3.png"
     },
@@ -5782,7 +6716,8 @@
       "detail": {
         "name": "Inventory 4",
         "description": "Add two slots in your bag",
-        "level": 10
+        "level": 10,
+        "skillCost": 2
       },
       "ground_img": "img/skill-inv4.png"
     },
@@ -5798,7 +6733,8 @@
       "detail": {
         "name": "Inventory 5",
         "description": "Add three slots in your bag",
-        "level": 12
+        "level": 12,
+        "skillCost": 3
       },
       "ground_img": "img/skill-inv5.png"
     },
@@ -5814,7 +6750,8 @@
       "detail": {
         "name": "Light Weight",
         "description": "Less likely to trigger traps.",
-        "level": 8
+        "level": 8,
+        "skillCost": 1
       },
       "ground_img": "img/skill-lightweight.png"
     }

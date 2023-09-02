@@ -778,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9054970591419206434
 Transform:
   m_ObjectHideFlags: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBuilding: 0
-  item:
+  slotItem:
     item:
       id: 0
       img:
@@ -836,6 +836,7 @@ MonoBehaviour:
         enclosed: 
         building: 
       health: 0
+      selection_type: 0
     slotObject: {fileID: 0}
     count: 0
     slotHandler: {fileID: 0}

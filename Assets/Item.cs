@@ -19,10 +19,9 @@ public class Item
     public Broken[] broken; 
     public Instation[] instation; 
     public string ground_img;
-
     public BlockMeshes blockMeshes;
-
     public int health;
+    public int selection_type;
 
     // Start is called before the first frame update
     void Start()

@@ -47,9 +47,9 @@ public class Engine : NetworkBehaviour
 
         //player.inventory.DropItem(player.inventory.slots.Count-1);
       }
-      player.vitalStats.cold -=0.03f;
+      player.vitalStats.cold = Mathf.Max(0, player.vitalStats.cold - 0.03f);
+      player.vitalStats.hunger = Mathf.Max(0, player.vitalStats.hunger - 0.03f);
 
-      player.vitalStats.hunger -=0.03f;
 
 
       player.localPlayer.vitalStatsUI.UpdateVitalStats(player.vitalStats);

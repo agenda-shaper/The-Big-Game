@@ -46,7 +46,7 @@ public class Character : NetworkBehaviour
         playerCamera = localPlayer.playerCamera;
         inventory.centerSlots = localPlayer.centerSlots;
         if(playerCamera) playerCamera.enabled = false;
-        //localPlayer.buildingManager.startBuilding(engine.blockManager.GetItemById(29));
+        //localPlayer.buildingManager.startBuilding();
 
     }
 
@@ -114,6 +114,12 @@ public class Character : NetworkBehaviour
         if (Input.GetMouseButtonDown(0)) // Left Click
         {
             // Code for left click
+            if (inventory.highlightedSlot != -1) {
+                // inventory handling
+                // skip this
+                return;
+            }
+
             if (localPlayer.buildingManager.isBuilding){
                 BuildBlock(localPlayer.buildingManager);
             }
@@ -134,7 +140,7 @@ public class Character : NetworkBehaviour
     public void BuildBlock(BuildManager buildManager){
         // check and verify the positions
 
-        engine.blockManager.SpawnBlock(buildManager.x, buildManager.y, buildManager.item.item.id);
+        engine.blockManager.SpawnBlock(buildManager.x, buildManager.y, buildManager.slotItem.item.id);
 
         // remove 1 block
         // do all the inventory checking
@@ -144,8 +150,6 @@ public class Character : NetworkBehaviour
     public void HandlePlayer(){
         vitalStats.HandleVitals();
         HandleMovement();
-        
-
     }
 
     [Server]
