@@ -1,21 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class DroppedItem : MonoBehaviour
+public class HoldingItem : NetworkBehaviour
 {
-
-    public Item item;
-    public int count;
-    public float despawnTimeLeft;
     public Renderer quadRenderer; // Reference to the quad's renderer.
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public SlotItem slotItem;
 
     public void LoadImage(Texture2D tex)
     {
@@ -29,6 +21,4 @@ public class DroppedItem : MonoBehaviour
         float scalingFactor = 0.007f; // Adjust this to change the overall size of the quad
         transform.localScale = new Vector3(width * scalingFactor, 1f, height * scalingFactor);
     }
-
-
 }

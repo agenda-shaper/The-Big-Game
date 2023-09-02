@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class VitalStats : NetworkBehaviour
 {
+    public Character player;
     [SyncVar] public float health = 255;
     [SyncVar] public float hunger = 255;
     [SyncVar] public float cold = 255;
@@ -24,7 +25,13 @@ public class VitalStats : NetworkBehaviour
         }
                 
         if (health <= 0){
-            // die
+            if (player.immortal){
+                health = 255;
+            } else {
+                // die
+                Debug.Log("dead");
+            }
+            
         }
 
     }

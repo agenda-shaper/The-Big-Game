@@ -9,11 +9,14 @@ using UnityEngine.Networking;
 public class ActionHandler : MonoBehaviour
 {
     public Inventory inventory;
+    public bool actionContinous = true;
+    public bool isActing;
+    public SlotItem currentSlotItem;  
 
     public GameObject projectilePrefab;
 
     public void exitLastAction() {
-            switch (inventory.actionManager.currentSlotItem.item.selection_type) {
+            switch (currentSlotItem.item.selection_type) {
                 case 21:
                     inventory.player.localPlayer.buildingManager.exitBuilding();
                     break;
@@ -25,16 +28,17 @@ public class ActionHandler : MonoBehaviour
 
 
     public void HandleSelection(SlotItem slotItem){
-        if (inventory.actionManager.isActing) exitLastAction();
+        if (isActing) exitLastAction();
 
-        if (inventory.actionManager.isActing && inventory.actionManager.currentSlotItem == slotItem){
+        if (isActing && currentSlotItem == slotItem){
             // firstly deselect slotItem if its the same and in action
-            inventory.actionManager.isActing = false;
-            inventory.actionManager.currentSlotItem = null;
+            isActing = false;
+            currentSlotItem = null;
+            inventory.holdingItem.gameObject.SetActive(false);
             return;
         }
-
-
+                
+        
         switch (slotItem.item.selection_type) {
             case 21:
                 inventory.player.localPlayer.buildingManager.startBuilding(slotItem);
@@ -43,109 +47,118 @@ public class ActionHandler : MonoBehaviour
                 // pick up in hand
                 break;
         }
-        inventory.actionManager.isActing = true;
-        inventory.actionManager.currentSlotItem = slotItem;
+
+        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(slotItem.item.ground_img));
+
+        inventory.holdingItem.gameObject.SetActive(true);
+        isActing = true;
+        currentSlotItem = slotItem;
     }
 
-    public void HandleUseAction(SlotItem slotItem)
+    public void HandleUseAction()
     {
-        switch (slotItem.item.selection_type) {
+        switch (currentSlotItem.item.selection_type) {
             case 1:
-                HandleStonePick(slotItem);
+                HandleStonePick(currentSlotItem);
                 break;
             case 2:
-                HandleMetalPick(slotItem);
+                HandleMetalPick(currentSlotItem);
                 break;
             case 3:
-                HandleHatchet(slotItem);
+                HandleHatchet(currentSlotItem);
                 break;
             case 4:
-                HandleMetalAxe(slotItem);
+                HandleMetalAxe(currentSlotItem);
                 break;
             case 5:
-                HandleWoodSpear(slotItem);
+                HandleWoodSpear(currentSlotItem);
                 break;
             case 6:
-                HandleWoodBow(slotItem);
+                HandleWoodBow(currentSlotItem);
                 break;
             case 7:
-                HandleShotgun(slotItem);
+                HandleShotgun(currentSlotItem);
                 break;
             case 8:
-                Handle9MM(slotItem);
+                Handle9MM(currentSlotItem);
                 break;
             case 9:
-                HandleDesertEagle(slotItem);
+                HandleDesertEagle(currentSlotItem);
                 break;
             case 10:
-                HandleAK47(slotItem);
+                HandleAK47(currentSlotItem);
                 break;
             case 11:
-                HandleSniper(slotItem);
+                HandleSniper(currentSlotItem);
                 break;
             case 12:
-                HandleRawSteak(slotItem);
+                HandleRawSteak(currentSlotItem);
                 break;
             case 13:
-                HandleCookedSteak(slotItem);
+                HandleCookedSteak(currentSlotItem);
                 break;
             case 14:
-                HandleRottenSteak(slotItem);
+                HandleRottenSteak(currentSlotItem);
                 break;
             case 15:
-                HandleOrange(slotItem);
+                HandleOrange(currentSlotItem);
                 break;
             case 16:
-                HandleRottenOrange(slotItem);
+                HandleRottenOrange(currentSlotItem);
                 break;
             case 17:
-                HandleMedkit(slotItem);
+                HandleMedkit(currentSlotItem);
                 break;
             case 18:
-                HandleBandage(slotItem);
+                HandleBandage(currentSlotItem);
                 break;
             case 19:
-                HandleSoda(slotItem);
+                HandleSoda(currentSlotItem);
                 break;
             case 20:
-                HandleMP5(slotItem);
+                HandleMP5(currentSlotItem);
                 break;
             case 21:
                 // building
                 // cant pick in hands
                 break;
             case 22:
-                HandleSulfurPick(slotItem);
+                HandleSulfurPick(currentSlotItem);
                 break;
             case 23:
-                HandleHammer(slotItem);
+                HandleHammer(currentSlotItem);
                 break;
             case 24:
-                HandleRepairHammer(slotItem);
+                HandleRepairHammer(currentSlotItem);
                 break;
             case 25:
-                HandleTomatoSoup(slotItem);
+                HandleTomatoSoup(currentSlotItem);
                 break;
             default:
                 // Handle default case
                 // for now exit
-                inventory.actionManager.isActing = false;
-                inventory.actionManager.currentSlotItem = null;
+                isActing = false;
+                currentSlotItem = null;
                 return;
         }
     }
 
 
     public void shootProjectile(int pDamage, int bDamage, float projSpeed) {
-        GameObject projectile = Instantiate(projectilePrefab, inventory.player.transform.position, transform.rotation); // Instantiate projectile
+        Quaternion adjustedRotation = Quaternion.Euler(0, inventory.player.transform.rotation.eulerAngles.y+ 90, 0);
+        Vector3 spawnPosition = inventory.player.transform.position + (inventory.player.transform.right * 0.5f);
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, adjustedRotation); // Instantiate projectile
         Projectile projScript = projectile.GetComponent<Projectile>();
-        projScript.Init(pDamage,bDamage,projSpeed);
+        projScript.Init(pDamage, bDamage, projSpeed);
+        projScript.owner = inventory.player;
+        NetworkServer.Spawn(projectile);
         inventory.player.projectiles.Add(projScript); // Add to player's list
     }
 
+
     public void HandleAK47(SlotItem item) {
         // add bullet image 
-        shootProjectile(1, 2, 0.1f);
+        shootProjectile(12, 24, 0.1f);
     }
     public void HandleSniper(SlotItem item){
 

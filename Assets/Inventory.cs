@@ -23,13 +23,6 @@ public class SlotItem
     // Add more slot-specific data if needed.
 }
 
-[System.Serializable]
-public class ActionManager
-{
-    public bool isActing;
-    public SlotItem currentSlotItem;    
-}
-
 public class Inventory : NetworkBehaviour
 {
     public Dictionary<int, SlotItem> slots = new Dictionary<int, SlotItem>();
@@ -37,16 +30,18 @@ public class Inventory : NetworkBehaviour
 
     public int highlightedSlot;
     public Character player;
-
-    public ActionManager actionManager;
-
     public ActionHandler actionHandler;
+
+    public bool actionContinous;
 
     public GameObject droppedItemPrefab;
 
     public GameObject slotPrefab; // Drag your slot prefab here in the inspector.
 
     public Transform centerSlots; // Drag the centerSlots transform here in the inspector.
+
+
+    public HoldingItem holdingItem;
 
 
     

@@ -10,6 +10,9 @@ public class Character : NetworkBehaviour
     public GameObject character;
 
     [SyncVar]
+    public bool immortal = true;
+
+    [SyncVar]
     public Inventory inventory;
 
     public Engine engine;
@@ -36,8 +39,8 @@ public class Character : NetworkBehaviour
 
     public float rotation;
 
-    public int movingTo; // 0 - idle | 1 - left | 2 - right | 4 - down | 8 - up | 5 - left + down | 6 - right + down | 9 - left + up | 10 - right + up
-    public bool isSprinting;
+    public int movingTo = 0; // 0 - idle | 1 - left | 2 - right | 4 - down | 8 - up | 5 - left + down | 6 - right + down | 9 - left + up | 10 - right + up
+    public bool isSprinting = false;
 
 
 
@@ -110,7 +113,12 @@ public class Character : NetworkBehaviour
         if (localPlayer.buildingManager.isBuilding){
             localPlayer.buildingManager.updatePosition(this);
         }
-
+        if (Input.GetMouseButton(0)) // Left Mouse Button Hold
+        {
+            if (inventory.actionHandler.isActing && inventory.actionHandler.actionContinous){
+                inventory.actionHandler.HandleUseAction();
+            }
+        }
         if (Input.GetMouseButtonDown(0)) // Left Click
         {
             // Code for left click
@@ -122,6 +130,8 @@ public class Character : NetworkBehaviour
 
             if (localPlayer.buildingManager.isBuilding){
                 BuildBlock(localPlayer.buildingManager);
+            } else if (inventory.actionHandler.isActing){
+                inventory.actionHandler.HandleUseAction();
             }
             
         }

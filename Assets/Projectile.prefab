@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7377907647396346813}
   - component: {fileID: 7962198276878298853}
   - component: {fileID: 3025219607673704067}
+  - component: {fileID: 7769385382381719135}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MonoBehaviour:
   playerDamage: 0
   buildingDamage: 0
   speed: 0
-  rb: {fileID: 0}
+  owner: {fileID: 0}
 --- !u!114 &3025219607673704067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +71,29 @@ MonoBehaviour:
   serverOnly: 0
   visible: 2
   hasSpawned: 0
+--- !u!136 &7769385382381719135
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435832863042950256}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Height: 0.2
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9149115346902750549
 GameObject:
   m_ObjectHideFlags: 0

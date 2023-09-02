@@ -14,7 +14,7 @@ public class Projectile : NetworkBehaviour {
     [SyncVar]
     public float speed;
 
-    public Rigidbody rb;
+    public Character owner;
 
     [Server]
     public void Init(int pDamage, int bDamage, float projSpeed) {
@@ -25,6 +25,33 @@ public class Projectile : NetworkBehaviour {
 
     [Server]
     public void MoveProjectile() {
-        rb.velocity = transform.forward * speed;
+        Debug.Log("moving proj");
+        transform.position += transform.forward * speed;
+    }
+
+    [Server]
+    void OnTriggerEnter(Collider other) {
+        // Apply damage to player or building
+        
+
+        if (other.CompareTag("Player")) {
+            Debug.Log("hit: "+ other);
+            other.GetComponent<Character>().vitalStats.health -= playerDamage;
+            
+            // Despawn bullet
+            despawn();
+
+        } 
+        // else if (other.CompareTag("Building")) {
+        //     despawn();
+        // }
+        
+        
+
+    }
+
+    void despawn(){
+        owner.projectiles.Remove(this);
+        NetworkServer.Destroy(gameObject);
     }
 }
