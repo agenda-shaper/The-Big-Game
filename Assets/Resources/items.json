@@ -255,18 +255,8 @@
         "skillCost": 1
       },
       "stack": 40,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/day-clear-blue-plant2-orange.png"
       },
@@ -547,18 +537,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-wood-wall.png"
       },
@@ -748,18 +728,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-wall.png"
       },
@@ -949,18 +919,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-wall.png"
       },
@@ -1150,18 +1110,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-wood-door.png"
       },
@@ -1200,18 +1150,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door.png"
       },
@@ -1250,18 +1190,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door.png"
       },
@@ -1300,18 +1230,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-campfire.png"
       },
@@ -1595,18 +1515,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-campfire-bbq.png"
       },
@@ -1634,18 +1544,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        260,
-        100,
-        260
-      ],
-      "height": [
-        260,
-        100,
-        260,
-        100
-      ],
+      "width": [100, 260, 100, 260],
+      "height": [260, 100, 260, 100],
       "putableimg": {
         "source": "img/day-clear-blue-smelter.png"
       },
@@ -1687,18 +1587,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-wood-door1.png"
       },
@@ -1737,18 +1627,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door1.png"
       },
@@ -1787,18 +1667,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-door1.png"
       },
@@ -1873,18 +1743,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        280,
-        100,
-        280
-      ],
-      "height": [
-        280,
-        100,
-        280,
-        100
-      ],
+      "width": [100, 280, 100, 280],
+      "height": [280, 100, 280, 100],
       "putableimg": {
         "source": "img/day-clear-blue-workbench2.png"
       },
@@ -1930,18 +1790,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-weaving-machine.png"
       },
@@ -2006,18 +1856,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-chest.png"
       },
@@ -2045,18 +1885,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        50,
-        100,
-        50,
-        100
-      ],
-      "height": [
-        100,
-        50,
-        100,
-        50
-      ],
+      "width": [50, 100, 50, 100],
+      "height": [100, 50, 100, 50],
       "putableimg": {
         "source": "img/day-clear-blue-fridge.png"
       },
@@ -2084,18 +1914,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-wood-floor.png"
       },
@@ -2296,18 +2116,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-sleeping-bag.png"
       },
@@ -2372,18 +2182,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-woodlight-floor.png"
       },
@@ -2565,18 +2365,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-wood-smallwall.png"
       },
@@ -2737,18 +2527,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-smallwalls.png"
       },
@@ -2909,18 +2689,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        35,
-        100,
-        35
-      ],
-      "height": [
-        35,
-        100,
-        35,
-        100
-      ],
+      "width": [100, 35, 100, 35],
+      "height": [35, 100, 35, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-smallwalls.png"
       },
@@ -3162,18 +2932,8 @@
         "skillCost": 1
       },
       "stack": 40,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/day-clear-blue-tomato.png"
       },
@@ -3350,18 +3110,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -3543,18 +3293,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-tiling-floor.png"
       },
@@ -3872,18 +3612,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        260,
-        100,
-        260
-      ],
-      "height": [
-        260,
-        100,
-        260,
-        100
-      ],
+      "width": [100, 260, 100, 260],
+      "height": [260, 100, 260, 100],
       "putableimg": {
         "source": "img/day-clear-blue-workbench3.png"
       },
@@ -3962,18 +3692,8 @@
         "skillCost": 1
       },
       "stack": 20,
-      "width": [
-        50,
-        50,
-        50,
-        50
-      ],
-      "height": [
-        50,
-        50,
-        50,
-        50
-      ],
+      "width": [50, 50, 50, 50],
+      "height": [50, 50, 50, 50],
       "putableimg": {
         "source": "img/clear-blue-landmine.png"
       },
@@ -4012,18 +3732,8 @@
         "skillCost": 1
       },
       "stack": 10,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-dynamite.png"
       },
@@ -4059,18 +3769,8 @@
         "skillCost": 1
       },
       "stack": 5,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-C4.png"
       },
@@ -4125,18 +3825,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-composter.png"
       },
@@ -4334,18 +4024,8 @@
         "skillCost": 1
       },
       "stack": 40,
-      "width": [
-        50,
-        50,
-        50,
-        50
-      ],
-      "height": [
-        50,
-        50,
-        50,
-        50
-      ],
+      "width": [50, 50, 50, 50],
+      "height": [50, 50, 50, 50],
       "putableimg": {
         "source": "img/clear-blue-wood-spike.png"
       },
@@ -4466,18 +4146,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-agitator.png"
       },
@@ -4671,18 +4341,8 @@
         "skillCost": 1
       },
       "stack": 5,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/clear-blue-lapabot.png"
       },
@@ -4783,18 +4443,8 @@
         "skillCost": 1
       },
       "stack": 40,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/clear-blue-root.png"
       },
@@ -4839,18 +4489,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-extractor.png"
       },
@@ -4926,18 +4566,8 @@
         "skillCost": 1
       },
       "stack": 100,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/clear-blue-plant-tree.png"
       },
@@ -5039,18 +4669,8 @@
         "skillCost": 1
       },
       "stack": 5,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/clear-blue-hal-bot.png"
       },
@@ -5095,18 +4715,8 @@
         "skillCost": 1
       },
       "stack": 5,
-      "width": [
-        30,
-        30,
-        30,
-        30
-      ],
-      "height": [
-        30,
-        30,
-        30,
-        30
-      ],
+      "width": [30, 30, 30, 30],
+      "height": [30, 30, 30, 30],
       "putableimg": {
         "source": "img/clear-blue-tesla-bot.png"
       },
@@ -5151,18 +4761,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-wire0.png"
       },
@@ -5190,18 +4790,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-wire1.png"
       },
@@ -5229,18 +4819,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-wire2.png"
       },
@@ -5268,18 +4848,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-wire3.png"
       },
@@ -5307,18 +4877,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-switch.png"
       },
@@ -5354,18 +4914,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-switch-or.png"
       },
@@ -5393,18 +4943,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-switch-and.png"
       },
@@ -5432,18 +4972,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-switch-reverse.png"
       },
@@ -5471,18 +5001,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-lamp.png"
       },
@@ -5510,18 +5030,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-cable-wall.png"
       },
@@ -5563,18 +5073,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-automatic-door.png"
       },
@@ -5582,10 +5082,7 @@
         "source": "img/redprint-automatic-door.png"
       },
       "isDoor": 0,
-      "instation": [
-        {},
-        {}
-      ],
+      "instation": [{}, {}],
       "ground_img": "img/day-ground-automatic-door.png",
       "health": 15000,
       "selection_type": 21
@@ -5606,18 +5103,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-platform-off.png"
       },
@@ -5645,18 +5132,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-stone-cave.png"
       },
@@ -5838,18 +5315,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-bunker-wall.png"
       },
@@ -6031,18 +5498,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -6224,18 +5681,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/day-clear-blue-stone-floor.png"
       },
@@ -6417,18 +5864,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-welding-machine.png"
       },
@@ -6456,18 +5893,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-wire4.png"
       },
@@ -6495,18 +5922,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-timer.png"
       },
@@ -6548,18 +5965,8 @@
         "skillCost": 1
       },
       "stack": 255,
-      "width": [
-        100,
-        100,
-        100,
-        100
-      ],
-      "height": [
-        100,
-        100,
-        100,
-        100
-      ],
+      "width": [100, 100, 100, 100],
+      "height": [100, 100, 100, 100],
       "putableimg": {
         "source": "img/clear-blue-xor.png"
       },
