@@ -25,6 +25,8 @@ public class Item
 
     public string texture;
 
+    public string connection_type;
+
     // Start is called before the first frame update
     void Start()
     {

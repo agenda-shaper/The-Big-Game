@@ -199,7 +199,7 @@ public class BlockManager : NetworkBehaviour
     }
     private Mesh LoadBlockMesh(string meshSource)
     {
-        return Resources.Load<Mesh>("BlockMeshes/" + meshSource);
+        return Resources.Load<Mesh>("Meshes/" + meshSource);
     }
 
 

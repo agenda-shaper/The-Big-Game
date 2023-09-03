@@ -26,7 +26,7 @@ public class BuildManager : MonoBehaviour {
 
 
         // Load the mesh from Resources folder
-        Mesh loadedMesh = Resources.Load<Mesh>("BlockMeshes/" + meshSource);
+        Mesh loadedMesh = Resources.Load<Mesh>("Meshes/" + meshSource);
         meshFilter.mesh = loadedMesh;
 
         transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);

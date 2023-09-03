@@ -16,16 +16,43 @@ public class Projectile : NetworkBehaviour {
 
     public Character owner;
 
+    public MeshFilter meshFilter;
+
+    public GameObject meshObject;
+
+    public int despawnDuration;
+
     [Server]
-    public void Init(int pDamage, int bDamage, float projSpeed) {
+    public void Init(int pDamage, int bDamage, float projSpeed, string objFilename, int duration) {
         playerDamage = pDamage;
         buildingDamage = bDamage;
         speed = projSpeed;
+        despawnDuration = duration;
+        Mesh mesh = LoadBulletMesh(objFilename);
+        if (mesh != null) {
+            meshFilter.mesh = mesh;
+            meshObject.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
+
+        } else {
+            Debug.LogError("Mesh not found");
+        }
     }
+
+    private Mesh LoadBulletMesh(string meshSource)
+    {
+        return Resources.Load<Mesh>("Meshes/" + meshSource);
+    }
+
 
     [Server]
     public void MoveProjectile() {
-        transform.position += transform.forward * speed;
+        if (despawnDuration > 0) {
+            transform.position += transform.forward * speed;
+            despawnDuration-=1;
+        } else {
+            despawn();
+        }
+        
     }
 
     [Server]

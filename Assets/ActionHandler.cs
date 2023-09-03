@@ -144,12 +144,12 @@ public class ActionHandler : MonoBehaviour
     }
 
 
-    public void shootProjectile(int pDamage, int bDamage, float projSpeed) {
+    public void shootProjectile(int pDamage, int bDamage, float projSpeed,string type,int duration) {
         Quaternion adjustedRotation = Quaternion.Euler(0, inventory.player.transform.rotation.eulerAngles.y+ 90, 0);
         Vector3 spawnPosition = inventory.player.transform.position + (inventory.player.transform.right * 0.75f);
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, adjustedRotation); // Instantiate projectile
         Projectile projScript = projectile.GetComponent<Projectile>();
-        projScript.Init(pDamage, bDamage, projSpeed);
+        projScript.Init(pDamage, bDamage, projSpeed,type,duration);
         projScript.owner = inventory.player;
         NetworkServer.Spawn(projectile);
         inventory.player.projectiles.Add(projScript); // Add to player's list
@@ -158,10 +158,10 @@ public class ActionHandler : MonoBehaviour
 
     public void HandleAK47(SlotItem item) {
         // add bullet image 
-        shootProjectile(12, 24, 0.2f);
+        shootProjectile(12, 12, 0.25f,"heavy_bullet",50);
     }
     public void HandleSniper(SlotItem item){
-
+        shootProjectile(30, 30, 0.3f,"heavy_bullet",50);
     }
     public void HandleMedkit(SlotItem item){
 
@@ -173,7 +173,7 @@ public class ActionHandler : MonoBehaviour
 
     }
     public void HandleMP5(SlotItem item){
-
+        shootProjectile(8, 8, 0.25f,"9mm_bullet",50);
     }
     public void HandleSulfurPick(SlotItem item){
 
@@ -209,9 +209,10 @@ public class ActionHandler : MonoBehaviour
 
     }
     public void Handle9MM(SlotItem item){
-
+        shootProjectile(8, 8, 0.25f,"9mm_bullet",50);
     }
     public void HandleDesertEagle(SlotItem item){
+        shootProjectile(12, 12, 0.25f,"9mm_bullet",50);
 
     }
     public void HandleRawSteak(SlotItem item){
