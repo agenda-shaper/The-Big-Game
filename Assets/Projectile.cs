@@ -25,7 +25,6 @@ public class Projectile : NetworkBehaviour {
 
     [Server]
     public void MoveProjectile() {
-        Debug.Log("moving proj");
         transform.position += transform.forward * speed;
     }
 
@@ -35,16 +34,17 @@ public class Projectile : NetworkBehaviour {
         
 
         if (other.CompareTag("Player")) {
-            Debug.Log("hit: "+ other);
             other.GetComponent<Character>().vitalStats.health -= playerDamage;
-            
             // Despawn bullet
             despawn();
 
         } 
-        // else if (other.CompareTag("Building")) {
-        //     despawn();
-        // }
+        else if (other.CompareTag("Block")) {
+            Block block = other.GetComponent<Block>();
+            block.health -= buildingDamage;
+            block.AnimateHit(owner.rotation);
+            despawn();
+        }
         
         
 

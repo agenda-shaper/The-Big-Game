@@ -113,12 +113,12 @@ public class Character : NetworkBehaviour
         if (localPlayer.buildingManager.isBuilding){
             localPlayer.buildingManager.updatePosition(this);
         }
-        if (Input.GetMouseButton(0)) // Left Mouse Button Hold
-        {
-            if (inventory.actionHandler.isActing && inventory.actionHandler.actionContinous){
-                inventory.actionHandler.HandleUseAction();
-            }
-        }
+        // if (Input.GetMouseButton(0)) // Left Mouse Button Hold
+        // {
+        //     if (inventory.actionHandler.isActing && inventory.actionHandler.actionContinous){
+        //         inventory.actionHandler.HandleUseAction();
+        //     }
+        // }
         if (Input.GetMouseButtonDown(0)) // Left Click
         {
             // Code for left click

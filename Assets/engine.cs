@@ -19,8 +19,7 @@ public class Engine : NetworkBehaviour
 
   public GameObject localPlayerPrefab;
 
-
-
+  public static Engine Instance;
 
   public void AddPlayer(Character player) {
     playerList.Add(player);
@@ -63,6 +62,7 @@ public class Engine : NetworkBehaviour
 
   void Start(){
     Debug.Log("Starting");
+    Instance = this;
     networkManager.StartHost();
     blockManager.LoadItemDatabase();
 

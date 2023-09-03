@@ -146,7 +146,7 @@ public class ActionHandler : MonoBehaviour
 
     public void shootProjectile(int pDamage, int bDamage, float projSpeed) {
         Quaternion adjustedRotation = Quaternion.Euler(0, inventory.player.transform.rotation.eulerAngles.y+ 90, 0);
-        Vector3 spawnPosition = inventory.player.transform.position + (inventory.player.transform.right * 0.5f);
+        Vector3 spawnPosition = inventory.player.transform.position + (inventory.player.transform.right * 0.75f);
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, adjustedRotation); // Instantiate projectile
         Projectile projScript = projectile.GetComponent<Projectile>();
         projScript.Init(pDamage, bDamage, projSpeed);
@@ -158,7 +158,7 @@ public class ActionHandler : MonoBehaviour
 
     public void HandleAK47(SlotItem item) {
         // add bullet image 
-        shootProjectile(12, 24, 0.1f);
+        shootProjectile(12, 24, 0.2f);
     }
     public void HandleSniper(SlotItem item){
 

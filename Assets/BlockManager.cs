@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
-
+using System.Linq;
 
 [System.Serializable]
 public class ItemDatabaseWrapper
@@ -51,6 +51,7 @@ public class BlockManager : NetworkBehaviour
         Block block = blockInstance.GetComponent<Block>();  
 
         block.item = item;  
+        block.health = item.health;
 
         if (blockMap.ContainsKey(coord))
         {
@@ -80,7 +81,6 @@ public class BlockManager : NetworkBehaviour
 
         // Assuming you are using a simple texture to represent the block's appearance
         //Debug.Log(block.item.instation);
-
         UpdateBlock(block);
 
         Material material = Resources.Load<Material>("Materials/YellowMat");
@@ -90,7 +90,7 @@ public class BlockManager : NetworkBehaviour
                   
         if(texture != null)
         {
-            block.LoadImageTexture(texture);
+            block.loadImageTexture(texture);
         }
         else
         {
@@ -116,14 +116,29 @@ public class BlockManager : NetworkBehaviour
         }
     }
 
+    private bool IsConnected(Block block, Vector2 offset)
+    {
+        if (block.animating) {
+            Debug.Log("animating disconnected");
+            return false;}
+
+        Vector2 coord = new Vector2(block.transform.position.x + offset.x, block.transform.position.z + offset.y);
+        if (blockMap.TryGetValue(coord, out List<Block> neighborBlocks))
+        {
+            return neighborBlocks.Any(b => b.item.id == block.item.id && !b.animating);
+        }
+        return false;
+    }
+
+
+
     [Server]
     public void CheckAndUpdateMesh(Block block)
     {
         float x = block.transform.position.x;
         float z = block.transform.position.z;
 
-        MeshFilter meshFilter = block.GetComponent<MeshFilter>();
-        meshFilter.mesh.Clear(); // Clear the existing mesh data
+        block.meshFilter.mesh.Clear(); // Clear the existing mesh data
 
         CombineInstance[] combine = new CombineInstance[4];
 
@@ -148,9 +163,11 @@ public class BlockManager : NetworkBehaviour
                 translation = new Vector3(offsets[0].x, -1f, offsets[1].y);
             }
             Vector2 diagonalOffset = offsets[0] + offsets[1];
-            bool side1 = blockMap.ContainsKey(new Vector2(x + offsets[0].x, z + offsets[0].y));
-            bool side2 = blockMap.ContainsKey(new Vector2(x + offsets[1].x, z + offsets[1].y));
-            bool diag = blockMap.ContainsKey(new Vector2(x + diagonalOffset.x, z + diagonalOffset.y));
+
+            // if block is animating then treat it as not connected
+            bool side1 = IsConnected(block, new Vector2(offsets[0].x, offsets[0].y));
+            bool side2 = IsConnected(block, new Vector2(offsets[1].x, offsets[1].y));
+            bool diag = IsConnected(block, new Vector2(diagonalOffset.x, diagonalOffset.y));
 
 
             (string meshSource, float rotationAngle) = SelectMesh(block.item, side1, side2, diag);
@@ -165,11 +182,19 @@ public class BlockManager : NetworkBehaviour
             combine[i].transform = scaleMatrix * Matrix4x4.Translate(translation) * Matrix4x4.Rotate(Quaternion.Euler(0, finalRotation, 0));
         }
 
-        meshFilter.mesh = new Mesh();
-        meshFilter.mesh.CombineMeshes(combine, true, true);
+        block.meshFilter.mesh = new Mesh();
+        block.meshFilter.mesh.CombineMeshes(combine, true, true);
 
+        Vector3[] vertices = block.meshFilter.mesh.vertices;  // Get all vertices
+        Vector2[] newUVs = new Vector2[vertices.Length]; // Initialize new UV array
 
-        
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            Vector3 vertex = vertices[i];
+            newUVs[i] = new Vector2(vertex.x, vertex.z);  // Planar projection
+        }
+
+        block.meshFilter.mesh.uv = newUVs; // Set the mesh's UVs
 
     }
     private Mesh LoadBlockMesh(string meshSource)
@@ -225,7 +250,9 @@ public class BlockManager : NetworkBehaviour
             Vector2 neighborCoord = new Vector2(x + offset.x, z + offset.y);
             if (blockMap.TryGetValue(neighborCoord, out List<Block> neighborBlocks))
             {
-                neighbors.AddRange(neighborBlocks);
+                // Filter blocks with the same item.id
+                var filteredNeighbors = neighborBlocks.Where(n => n.item.id == block.item.id).ToList();
+                neighbors.AddRange(filteredNeighbors);
             }
         }
         return neighbors;

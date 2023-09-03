@@ -27,6 +27,10 @@ public class VitalStats : NetworkBehaviour
         if (health <= 0){
             if (player.immortal){
                 health = 255;
+                hunger = 255;
+                cold = 255;
+                radiation = 255;
+                energy = 255;
             } else {
                 // die
                 Debug.Log("dead");

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - ActionSpace
+  - Block
   layers:
   - Default
   - TransparentFX
