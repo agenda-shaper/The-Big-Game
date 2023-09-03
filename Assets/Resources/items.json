@@ -729,7 +729,8 @@
         "building": "cube_block_building"
       },
       "health": 3000,
-      "selection_type": 21
+      "selection_type": 21,
+      "texture": "wooden_wall"
     },
     {
       "id": 28,
@@ -929,7 +930,8 @@
         "building": "cube_block_building"
       },
       "health": 7000,
-      "selection_type": 21
+      "selection_type": 21,
+      "texture": "stone_wall"
     },
     {
       "id": 29,
@@ -941,7 +943,7 @@
         ]
       },
       "detail": {
-        "name": "Metal Wall",
+        "name": "Steel Wall",
         "description": "Afraid we'll find you?",
         "level": 6,
         "skillCost": 1
@@ -1129,7 +1131,8 @@
         "building": "cube_block_building"
       },
       "health": 15000,
-      "selection_type": 21
+      "selection_type": 21,
+      "texture": "steel_wall"
     },
     {
       "id": 30,

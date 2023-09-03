@@ -32,7 +32,6 @@ public class Inventory : NetworkBehaviour
     public Character player;
     public ActionHandler actionHandler;
 
-    public bool actionContinous;
 
     public GameObject droppedItemPrefab;
 

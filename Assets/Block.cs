@@ -32,7 +32,7 @@ public class Block : NetworkBehaviour
     {
         //image.texture = tex;
         meshRenderer.material.mainTexture = tex;
-        meshRenderer.material.shader = Shader.Find("Unlit/Transparent");
+        meshRenderer.material.shader = Shader.Find("Standard");
         meshRenderer.enabled = true;
         //image.rectTransform.sizeDelta = new Vector2(tex.width, tex.height);
     }

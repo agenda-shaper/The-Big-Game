@@ -23,6 +23,8 @@ public class Item
     public int health;
     public int selection_type;
 
+    public string texture;
+
     // Start is called before the first frame update
     void Start()
     {

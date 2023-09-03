@@ -1141,6 +1141,7 @@ const items = [
       enclosed: "cube_block_enclosed",
       building: "cube_block_building",
     },
+    texture: "wooden_wall",
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
@@ -1533,6 +1534,7 @@ const items = [
       enclosed: "cube_block_enclosed",
       building: "cube_block_building",
     },
+    texture: "stone_wall",
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
@@ -1907,7 +1909,7 @@ const items = [
       ],
     },
     detail: {
-      name: "Metal Wall",
+      name: "Steel Wall",
       description: "Afraid we'll find you?",
       WVn: [[8, 3]],
       stack: 1,
@@ -1925,6 +1927,7 @@ const items = [
       enclosed: "cube_block_enclosed",
       building: "cube_block_building",
     },
+    texture: "steel_wall",
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
@@ -20671,6 +20674,7 @@ const ClearedItems = items.map((item) => {
     blockMeshes,
     health,
     selection_type,
+    texture,
   } = item;
 
   //console.log(typeof broken);
@@ -20698,13 +20702,14 @@ const ClearedItems = items.map((item) => {
       ? broken.map(({ source }) => ({ source }))
       : undefined,
     instation: Array.isArray(instation)
-      ? instation.map(({ source }) => ({ source })) 
+      ? instation.map(({ source }) => ({ source }))
       : undefined,
 
     ground_img,
     blockMeshes,
     health,
     selection_type,
+    texture,
   };
 });
 

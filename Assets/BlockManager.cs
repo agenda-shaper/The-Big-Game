@@ -83,10 +83,10 @@ public class BlockManager : NetworkBehaviour
         //Debug.Log(block.item.instation);
         UpdateBlock(block);
 
-        Material material = Resources.Load<Material>("Materials/YellowMat");
-        block.meshRenderer.material = material;
+        //Material material = Resources.Load<Material>("Materials/YellowMat");
+        //block.meshRenderer.material = material;
         block.meshRenderer.enabled = true;
-        Texture2D texture = LoadTextureFromPath("wooden");
+        Texture2D texture = LoadTextureFromPath("Materials/" + block.item.texture);
                   
         if(texture != null)
         {
