@@ -22,7 +22,7 @@ public class BuildManager : MonoBehaviour {
         isBuilding = true;
         slotItem = item;
 
-        string meshSource = "cube_block_building"; // item.item.blockMeshes.building;  
+        string meshSource = item.item.blockMeshes.building;
 
 
         // Load the mesh from Resources folder

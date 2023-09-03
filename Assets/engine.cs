@@ -42,7 +42,7 @@ public class Engine : NetworkBehaviour
       player.HandlePlayer(); // You would define this method in your Player class
       if (player.inventory.slots.Count < 8){
         player.inventory.SpawnNewSlot();
-        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+20),1);
+        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+53),1);
 
         //player.inventory.DropItem(player.inventory.slots.Count-1);
       }
@@ -66,12 +66,12 @@ public class Engine : NetworkBehaviour
     networkManager.StartHost();
     blockManager.LoadItemDatabase();
 
-    blockManager.SpawnBlock(2, 3, 29);
-    blockManager.SpawnBlock(3, 2, 29);
-    blockManager.SpawnBlock(3, 3, 29);
-    blockManager.SpawnBlock(4, 3, 29);
-    blockManager.SpawnBlock(5, 3, 29);
-    blockManager.SpawnBlock(6, 3, 29);
+    blockManager.SpawnBlock(2, 3, 29,0);
+    blockManager.SpawnBlock(3, 2, 29,0);
+    blockManager.SpawnBlock(3, 3, 29,0);
+    blockManager.SpawnBlock(4, 3, 29,0);
+    blockManager.SpawnBlock(5, 3, 29,0);
+    blockManager.SpawnBlock(6, 3, 29,0);
     //blockManager.SpawnBlock(2, 2, 29);
 
 

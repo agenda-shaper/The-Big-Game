@@ -27,6 +27,10 @@ public class Item
 
     public string connection_type;
 
+    public bool hittable_by_projectiles;
+
+    public bool hasCollision;
+
     // Start is called before the first frame update
     void Start()
     {

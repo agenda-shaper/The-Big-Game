@@ -68,13 +68,12 @@ public class Projectile : NetworkBehaviour {
         } 
         else if (other.CompareTag("Block")) {
             Block block = other.GetComponent<Block>();
-            block.health -= buildingDamage;
-            block.AnimateHit(owner.rotation);
-            despawn();
+            if (block.item.hittable_by_projectiles){
+                block.health -= buildingDamage;
+                block.AnimateHit(owner.rotation);
+                despawn();
+            }
         }
-        
-        
-
     }
 
     void despawn(){

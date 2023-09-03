@@ -19,6 +19,6 @@ public class HoldingItem : NetworkBehaviour
 
         // Scale the quad to match the texture's dimensions
         float scalingFactor = 0.007f; // Adjust this to change the overall size of the quad
-        transform.localScale = new Vector3(width * scalingFactor, 1f, height * scalingFactor);
+        transform.localScale = new Vector3(width * scalingFactor, height * scalingFactor,1f);
     }
 }

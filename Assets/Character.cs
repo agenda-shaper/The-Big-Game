@@ -150,7 +150,7 @@ public class Character : NetworkBehaviour
     public void BuildBlock(BuildManager buildManager){
         // check and verify the positions
 
-        engine.blockManager.SpawnBlock(buildManager.x, buildManager.y, buildManager.slotItem.item.id);
+        engine.blockManager.SpawnBlock(buildManager.x, buildManager.y, buildManager.slotItem.item.id,buildManager.rotation);
 
         // remove 1 block
         // do all the inventory checking

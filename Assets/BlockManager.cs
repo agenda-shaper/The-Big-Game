@@ -24,7 +24,7 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    public void SpawnBlock(float x, float z, int itemId)
+    public void SpawnBlock(float x, float z, int itemId, int rotation)
     {
 
         Vector2 coord = new Vector2(x, z);
@@ -46,12 +46,13 @@ public class BlockManager : NetworkBehaviour
         Vector3 position = new Vector3(x, 1, z);
 
         // spawn blank prefab
-        GameObject blockInstance = Instantiate(blockPrefab, position, Quaternion.identity);
+        GameObject blockInstance = Instantiate(blockPrefab, position, Quaternion.Euler(0, rotation, 0));
 
         Block block = blockInstance.GetComponent<Block>();  
 
         block.item = item;  
         block.health = item.health;
+        block.rotation = rotation;
 
         if (blockMap.ContainsKey(coord))
         {
@@ -77,10 +78,11 @@ public class BlockManager : NetworkBehaviour
     {
         //Debug.Log(block.item);
         // Set up collisions based on width and height
-        SetupCollisions(block.blockInstance,block.item.width, block.item.height);
+        SetupCollisions(block);
 
         // Assuming you are using a simple texture to represent the block's appearance
         //Debug.Log(block.item.instation);
+        
         UpdateBlock(block);
 
         //Material material = Resources.Load<Material>("Materials/YellowMat");
@@ -104,22 +106,24 @@ public class BlockManager : NetworkBehaviour
     [Server]
     public void UpdateBlock(Block block)
     {
+        if (block.item.connection_type == null){
+            //Debug.Log("null connection type of: "+ block.item.details.name);
+            return;
+        }
+
 
         List<Block> neighbors = GetNeighboringBlocks(block);
         CheckAndUpdateMesh(block);
-
         foreach (var neighbor in neighbors)
         {
-            //Debug.Log("updating neighbour");
             CheckAndUpdateMesh(neighbor);
-            // update all neighbours too
-        }
+        }        
     }
 
     private bool IsConnected(Block block, Vector2 offset)
     {
         if (block.animating) {
-            Debug.Log("animating disconnected");
+            //Debug.Log("animating disconnected");
             return false;}
 
         Vector2 coord = new Vector2(block.transform.position.x + offset.x, block.transform.position.z + offset.y);
@@ -129,8 +133,6 @@ public class BlockManager : NetworkBehaviour
         }
         return false;
     }
-
-
 
     [Server]
     public void CheckAndUpdateMesh(Block block)
@@ -173,7 +175,7 @@ public class BlockManager : NetworkBehaviour
             (string meshSource, float rotationAngle) = SelectMesh(block.item, side1, side2, diag);
             //Debug.Log("source: " + meshSource);
             Mesh cornerMesh = LoadBlockMesh(meshSource);  // This will load the Mesh
-            float finalRotation = rotationAngle + baseRotationAngles[i] + block.rotation;  // Combine with base rotation
+            float finalRotation = rotationAngle + baseRotationAngles[i];// + block.rotation;  // Combine with base rotation
             
 
 
@@ -207,27 +209,44 @@ public class BlockManager : NetworkBehaviour
     {
         float rotationAngle = 0.0f;
 
-        if (side1 && side2 && !diag)
-        {
-            return (item.blockMeshes.inward, rotationAngle);
+        switch (item.connection_type){
+            case "wall":
+                if (side1 && side2 && !diag)
+                {
+                    return (item.blockMeshes.inward, rotationAngle);
+                }
+                else if (side1 && side2 && diag)
+                {
+                    return (item.blockMeshes.enclosed, rotationAngle);
+                }
+                else if (side1 && !side2)
+                {
+                    return (item.blockMeshes.side, rotationAngle);
+                }
+                else if (!side1 && side2)
+                {
+                    rotationAngle = 270.0f;
+                    return (item.blockMeshes.side, rotationAngle);
+                }
+                else
+                {
+                    return (item.blockMeshes.outward, rotationAngle);
+                }
+            case "floor":
+                if (!side1 && !side2)
+                {
+                    rotationAngle = -90.0f;
+                    return (item.blockMeshes.outward, rotationAngle);
+                }
+                else
+                {
+                    return (item.blockMeshes.enclosed, rotationAngle);
+                }
+            default:
+                return (item.blockMeshes.outward, rotationAngle);
         }
-        else if (side1 && side2 && diag)
-        {
-            return (item.blockMeshes.enclosed, rotationAngle);
-        }
-        else if (side1 && !side2)
-        {
-            return (item.blockMeshes.side, rotationAngle);
-        }
-        else if (!side1 && side2)
-        {
-            rotationAngle = 270.0f;
-            return (item.blockMeshes.side, rotationAngle);
-        }
-        else
-        {
-            return (item.blockMeshes.outward, rotationAngle);
-        }
+
+        
     }
 
 
@@ -285,19 +304,29 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    void SetupCollisions(GameObject blockInstance, int[] widths, int[] heights)
+    void CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3())
     {
+        GameObject colliderChild = new GameObject(childName);
+        colliderChild.transform.SetParent(blockInstance.transform);
+        colliderChild.transform.localPosition = localPosition;
+        colliderChild.transform.localRotation = Quaternion.Euler(rotation); // Rotation added here
 
-        //Debug.Log("collisions setuping");
+        BoxCollider collider = colliderChild.AddComponent<BoxCollider>();
+        collider.size = size;
+    }
 
-
+    [Server]
+    void SetupCollisions(Block block)
+    {
+        GameObject blockInstance = block.blockInstance;
+        int[] widths = block.item.width;
+        int[] heights = block.item.height;
         if (widths.Length != 4 || heights.Length != 4)
         {
             Debug.LogError("Widths and heights arrays should both have 4 elements.");
             return;
         }
 
-        // Convert values since 100 = 1 unit
         float[] floatWidths = new float[4];
         float[] floatHeights = new float[4];
         for (int i = 0; i < 4; i++)
@@ -306,20 +335,10 @@ public class BlockManager : NetworkBehaviour
             floatHeights[i] = heights[i] / 100f;
         }
 
-        CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]));
-        CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]));
+    CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0)); // block.rotation
+    CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0)); // Subtract 90-degree for the second collider
     }
 
-    [Server]
-    void CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size)
-    {
-        GameObject colliderChild = new GameObject(childName);
-        colliderChild.transform.SetParent(blockInstance.transform);
-        colliderChild.transform.localPosition = localPosition;
-
-        BoxCollider collider = colliderChild.AddComponent<BoxCollider>();
-        collider.size = size;
-    }
 
     [Server]
     public void LoadItemDatabase()

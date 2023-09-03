@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 2757225369763166857}
   - component: {fileID: 5378244703336752095}
   - component: {fileID: 7608188466805991698}
-  - component: {fileID: 8610051893450941913}
   - component: {fileID: 8134799120637107741}
   m_Layer: 0
   m_Name: Block
@@ -163,27 +162,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &8610051893450941913
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4508682483363868049}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8134799120637107741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +209,10 @@ MonoBehaviour:
       building: 
     health: 0
     selection_type: 0
+    texture: 
+    connection_type: 
+    hittable_by_projectiles: 0
+    hasCollision: 0
   rotation: 0
   health: 0
-  moveDistance: 1
-  moveDuration: 0.5
+  animating: 0

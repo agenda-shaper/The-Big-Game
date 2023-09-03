@@ -28,6 +28,7 @@ public class ActionHandler : MonoBehaviour
 
 
     public void HandleSelection(SlotItem slotItem){
+        if (slotItem.item.selection_type <= 0) return;
         if (isActing) exitLastAction();
 
         if (isActing && currentSlotItem == slotItem){
@@ -38,7 +39,7 @@ public class ActionHandler : MonoBehaviour
             return;
         }
                 
-        
+    
         switch (slotItem.item.selection_type) {
             case 21:
                 inventory.player.localPlayer.buildingManager.startBuilding(slotItem);
@@ -47,12 +48,14 @@ public class ActionHandler : MonoBehaviour
                 // pick up in hand
                 break;
         }
-
-        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(slotItem.item.ground_img));
+        string holdingSource = "img/day-" + slotItem.item.detail.name.ToLower().Replace(" ", "-");
+        //Debug.Log(holdingSource);
 
         inventory.holdingItem.gameObject.SetActive(true);
         isActing = true;
         currentSlotItem = slotItem;
+        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(holdingSource));
+
     }
 
     public void HandleUseAction()
