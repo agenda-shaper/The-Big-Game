@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 430, y: 246.2}
+  m_AnchoredPosition: {x: 430, y: 243.1}
   m_SizeDelta: {x: 84.8, y: 20.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6034710509204323581
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278886310
-  m_fontColor: {r: 0.6509434, g: 0.62285024, b: 0.03991636, a: 1}
+    rgba: 4279399030
+  m_fontColor: {r: 0.4627451, g: 0.44705883, b: 0.07058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -126,8 +126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -522,7 +522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 472, y: 288}
+  m_AnchoredPosition: {x: 472, y: 287.5}
   m_SizeDelta: {x: 168.9, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2653358286329411793
@@ -721,6 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6570023995265228126}
+  - component: {fileID: 5990444757442214633}
   m_Layer: 5
   m_Name: HighlightedItem
   m_TagString: Untagged
@@ -751,6 +752,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &5990444757442214633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3079501892094632944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd3acc79d98b6e4eb6d2fa2fa44e14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftingMenu: {fileID: 6782273561529897335}
+  itemImage: {fileID: 7743524700403812462}
+  itemName: {fileID: 1295769077051158856}
+  description: {fileID: 5244405417650153561}
+  life: {fileID: 9096126089855779080}
 --- !u!1 &3404609003763030717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,7 +1194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 430, y: 315.7}
+  m_AnchoredPosition: {x: 430, y: 320.78}
   m_SizeDelta: {x: 84.8, y: 20.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &3044627382674729196
@@ -1241,7 +1259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wooden Wall
+  m_text: Wooden Low Door
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -1250,8 +1268,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278886310
-  m_fontColor: {r: 0.6509434, g: 0.62285024, b: 0.03991636, a: 1}
+    rgba: 4279399030
+  m_fontColor: {r: 0.4627451, g: 0.44705883, b: 0.07058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1268,13 +1286,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 110
-  m_fontSizeBase: 110
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1365,6 +1383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstCraftPrefab: {fileID: 3525309122665591590, guid: e1bb70f14de557348ac1425751d994a0, type: 3}
   localPlayer: {fileID: 1388985727030959506}
+  highlightedItem: {fileID: 5990444757442214633}
   craftSlots: []
 --- !u!1 &8436393302374936136
 GameObject:

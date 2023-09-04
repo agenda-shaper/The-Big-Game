@@ -8,6 +8,8 @@ public class CraftingMenu : MonoBehaviour
 
     public LocalPlayer localPlayer;
 
+    public HighlightedItem highlightedItem;
+
     public List<CraftSlot> craftSlots = new List<CraftSlot>();
 
     private float starting_pos_x = -485f;
@@ -68,6 +70,8 @@ public class CraftingMenu : MonoBehaviour
             // Load the item into the slot
             LoadItemInSlot(currentSlot, items[i]);
         }
+        // highlight first
+        highlightedItem.LoadInfo(craftSlots[0]);
     }
 
     public void ClearAllCraftSlots()
@@ -83,6 +87,8 @@ public class CraftingMenu : MonoBehaviour
             // If you want to deactivate the slot's game object, do:
             slot.gameObject.SetActive(false);
         }
+
+        
     }
 
 
@@ -119,6 +125,7 @@ public class CraftingMenu : MonoBehaviour
         LoadItemTexture(slot, slot.item.img.source[1]);
 
         // add loading item
+        highlightedItem.LoadInfo(slot);
     }
 
 
