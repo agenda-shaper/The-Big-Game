@@ -13,6 +13,9 @@ public class Item
     public int stack;
     public int[] width;
     public int[] height;
+
+    public int[] inmapx;
+    public int[] inmapy;
     public PutableImg putableimg;
     public NonPutableImg notputableimg;
     public bool isDoor;
@@ -29,7 +32,9 @@ public class Item
 
     public bool hittable_by_projectiles;
 
-    public bool hasCollision;
+    public bool collidesWithEntities;
+
+    public string inmap_image;
 
     // Start is called before the first frame update
     void Start()

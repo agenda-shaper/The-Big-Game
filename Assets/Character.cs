@@ -32,7 +32,7 @@ public class Character : NetworkBehaviour
 
 
     [SyncVar]
-    public float movementSpeed = 0.04f;
+    public float movementSpeed = 0.03f;
     
     [SyncVar]
     public float sprintMultiplier = 1.5f;

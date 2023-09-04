@@ -16,7 +16,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-wood.png"
+      "ground_img": "img/day-ground-wood.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 2,
@@ -34,7 +37,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-stone.png"
+      "ground_img": "img/day-ground-stone.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 3,
@@ -52,7 +58,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-steel.png"
+      "ground_img": "img/day-ground-steel.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 4,
@@ -70,7 +79,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-animal-fat.png"
+      "ground_img": "img/day-ground-animal-fat.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 5,
@@ -88,7 +100,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-animal-tendon.png"
+      "ground_img": "img/day-ground-animal-tendon.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 6,
@@ -106,7 +121,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-string.png"
+      "ground_img": "img/day-ground-string.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 7,
@@ -124,7 +142,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-leather-boar.png"
+      "ground_img": "img/day-ground-leather-boar.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 8,
@@ -142,7 +163,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-shaped-metal.png"
+      "ground_img": "img/day-ground-shaped-metal.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 9,
@@ -161,7 +185,10 @@
       },
       "stack": 10,
       "ground_img": "img/day-ground-raw-steak.png",
-      "selection_type": 12
+      "selection_type": 12,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 10,
@@ -180,7 +207,10 @@
       },
       "stack": 10,
       "ground_img": "img/day-ground-cooked-steak.png",
-      "selection_type": 13
+      "selection_type": 13,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 11,
@@ -199,7 +229,10 @@
       },
       "stack": 10,
       "ground_img": "img/day-ground-rotten-steak.png",
-      "selection_type": 14
+      "selection_type": 14,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 12,
@@ -218,7 +251,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-orange.png",
-      "selection_type": 15
+      "selection_type": 15,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 13,
@@ -237,7 +273,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-orange.png",
-      "selection_type": 16
+      "selection_type": 16,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 14,
@@ -293,7 +332,10 @@
       ],
       "ground_img": "img/day-ground-orange-seed.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 15,
@@ -312,7 +354,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-hachet.png",
-      "selection_type": 3
+      "selection_type": 3,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 16,
@@ -331,7 +376,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-pickaxe.png",
-      "selection_type": 1
+      "selection_type": 1,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 17,
@@ -350,7 +398,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-steel-pickaxe.png",
-      "selection_type": 2
+      "selection_type": 2,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 18,
@@ -369,7 +420,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-axe.png",
-      "selection_type": 4
+      "selection_type": 4,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 19,
@@ -396,7 +450,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-workbench.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-workbench.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 20,
@@ -415,7 +472,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-spear.png",
-      "selection_type": 5
+      "selection_type": 5,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 21,
@@ -434,7 +494,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-bow.png",
-      "selection_type": 6
+      "selection_type": 6,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 22,
@@ -453,7 +516,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-9mm.png",
-      "selection_type": 8
+      "selection_type": 8,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 23,
@@ -472,7 +538,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-desert-eagle.png",
-      "selection_type": 9
+      "selection_type": 9,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 24,
@@ -491,7 +560,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-shotgun.png",
-      "selection_type": 7
+      "selection_type": 7,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 25,
@@ -510,7 +582,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-ak47.png",
-      "selection_type": 10
+      "selection_type": 10,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 26,
@@ -529,7 +604,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-sniper.png",
-      "selection_type": 11
+      "selection_type": 11,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 27,
@@ -559,167 +637,7 @@
         100,
         100
       ],
-      "putableimg": {
-        "source": "img/day-clear-blue-wood-wall.png"
-      },
-      "notputableimg": {
-        "source": "img/day-redprint-wood-wall.png"
-      },
       "isDoor": 0,
-      "broken": [
-        {
-          "source": "img/day-wood-wall-broken0.png"
-        },
-        {
-          "source": "img/day-wood-wall-broken1.png"
-        },
-        {
-          "source": "img/day-wood-wall-broken2.png"
-        }
-      ],
-      "instation": [
-        {
-          "source": "img/day-wood-wall0.png"
-        },
-        {
-          "source": "img/day-wood-wall1.png"
-        },
-        {
-          "source": "img/day-wood-wall2.png"
-        },
-        {
-          "source": "img/day-wood-wall3.png"
-        },
-        {
-          "source": "img/day-wood-wall4.png"
-        },
-        {
-          "source": "img/day-wood-wall5.png"
-        },
-        {
-          "source": "img/day-wood-wall6.png"
-        },
-        {
-          "source": "img/day-wood-wall7.png"
-        },
-        {
-          "source": "img/day-wood-wall8.png"
-        },
-        {
-          "source": "img/day-wood-wall9.png"
-        },
-        {
-          "source": "img/day-wood-wall10.png"
-        },
-        {
-          "source": "img/day-wood-wall11.png"
-        },
-        {
-          "source": "img/day-wood-wall12.png"
-        },
-        {
-          "source": "img/day-wood-wall13.png"
-        },
-        {
-          "source": "img/day-wood-wall14.png"
-        },
-        {
-          "source": "img/day-wood-wall15.png"
-        },
-        {
-          "source": "img/day-wood-wall16.png"
-        },
-        {
-          "source": "img/day-wood-wall17.png"
-        },
-        {
-          "source": "img/day-wood-wall18.png"
-        },
-        {
-          "source": "img/day-wood-wall19.png"
-        },
-        {
-          "source": "img/day-wood-wall20.png"
-        },
-        {
-          "source": "img/day-wood-wall21.png"
-        },
-        {
-          "source": "img/day-wood-wall22.png"
-        },
-        {
-          "source": "img/day-wood-wall23.png"
-        },
-        {
-          "source": "img/day-wood-wall24.png"
-        },
-        {
-          "source": "img/day-wood-wall25.png"
-        },
-        {
-          "source": "img/day-wood-wall26.png"
-        },
-        {
-          "source": "img/day-wood-wall27.png"
-        },
-        {
-          "source": "img/day-wood-wall28.png"
-        },
-        {
-          "source": "img/day-wood-wall29.png"
-        },
-        {
-          "source": "img/day-wood-wall30.png"
-        },
-        {
-          "source": "img/day-wood-wall31.png"
-        },
-        {
-          "source": "img/day-wood-wall32.png"
-        },
-        {
-          "source": "img/day-wood-wall33.png"
-        },
-        {
-          "source": "img/day-wood-wall34.png"
-        },
-        {
-          "source": "img/day-wood-wall35.png"
-        },
-        {
-          "source": "img/day-wood-wall36.png"
-        },
-        {
-          "source": "img/day-wood-wall37.png"
-        },
-        {
-          "source": "img/day-wood-wall38.png"
-        },
-        {
-          "source": "img/day-wood-wall39.png"
-        },
-        {
-          "source": "img/day-wood-wall40.png"
-        },
-        {
-          "source": "img/day-wood-wall41.png"
-        },
-        {
-          "source": "img/day-wood-wall42.png"
-        },
-        {
-          "source": "img/day-wood-wall43.png"
-        },
-        {
-          "source": "img/day-wood-wall44.png"
-        },
-        {
-          "source": "img/day-wood-wall45.png"
-        },
-        {
-          "source": "img/day-wood-wall46.png"
-        }
-      ],
       "ground_img": "img/day-ground-wood-wall.png",
       "blockMeshes": {
         "inward": "cube_block_inward",
@@ -731,7 +649,10 @@
       "health": 3000,
       "selection_type": 21,
       "texture": "wooden_wall",
-      "connection_type": "wall"
+      "inmap_image": null,
+      "connection_type": "wall",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 28,
@@ -761,167 +682,7 @@
         100,
         100
       ],
-      "putableimg": {
-        "source": "img/day-clear-blue-stone-wall.png"
-      },
-      "notputableimg": {
-        "source": "img/day-redprint-stone-wall.png"
-      },
       "isDoor": 0,
-      "broken": [
-        {
-          "source": "img/day-stone-wall-broken0.png"
-        },
-        {
-          "source": "img/day-stone-wall-broken1.png"
-        },
-        {
-          "source": "img/day-stone-wall-broken2.png"
-        }
-      ],
-      "instation": [
-        {
-          "source": "img/day-stone-wall0.png"
-        },
-        {
-          "source": "img/day-stone-wall1.png"
-        },
-        {
-          "source": "img/day-stone-wall2.png"
-        },
-        {
-          "source": "img/day-stone-wall3.png"
-        },
-        {
-          "source": "img/day-stone-wall4.png"
-        },
-        {
-          "source": "img/day-stone-wall5.png"
-        },
-        {
-          "source": "img/day-stone-wall6.png"
-        },
-        {
-          "source": "img/day-stone-wall7.png"
-        },
-        {
-          "source": "img/day-stone-wall8.png"
-        },
-        {
-          "source": "img/day-stone-wall9.png"
-        },
-        {
-          "source": "img/day-stone-wall10.png"
-        },
-        {
-          "source": "img/day-stone-wall11.png"
-        },
-        {
-          "source": "img/day-stone-wall12.png"
-        },
-        {
-          "source": "img/day-stone-wall13.png"
-        },
-        {
-          "source": "img/day-stone-wall14.png"
-        },
-        {
-          "source": "img/day-stone-wall15.png"
-        },
-        {
-          "source": "img/day-stone-wall16.png"
-        },
-        {
-          "source": "img/day-stone-wall17.png"
-        },
-        {
-          "source": "img/day-stone-wall18.png"
-        },
-        {
-          "source": "img/day-stone-wall19.png"
-        },
-        {
-          "source": "img/day-stone-wall20.png"
-        },
-        {
-          "source": "img/day-stone-wall21.png"
-        },
-        {
-          "source": "img/day-stone-wall22.png"
-        },
-        {
-          "source": "img/day-stone-wall23.png"
-        },
-        {
-          "source": "img/day-stone-wall24.png"
-        },
-        {
-          "source": "img/day-stone-wall25.png"
-        },
-        {
-          "source": "img/day-stone-wall26.png"
-        },
-        {
-          "source": "img/day-stone-wall27.png"
-        },
-        {
-          "source": "img/day-stone-wall28.png"
-        },
-        {
-          "source": "img/day-stone-wall29.png"
-        },
-        {
-          "source": "img/day-stone-wall30.png"
-        },
-        {
-          "source": "img/day-stone-wall31.png"
-        },
-        {
-          "source": "img/day-stone-wall32.png"
-        },
-        {
-          "source": "img/day-stone-wall33.png"
-        },
-        {
-          "source": "img/day-stone-wall34.png"
-        },
-        {
-          "source": "img/day-stone-wall35.png"
-        },
-        {
-          "source": "img/day-stone-wall36.png"
-        },
-        {
-          "source": "img/day-stone-wall37.png"
-        },
-        {
-          "source": "img/day-stone-wall38.png"
-        },
-        {
-          "source": "img/day-stone-wall39.png"
-        },
-        {
-          "source": "img/day-stone-wall40.png"
-        },
-        {
-          "source": "img/day-stone-wall41.png"
-        },
-        {
-          "source": "img/day-stone-wall42.png"
-        },
-        {
-          "source": "img/day-stone-wall43.png"
-        },
-        {
-          "source": "img/day-stone-wall44.png"
-        },
-        {
-          "source": "img/day-stone-wall45.png"
-        },
-        {
-          "source": "img/day-stone-wall46.png"
-        }
-      ],
       "ground_img": "img/day-ground-stone-wall.png",
       "blockMeshes": {
         "inward": "cube_block_inward",
@@ -933,7 +694,10 @@
       "health": 7000,
       "selection_type": 21,
       "texture": "stone_wall",
-      "connection_type": "wall"
+      "inmap_image": null,
+      "connection_type": "wall",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 29,
@@ -963,167 +727,7 @@
         100,
         100
       ],
-      "putableimg": {
-        "source": "img/day-clear-blue-stone-wall.png"
-      },
-      "notputableimg": {
-        "source": "img/day-redprint-stone-wall.png"
-      },
       "isDoor": 0,
-      "broken": [
-        {
-          "source": "img/day-steel-wall-broken0.png"
-        },
-        {
-          "source": "img/day-steel-wall-broken1.png"
-        },
-        {
-          "source": "img/day-steel-wall-broken2.png"
-        }
-      ],
-      "instation": [
-        {
-          "source": "img/day-steel-wall0.png"
-        },
-        {
-          "source": "img/day-steel-wall1.png"
-        },
-        {
-          "source": "img/day-steel-wall2.png"
-        },
-        {
-          "source": "img/day-steel-wall3.png"
-        },
-        {
-          "source": "img/day-steel-wall4.png"
-        },
-        {
-          "source": "img/day-steel-wall5.png"
-        },
-        {
-          "source": "img/day-steel-wall6.png"
-        },
-        {
-          "source": "img/day-steel-wall7.png"
-        },
-        {
-          "source": "img/day-steel-wall8.png"
-        },
-        {
-          "source": "img/day-steel-wall9.png"
-        },
-        {
-          "source": "img/day-steel-wall10.png"
-        },
-        {
-          "source": "img/day-steel-wall11.png"
-        },
-        {
-          "source": "img/day-steel-wall12.png"
-        },
-        {
-          "source": "img/day-steel-wall13.png"
-        },
-        {
-          "source": "img/day-steel-wall14.png"
-        },
-        {
-          "source": "img/day-steel-wall15.png"
-        },
-        {
-          "source": "img/day-steel-wall16.png"
-        },
-        {
-          "source": "img/day-steel-wall17.png"
-        },
-        {
-          "source": "img/day-steel-wall18.png"
-        },
-        {
-          "source": "img/day-steel-wall19.png"
-        },
-        {
-          "source": "img/day-steel-wall20.png"
-        },
-        {
-          "source": "img/day-steel-wall21.png"
-        },
-        {
-          "source": "img/day-steel-wall22.png"
-        },
-        {
-          "source": "img/day-steel-wall23.png"
-        },
-        {
-          "source": "img/day-steel-wall24.png"
-        },
-        {
-          "source": "img/day-steel-wall25.png"
-        },
-        {
-          "source": "img/day-steel-wall26.png"
-        },
-        {
-          "source": "img/day-steel-wall27.png"
-        },
-        {
-          "source": "img/day-steel-wall28.png"
-        },
-        {
-          "source": "img/day-steel-wall29.png"
-        },
-        {
-          "source": "img/day-steel-wall30.png"
-        },
-        {
-          "source": "img/day-steel-wall31.png"
-        },
-        {
-          "source": "img/day-steel-wall32.png"
-        },
-        {
-          "source": "img/day-steel-wall33.png"
-        },
-        {
-          "source": "img/day-steel-wall34.png"
-        },
-        {
-          "source": "img/day-steel-wall35.png"
-        },
-        {
-          "source": "img/day-steel-wall36.png"
-        },
-        {
-          "source": "img/day-steel-wall37.png"
-        },
-        {
-          "source": "img/day-steel-wall38.png"
-        },
-        {
-          "source": "img/day-steel-wall39.png"
-        },
-        {
-          "source": "img/day-steel-wall40.png"
-        },
-        {
-          "source": "img/day-steel-wall41.png"
-        },
-        {
-          "source": "img/day-steel-wall42.png"
-        },
-        {
-          "source": "img/day-steel-wall43.png"
-        },
-        {
-          "source": "img/day-steel-wall44.png"
-        },
-        {
-          "source": "img/day-steel-wall45.png"
-        },
-        {
-          "source": "img/day-steel-wall46.png"
-        }
-      ],
       "ground_img": "img/day-ground-steel-wall.png",
       "blockMeshes": {
         "inward": "cube_block_inward",
@@ -1135,7 +739,10 @@
       "health": 15000,
       "selection_type": 21,
       "texture": "steel_wall",
-      "connection_type": "wall"
+      "inmap_image": null,
+      "connection_type": "wall",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 30,
@@ -1185,7 +792,10 @@
       ],
       "ground_img": "img/day-ground-wood-door.png",
       "health": 2000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wood-door.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 31,
@@ -1235,7 +845,10 @@
       ],
       "ground_img": "img/day-ground-stone-door.png",
       "health": 5000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-stone-door.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 32,
@@ -1285,7 +898,10 @@
       ],
       "ground_img": "img/day-ground-steel-door.png",
       "health": 10000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-steel-door.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 33,
@@ -1324,7 +940,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-campfire.png",
       "health": 150,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-campfire.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 34,
@@ -1342,7 +961,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-bullet-9mm.png"
+      "ground_img": "img/day-ground-bullet-9mm.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 35,
@@ -1360,7 +982,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-bullet-shotgun.png"
+      "ground_img": "img/day-ground-bullet-shotgun.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 36,
@@ -1378,7 +1003,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-bullet-sniper.png"
+      "ground_img": "img/day-ground-bullet-sniper.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 37,
@@ -1397,7 +1025,10 @@
       },
       "stack": 2,
       "ground_img": "img/day-ground-medikit.png",
-      "selection_type": 17
+      "selection_type": 17,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 38,
@@ -1416,7 +1047,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-bandage.png",
-      "selection_type": 18
+      "selection_type": 18,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 39,
@@ -1435,7 +1069,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-soda.png",
-      "selection_type": 19
+      "selection_type": 19,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 40,
@@ -1454,7 +1091,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-MP5.png",
-      "selection_type": 20
+      "selection_type": 20,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 41,
@@ -1472,7 +1112,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-headscarf.png"
+      "ground_img": "img/day-ground-headscarf.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 42,
@@ -1490,7 +1133,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-chapka.png"
+      "ground_img": "img/day-ground-chapka.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 43,
@@ -1508,7 +1154,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-coat.png"
+      "ground_img": "img/day-ground-coat.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 44,
@@ -1526,7 +1175,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-gaz-mask.png"
+      "ground_img": "img/day-ground-gaz-mask.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 45,
@@ -1544,7 +1196,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-gaz-protection.png"
+      "ground_img": "img/day-ground-gaz-protection.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 46,
@@ -1562,7 +1217,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-radiation-suit.png"
+      "ground_img": "img/day-ground-radiation-suit.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 47,
@@ -1580,7 +1238,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-wood-arrow.png"
+      "ground_img": "img/day-ground-wood-arrow.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 48,
@@ -1619,7 +1280,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-campfire-bbq.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-campfire-bbq.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 49,
@@ -1672,7 +1336,10 @@
       ],
       "ground_img": "img/day-ground-smelter.png",
       "health": 3000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 50,
@@ -1722,7 +1389,10 @@
       ],
       "ground_img": "img/day-ground-wood-door1.png",
       "health": 2500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wood-door1.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 51,
@@ -1772,7 +1442,10 @@
       ],
       "ground_img": "img/day-ground-stone-door1.png",
       "health": 6000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-stone-door1.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 52,
@@ -1822,7 +1495,10 @@
       ],
       "ground_img": "img/day-ground-steel-door1.png",
       "health": 12500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-steel-door1.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 53,
@@ -1840,7 +1516,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-sulfur.png"
+      "ground_img": "img/day-ground-sulfur.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 54,
@@ -1858,7 +1537,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-shaped-uranium.png"
+      "ground_img": "img/day-ground-shaped-uranium.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 55,
@@ -1897,7 +1579,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-workbench2.png",
       "health": 400,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-workbench2.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 56,
@@ -1915,7 +1600,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-uranium.png"
+      "ground_img": "img/day-ground-uranium.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 57,
@@ -1954,7 +1642,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-weaving-machine.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-weaving-machine.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 58,
@@ -1972,7 +1663,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-gasoline.png"
+      "ground_img": "img/day-ground-gasoline.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 59,
@@ -1991,7 +1685,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-pickaxe.png",
-      "selection_type": 22
+      "selection_type": 22,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 60,
@@ -2030,7 +1727,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-chest.png",
       "health": 300,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-chest.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 61,
@@ -2069,7 +1769,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-fridge.png",
       "health": 300,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-fridge.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 62,
@@ -2269,7 +1972,10 @@
       "health": 4000,
       "selection_type": 21,
       "texture": "wood_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 63,
@@ -2288,7 +1994,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-hammer.png",
-      "selection_type": 23
+      "selection_type": 23,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 64,
@@ -2327,7 +2036,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-sleeping-bag.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-sleeping-bag.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 65,
@@ -2346,7 +2058,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-repair-hammer.png",
-      "selection_type": 24
+      "selection_type": 24,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 66,
@@ -2364,7 +2079,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-nails.png"
+      "ground_img": "img/day-ground-nails.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 67,
@@ -2564,7 +2282,10 @@
       "health": 4000,
       "selection_type": 21,
       "texture": "light_wood_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 68,
@@ -2738,7 +2459,10 @@
       "health": 3000,
       "selection_type": 21,
       "texture": "wooden_low_wall",
-      "connection_type": "low_wall"
+      "inmap_image": null,
+      "connection_type": "low_wall",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 69,
@@ -2910,7 +2634,10 @@
       ],
       "ground_img": "img/day-ground-stone-smallwall.png",
       "health": 7000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 70,
@@ -3082,14 +2809,20 @@
       ],
       "ground_img": "img/day-ground-steel-smallwall.png",
       "health": 15000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 71,
       "img": {},
       "detail": {},
       "isDoor": 0,
-      "ground_img": ""
+      "ground_img": "",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 72,
@@ -3108,7 +2841,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-tomato-soup.png",
-      "selection_type": 25
+      "selection_type": 25,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 73,
@@ -3126,7 +2862,10 @@
         "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-syringe.png"
+      "ground_img": "img/day-ground-syringe.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 74,
@@ -3144,7 +2883,10 @@
         "skillCost": 1
       },
       "stack": 20,
-      "ground_img": "img/day-ground-chemical-component.png"
+      "ground_img": "img/day-ground-chemical-component.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 75,
@@ -3163,7 +2905,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-radaway.png",
-      "selection_type": 26
+      "selection_type": 26,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 76,
@@ -3219,7 +2964,10 @@
       ],
       "ground_img": "img/day-ground-tomato-seed.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 77,
@@ -3238,7 +2986,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-tomato.png",
-      "selection_type": 27
+      "selection_type": 27,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 78,
@@ -3257,7 +3008,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-tomato.png",
-      "selection_type": 28
+      "selection_type": 28,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 79,
@@ -3276,7 +3030,10 @@
       },
       "stack": 255,
       "ground_img": "img/day-ground-can.png",
-      "selection_type": 0
+      "selection_type": 0,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 80,
@@ -3295,7 +3052,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-crossbow.png",
-      "selection_type": 29
+      "selection_type": 29,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 81,
@@ -3313,7 +3073,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-wood-crossarrow.png"
+      "ground_img": "img/day-ground-wood-crossarrow.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 82,
@@ -3332,7 +3095,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-nail-gun.png",
-      "selection_type": 30
+      "selection_type": 30,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 83,
@@ -3351,7 +3117,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-sawed-off-shotgun.png",
-      "selection_type": 31
+      "selection_type": 31,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 84,
@@ -3551,7 +3320,10 @@
       "health": 8000,
       "selection_type": 21,
       "texture": "stone_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 85,
@@ -3751,14 +3523,20 @@
       "health": 8000,
       "selection_type": 21,
       "texture": "tiling_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 86,
       "img": {},
       "detail": {},
       "isDoor": 0,
-      "ground_img": ""
+      "ground_img": "",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 87,
@@ -3777,7 +3555,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-chips.png",
-      "selection_type": 32
+      "selection_type": 32,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 88,
@@ -3796,7 +3577,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-rotten-chips.png",
-      "selection_type": 33
+      "selection_type": 33,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 89,
@@ -3814,7 +3598,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-electronic-part.png"
+      "ground_img": "img/day-ground-electronic-part.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 90,
@@ -3832,7 +3619,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-junk.png"
+      "ground_img": "img/day-ground-junk.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 91,
@@ -3850,7 +3640,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-wires.png"
+      "ground_img": "img/day-ground-wires.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 92,
@@ -3868,7 +3661,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-small-energy-cells.png"
+      "ground_img": "img/day-ground-small-energy-cells.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 93,
@@ -3887,7 +3683,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-pistol.png",
-      "selection_type": 34
+      "selection_type": 34,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 94,
@@ -3940,7 +3739,10 @@
       ],
       "ground_img": "img/day-ground-workbench3.png",
       "health": 3000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 95,
@@ -3958,7 +3760,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-alloys.png"
+      "ground_img": "img/day-ground-alloys.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 96,
@@ -3977,7 +3782,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-axe.png",
-      "selection_type": 35
+      "selection_type": 35,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 97,
@@ -4027,7 +3835,10 @@
       ],
       "ground_img": "img/day-ground-landmine.png",
       "health": 5,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 98,
@@ -4074,7 +3885,10 @@
       ],
       "ground_img": "img/day-ground-dynamite.png",
       "health": 100,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 99,
@@ -4121,7 +3935,10 @@
       ],
       "ground_img": "img/day-ground-C4.png",
       "health": 100,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 100,
@@ -4140,7 +3957,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-joystick.png",
-      "selection_type": 36
+      "selection_type": 36,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 101,
@@ -4187,7 +4007,10 @@
       ],
       "ground_img": "img/day-ground-composter.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 102,
@@ -4205,7 +4028,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-metal-helmet.png"
+      "ground_img": "img/day-ground-metal-helmet.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 103,
@@ -4223,7 +4049,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-welding-helmet.png"
+      "ground_img": "img/day-ground-welding-helmet.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 104,
@@ -4241,7 +4070,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-gladiator-helmet.png"
+      "ground_img": "img/day-ground-gladiator-helmet.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 105,
@@ -4259,7 +4091,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-leather-jacket.png"
+      "ground_img": "img/day-ground-leather-jacket.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 106,
@@ -4277,7 +4112,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-kevlar-suit.png"
+      "ground_img": "img/day-ground-kevlar-suit.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 107,
@@ -4295,7 +4133,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-SWAT-suit.png"
+      "ground_img": "img/day-ground-SWAT-suit.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 108,
@@ -4313,7 +4154,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-protective-suit.png"
+      "ground_img": "img/day-ground-protective-suit.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 109,
@@ -4331,7 +4175,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-tesla-0.png"
+      "ground_img": "img/day-ground-tesla-0.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 110,
@@ -4349,7 +4196,10 @@
         "skillCost": 3
       },
       "stack": 1,
-      "ground_img": "img/day-ground-tesla-armor.png"
+      "ground_img": "img/day-ground-tesla-armor.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 111,
@@ -4388,7 +4238,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wood-spike.png",
       "health": 200,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 112,
@@ -4407,7 +4260,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-submachine.png",
-      "selection_type": 37
+      "selection_type": 37,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 113,
@@ -4426,7 +4282,10 @@
       },
       "stack": 10,
       "ground_img": "img/day-ground-grenade.png",
-      "selection_type": 38
+      "selection_type": 38,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 114,
@@ -4445,7 +4304,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-super-hammer.png",
-      "selection_type": 39
+      "selection_type": 39,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 115,
@@ -4463,7 +4325,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-ghoul-blood.png"
+      "ground_img": "img/day-ground-ghoul-blood.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 116,
@@ -4481,7 +4346,10 @@
         "skillCost": 1
       },
       "stack": 1,
-      "ground_img": "img/day-ground-camouflage-gear.png"
+      "ground_img": "img/day-ground-camouflage-gear.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 117,
@@ -4534,7 +4402,10 @@
       ],
       "ground_img": "img/day-ground-agitator.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 118,
@@ -4553,7 +4424,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-ghoul-drug.png",
-      "selection_type": 40
+      "selection_type": 40,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 119,
@@ -4572,7 +4446,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom1.png",
-      "selection_type": 41
+      "selection_type": 41,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 120,
@@ -4591,7 +4468,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom2.png",
-      "selection_type": 42
+      "selection_type": 42,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 121,
@@ -4610,7 +4490,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom3.png",
-      "selection_type": 43
+      "selection_type": 43,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 122,
@@ -4629,7 +4512,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom1.png",
-      "selection_type": 44
+      "selection_type": 44,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 123,
@@ -4648,7 +4534,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom2.png",
-      "selection_type": 45
+      "selection_type": 45,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 124,
@@ -4667,7 +4556,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom3.png",
-      "selection_type": 46
+      "selection_type": 46,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 125,
@@ -4686,7 +4578,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-lapadoine.png",
-      "selection_type": 47
+      "selection_type": 47,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 126,
@@ -4742,7 +4637,10 @@
       ],
       "ground_img": "img/day-ground-lapabot.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 127,
@@ -4760,7 +4658,10 @@
         "skillCost": 1
       },
       "stack": 255,
-      "ground_img": "img/day-ground-small-wire.png"
+      "ground_img": "img/day-ground-small-wire.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 128,
@@ -4779,7 +4680,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-pumpkin.png",
-      "selection_type": 48
+      "selection_type": 48,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 129,
@@ -4798,7 +4702,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-pumpkin.png",
-      "selection_type": 49
+      "selection_type": 49,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 130,
@@ -4854,7 +4761,10 @@
       ],
       "ground_img": "img/day-ground-ghoul5.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 131,
@@ -4904,7 +4814,10 @@
       ],
       "ground_img": "img/day-ground-extractor.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 132,
@@ -4923,7 +4836,10 @@
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote.png",
-      "selection_type": 50
+      "selection_type": 50,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 133,
@@ -4941,7 +4857,10 @@
         "skillCost": 1
       },
       "stack": 5,
-      "ground_img": "img/day-ground-antidote-flower.png"
+      "ground_img": "img/day-ground-antidote-flower.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 134,
@@ -4997,7 +4916,10 @@
       ],
       "ground_img": "img/day-ground-seed-tree.png",
       "health": 150,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 135,
@@ -5016,7 +4938,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-acorn.png",
-      "selection_type": 51
+      "selection_type": 51,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 136,
@@ -5035,7 +4960,10 @@
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-acorn.png",
-      "selection_type": 52
+      "selection_type": 52,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 137,
@@ -5054,7 +4982,10 @@
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-sniper.png",
-      "selection_type": 53
+      "selection_type": 53,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 138,
@@ -5110,7 +5041,10 @@
       ],
       "ground_img": "img/day-ground-hal-bot.png",
       "health": 400,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 139,
@@ -5166,7 +5100,10 @@
       ],
       "ground_img": "img/day-ground-tesla-bot.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 140,
@@ -5205,7 +5142,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wire0.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wire0.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 141,
@@ -5244,7 +5184,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wire1.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wire1.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 142,
@@ -5283,7 +5226,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wire2.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wire2.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 157,
@@ -5322,7 +5268,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wire3.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wire3.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 144,
@@ -5369,7 +5318,10 @@
       ],
       "ground_img": "img/day-ground-switch.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 145,
@@ -5408,7 +5360,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-switch-or.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-switch-or.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 146,
@@ -5447,7 +5402,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-switch-and.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-switch-and.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 147,
@@ -5486,7 +5444,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-switch-reverse.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-switch-reverse.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 148,
@@ -5525,7 +5486,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-lamp-white.png",
       "health": 600,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-lamp-off.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": true
     },
     {
       "id": 149,
@@ -5578,7 +5542,10 @@
       ],
       "ground_img": "img/day-ground-cable-wall.png",
       "health": 15000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 150,
@@ -5621,7 +5588,10 @@
       ],
       "ground_img": "img/day-ground-automatic-door.png",
       "health": 15000,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 151,
@@ -5660,7 +5630,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-platform.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-platform-off.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 152,
@@ -5853,7 +5826,10 @@
       ],
       "ground_img": "img/day-ground-stone-cave.png",
       "health": 300,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 153,
@@ -5890,160 +5866,6 @@
         "source": "img/redprint-bunker-wall.png"
       },
       "isDoor": 0,
-      "broken": [
-        {
-          "source": "img/day-bunker-wall-broken0.png"
-        },
-        {
-          "source": "img/day-bunker-wall-broken1.png"
-        },
-        {
-          "source": "img/day-bunker-wall-broken2.png"
-        }
-      ],
-      "instation": [
-        {
-          "source": "img/day-bunker-wall0.png"
-        },
-        {
-          "source": "img/day-bunker-wall1.png"
-        },
-        {
-          "source": "img/day-bunker-wall2.png"
-        },
-        {
-          "source": "img/day-bunker-wall3.png"
-        },
-        {
-          "source": "img/day-bunker-wall4.png"
-        },
-        {
-          "source": "img/day-bunker-wall5.png"
-        },
-        {
-          "source": "img/day-bunker-wall6.png"
-        },
-        {
-          "source": "img/day-bunker-wall7.png"
-        },
-        {
-          "source": "img/day-bunker-wall8.png"
-        },
-        {
-          "source": "img/day-bunker-wall9.png"
-        },
-        {
-          "source": "img/day-bunker-wall10.png"
-        },
-        {
-          "source": "img/day-bunker-wall11.png"
-        },
-        {
-          "source": "img/day-bunker-wall12.png"
-        },
-        {
-          "source": "img/day-bunker-wall13.png"
-        },
-        {
-          "source": "img/day-bunker-wall14.png"
-        },
-        {
-          "source": "img/day-bunker-wall15.png"
-        },
-        {
-          "source": "img/day-bunker-wall16.png"
-        },
-        {
-          "source": "img/day-bunker-wall17.png"
-        },
-        {
-          "source": "img/day-bunker-wall18.png"
-        },
-        {
-          "source": "img/day-bunker-wall19.png"
-        },
-        {
-          "source": "img/day-bunker-wall20.png"
-        },
-        {
-          "source": "img/day-bunker-wall21.png"
-        },
-        {
-          "source": "img/day-bunker-wall22.png"
-        },
-        {
-          "source": "img/day-bunker-wall23.png"
-        },
-        {
-          "source": "img/day-bunker-wall24.png"
-        },
-        {
-          "source": "img/day-bunker-wall25.png"
-        },
-        {
-          "source": "img/day-bunker-wall26.png"
-        },
-        {
-          "source": "img/day-bunker-wall27.png"
-        },
-        {
-          "source": "img/day-bunker-wall28.png"
-        },
-        {
-          "source": "img/day-bunker-wall29.png"
-        },
-        {
-          "source": "img/day-bunker-wall30.png"
-        },
-        {
-          "source": "img/day-bunker-wall31.png"
-        },
-        {
-          "source": "img/day-bunker-wall32.png"
-        },
-        {
-          "source": "img/day-bunker-wall33.png"
-        },
-        {
-          "source": "img/day-bunker-wall34.png"
-        },
-        {
-          "source": "img/day-bunker-wall35.png"
-        },
-        {
-          "source": "img/day-bunker-wall36.png"
-        },
-        {
-          "source": "img/day-bunker-wall37.png"
-        },
-        {
-          "source": "img/day-bunker-wall38.png"
-        },
-        {
-          "source": "img/day-bunker-wall39.png"
-        },
-        {
-          "source": "img/day-bunker-wall40.png"
-        },
-        {
-          "source": "img/day-bunker-wall41.png"
-        },
-        {
-          "source": "img/day-bunker-wall42.png"
-        },
-        {
-          "source": "img/day-bunker-wall43.png"
-        },
-        {
-          "source": "img/day-bunker-wall44.png"
-        },
-        {
-          "source": "img/day-bunker-wall45.png"
-        },
-        {
-          "source": "img/day-bunker-wall46.png"
-        }
-      ],
       "ground_img": "img/day-ground-bunker-wall.png",
       "blockMeshes": {
         "inward": "cube_block_inward",
@@ -6055,7 +5877,10 @@
       "health": 10000,
       "selection_type": 21,
       "texture": "bunker_wall",
-      "connection_type": "wall"
+      "inmap_image": null,
+      "connection_type": "wall",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 154,
@@ -6255,7 +6080,10 @@
       "health": 3000,
       "selection_type": 21,
       "texture": "golden_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 155,
@@ -6455,7 +6283,10 @@
       "health": 3000,
       "selection_type": 21,
       "texture": "red_floor",
-      "connection_type": "floor"
+      "inmap_image": null,
+      "connection_type": "floor",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 156,
@@ -6494,7 +6325,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-welding-machine.png",
       "health": 500,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-welding-machine.png",
+      "hittable_by_projectiles": true,
+      "collidesWithEntities": true
     },
     {
       "id": 157,
@@ -6533,7 +6367,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-wire4.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-wire4.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 158,
@@ -6586,7 +6423,10 @@
       ],
       "ground_img": "img/day-ground-timer.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 159,
@@ -6625,7 +6465,10 @@
       "isDoor": 0,
       "ground_img": "img/day-ground-xor.png",
       "health": 250,
-      "selection_type": 21
+      "selection_type": 21,
+      "inmap_image": "img/day-xor.png",
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 160,
@@ -6642,7 +6485,10 @@
         "level": 0,
         "skillCost": 1
       },
-      "ground_img": "img/skill-eye1.png"
+      "ground_img": "img/skill-eye1.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 161,
@@ -6659,7 +6505,10 @@
         "level": 5,
         "skillCost": 1
       },
-      "ground_img": "img/skill-eye2.png"
+      "ground_img": "img/skill-eye2.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 162,
@@ -6676,7 +6525,10 @@
         "level": 7,
         "skillCost": 1
       },
-      "ground_img": "img/skill-eye3.png"
+      "ground_img": "img/skill-eye3.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 163,
@@ -6693,7 +6545,10 @@
         "level": 6,
         "skillCost": 2
       },
-      "ground_img": "img/skill-builder1.png"
+      "ground_img": "img/skill-builder1.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 164,
@@ -6710,7 +6565,10 @@
         "level": 18,
         "skillCost": 1
       },
-      "ground_img": "img/skill-builder2.png"
+      "ground_img": "img/skill-builder2.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 165,
@@ -6727,7 +6585,10 @@
         "level": 0,
         "skillCost": 1
       },
-      "ground_img": "img/skill-inv1.png"
+      "ground_img": "img/skill-inv1.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 166,
@@ -6744,7 +6605,10 @@
         "level": 5,
         "skillCost": 1
       },
-      "ground_img": "img/skill-inv2.png"
+      "ground_img": "img/skill-inv2.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 167,
@@ -6761,7 +6625,10 @@
         "level": 7,
         "skillCost": 1
       },
-      "ground_img": "img/skill-inv3.png"
+      "ground_img": "img/skill-inv3.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 168,
@@ -6778,7 +6645,10 @@
         "level": 10,
         "skillCost": 2
       },
-      "ground_img": "img/skill-inv4.png"
+      "ground_img": "img/skill-inv4.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 169,
@@ -6795,7 +6665,10 @@
         "level": 12,
         "skillCost": 3
       },
-      "ground_img": "img/skill-inv5.png"
+      "ground_img": "img/skill-inv5.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     },
     {
       "id": 170,
@@ -6812,7 +6685,10 @@
         "level": 8,
         "skillCost": 1
       },
-      "ground_img": "img/skill-lightweight.png"
+      "ground_img": "img/skill-lightweight.png",
+      "inmap_image": null,
+      "hittable_by_projectiles": false,
+      "collidesWithEntities": false
     }
   ]
 }

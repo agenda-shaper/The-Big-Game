@@ -88,19 +88,24 @@ public class BlockManager : NetworkBehaviour
         //Material material = Resources.Load<Material>("Materials/YellowMat");
         //block.meshRenderer.material = material;
         block.meshRenderer.enabled = true;
-        Texture2D texture = LoadTextureFromPath("Materials/" + block.item.texture);
-                  
-        if(texture != null)
-        {
-            block.loadImageTexture(texture);
+        Texture2D texture;
+        if (block.item.texture != null ){
+            texture = LoadTextureFromPath("Materials/" + block.item.texture);
+            if(texture != null)
+            {
+                block.loadTexture(texture);
+                return;
+            }
+        } else {
+            texture = LoadTextureFromPath(block.item.inmap_image);
+            if(texture != null)
+            {
+                block.loadImageTexture(texture);
+                return;
+            }
         }
-        else
-        {
-            Debug.LogError("Texture not loaded!");
-            return;
-        }
-                
-        
+
+        Debug.LogError("Texture not loaded!");
     }
 
     [Server]
@@ -304,7 +309,7 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    void CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3())
+    BoxCollider CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3())
     {
         GameObject colliderChild = new GameObject(childName);
         colliderChild.transform.SetParent(blockInstance.transform);
@@ -313,6 +318,7 @@ public class BlockManager : NetworkBehaviour
 
         BoxCollider collider = colliderChild.AddComponent<BoxCollider>();
         collider.size = size;
+        return collider;
     }
 
     [Server]
@@ -321,6 +327,7 @@ public class BlockManager : NetworkBehaviour
         GameObject blockInstance = block.blockInstance;
         int[] widths = block.item.width;
         int[] heights = block.item.height;
+
         if (widths.Length != 4 || heights.Length != 4)
         {
             Debug.LogError("Widths and heights arrays should both have 4 elements.");
@@ -335,8 +342,55 @@ public class BlockManager : NetworkBehaviour
             floatHeights[i] = heights[i] / 100f;
         }
 
-    CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0)); // block.rotation
-    CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0)); // Subtract 90-degree for the second collider
+        BoxCollider collider1 = CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0)); // block.rotation
+        BoxCollider collider2 = CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0)); // Subtract 90-degree for the second collider
+            
+        GameObject meshObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        meshObj.transform.SetParent(blockInstance.transform);
+        meshObj.transform.localScale = new Vector3(collider1.size.x, 0, collider1.size.z);
+        meshObj.transform.localRotation = collider1.transform.localRotation;
+        meshObj.transform.position = new Vector3(0, 0.25f, 0);
+
+        GameObject meshObj2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        meshObj2.transform.SetParent(blockInstance.transform);
+        meshObj2.transform.localScale = new Vector3(collider2.size.x, 0, collider2.size.z);
+        meshObj2.transform.localRotation = collider2.transform.localRotation;
+        meshObj2.transform.position = new Vector3(0, 0.25f, 0);
+
+        Mesh mesh1 = meshObj.GetComponent<MeshFilter>().mesh;
+        Mesh mesh2 = meshObj2.GetComponent<MeshFilter>().mesh;
+
+
+        // Combine meshes
+        CombineInstance[] combine = new CombineInstance[2];
+        combine[0].mesh = mesh1;
+        combine[0].transform = meshObj.transform.localToWorldMatrix;
+        combine[1].mesh = mesh2;
+        combine[1].transform = meshObj2.transform.localToWorldMatrix;
+
+        meshObj.transform.localPosition = collider1.transform.localPosition;
+        meshObj2.transform.localPosition = collider2.transform.localPosition;
+
+        block.meshFilter.mesh = new Mesh();
+        block.meshFilter.mesh.CombineMeshes(combine, true, true);
+        block.meshObject.transform.localRotation = Quaternion.Euler(0, -block.rotation, 0);
+
+        Mesh finalMesh = block.meshFilter.mesh;
+        Vector2[] uvs = finalMesh.uv;
+
+        for (int i = 0; i < uvs.Length; i++) {
+            uvs[i] = new Vector2(1 - uvs[i].y, uvs[i].x);
+        }
+        finalMesh.uv = uvs; // apply rotated UVs back to the mesh
+
+
+
+
+
+        Destroy(meshObj);
+        Destroy(meshObj2);
+
+        
     }
 
 

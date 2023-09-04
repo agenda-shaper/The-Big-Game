@@ -1,4 +1,6 @@
+console.log("hi");
 const fs = require("fs");
+
 const items = [
   {
     id: 1,
@@ -19487,6 +19489,8 @@ const ClearedItems = items.map((item) => {
     connection_type,
     cantShootThrough,
     MMN,
+    inmapx,
+    inmapy,
   } = item;
 
   //console.log(typeof broken);
@@ -19514,6 +19518,11 @@ const ClearedItems = items.map((item) => {
     }
   }
 
+  let inmap_image = null;
+  if (instation && typeof instation === "object" && instation.source) {
+    inmap_image = instation.source;
+  }
+
   return {
     id,
     img: { source: source.length > 0 ? source : undefined },
@@ -19538,9 +19547,12 @@ const ClearedItems = items.map((item) => {
     health,
     selection_type,
     texture,
+    inmap_image: inmap_image,
     connection_type,
     hittable_by_projectiles,
     collidesWithEntities,
+    inmapx,
+    inmapy,
   };
 });
 
