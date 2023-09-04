@@ -13,6 +13,8 @@ public class LocalPlayer : MonoBehaviour
 
     public BuildManager buildingManager;
 
+    public CraftingMenu craftingMenu;
+
 
 }
 

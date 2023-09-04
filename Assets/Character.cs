@@ -35,7 +35,7 @@ public class Character : NetworkBehaviour
     public float movementSpeed = 0.03f;
     
     [SyncVar]
-    public float sprintMultiplier = 1.5f;
+    public float sprintMultiplier = 10.5f;
 
     public float rotation;
 
@@ -150,7 +150,7 @@ public class Character : NetworkBehaviour
     public void BuildBlock(BuildManager buildManager){
         // check and verify the positions
 
-        engine.blockManager.SpawnBlock(buildManager.x, buildManager.y, buildManager.slotItem.item.id,buildManager.rotation);
+        engine.blockManager.SpawnBlock(buildManager.slotItem.item.id,buildManager.x, buildManager.y, buildManager.rotation);
 
         // remove 1 block
         // do all the inventory checking

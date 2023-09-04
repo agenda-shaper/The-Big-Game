@@ -54,7 +54,7 @@ public class ActionHandler : MonoBehaviour
         inventory.holdingItem.gameObject.SetActive(true);
         isActing = true;
         currentSlotItem = slotItem;
-        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(holdingSource));
+        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(slotItem.item.inmap_image));
 
     }
 

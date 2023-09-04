@@ -46,8 +46,8 @@ public class BuildManager : MonoBehaviour {
 
     public void RotateObject()
     {
-        rotation = (rotation + 90) % 360; // Update the rotation variable
-        transform.rotation = Quaternion.Euler(0, rotation, 0); // Rotate the GameObject
+        rotation = (rotation + 1) % 4; // Update the rotation variable
+        transform.rotation = Quaternion.Euler(0, rotation*90, 0); // Rotate the GameObject
     }
 
     public void updatePosition(Character player)

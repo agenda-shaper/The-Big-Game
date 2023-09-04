@@ -236,6 +236,8 @@ MonoBehaviour:
       stack: 0
       width: 
       height: 
+      inmapx: 
+      inmapy: 
       putableimg:
         source: 
       notputableimg:
@@ -252,6 +254,11 @@ MonoBehaviour:
         building: 
       health: 0
       selection_type: 0
+      texture: 
+      connection_type: 
+      hittable_by_projectiles: 0
+      collidesWithEntities: 0
+      inmap_image: 
     slotObject: {fileID: 0}
     count: 0
     slotHandler: {fileID: 0}
@@ -367,7 +374,7 @@ MonoBehaviour:
   projectiles: []
   cameraOffset: {x: 0, y: 20, z: 0}
   movementSpeed: 0.05
-  sprintMultiplier: 1.5
+  sprintMultiplier: 15
   rotation: 0
   movingTo: 0
   isSprinting: 0
@@ -600,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 6342244485227254222}
+  actionContinous: 1
   isActing: 0
   currentSlotItem:
     item:
@@ -614,6 +622,8 @@ MonoBehaviour:
       stack: 0
       width: 
       height: 
+      inmapx: 
+      inmapy: 
       putableimg:
         source: 
       notputableimg:
@@ -630,6 +640,11 @@ MonoBehaviour:
         building: 
       health: 0
       selection_type: 0
+      texture: 
+      connection_type: 
+      hittable_by_projectiles: 0
+      collidesWithEntities: 0
+      inmap_image: 
     slotObject: {fileID: 0}
     count: 0
     slotHandler: {fileID: 0}

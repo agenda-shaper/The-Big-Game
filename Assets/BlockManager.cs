@@ -24,18 +24,28 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    public void SpawnBlock(float x, float z, int itemId, int rotation)
+    public void SpawnBlock(int itemId, float x, float z, int rotation)
     {
+        rotation *= 90;
 
         Vector2 coord = new Vector2(x, z);
 
         Item item = GetItemById(itemId);
 
-         // Check if the coordinate is already occupied by any block.
+
+        // Check if the coordinate is already occupied by any blocks.
         if (blockMap.ContainsKey(coord))
         {
-            // Coordinate is occupied, exit the function.
-            return;
+            List<Block> existingBlocks = blockMap[coord]; // Retrieve the list of blocks at the location
+
+            foreach (Block existingBlock in existingBlocks)
+            {
+                // Check if the new block and the existing block have the same collision type
+                if (item.collidesWithEntities == existingBlock.item.collidesWithEntities)
+                {
+                    return; // Prevent spawning if they are the same
+                }
+            }
         }
 
         // add a check if its a spawnable item
@@ -80,14 +90,9 @@ public class BlockManager : NetworkBehaviour
         // Set up collisions based on width and height
         SetupCollisions(block);
 
-        // Assuming you are using a simple texture to represent the block's appearance
-        //Debug.Log(block.item.instation);
-        
+
         UpdateBlock(block);
 
-        //Material material = Resources.Load<Material>("Materials/YellowMat");
-        //block.meshRenderer.material = material;
-        block.meshRenderer.enabled = true;
         Texture2D texture;
         if (block.item.texture != null ){
             texture = LoadTextureFromPath("Materials/" + block.item.texture);
@@ -97,10 +102,12 @@ public class BlockManager : NetworkBehaviour
                 return;
             }
         } else {
+            Debug.Log(block.item.inmap_image);
             texture = LoadTextureFromPath(block.item.inmap_image);
             if(texture != null)
             {
-                block.loadImageTexture(texture);
+                block.loadImageTexture(texture,block.item);
+
                 return;
             }
         }
@@ -291,6 +298,11 @@ public class BlockManager : NetworkBehaviour
         return ItemDatabase.Find(item => item.id == id);
     }
 
+    public List<Item> GetItemsByType(int type)
+    {
+        return ItemDatabase.FindAll(item => item.detail.type == type);
+    }
+
 
     public Texture2D LoadTextureFromPath(string pathWithExtension)
     {
@@ -309,7 +321,7 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    BoxCollider CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3())
+    BoxCollider CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3(), bool isTrigger = false)
     {
         GameObject colliderChild = new GameObject(childName);
         colliderChild.transform.SetParent(blockInstance.transform);
@@ -318,6 +330,7 @@ public class BlockManager : NetworkBehaviour
 
         BoxCollider collider = colliderChild.AddComponent<BoxCollider>();
         collider.size = size;
+        collider.isTrigger = isTrigger; // Set the collider to be a trigger based on the passed value
         return collider;
     }
 
@@ -342,56 +355,13 @@ public class BlockManager : NetworkBehaviour
             floatHeights[i] = heights[i] / 100f;
         }
 
-        BoxCollider collider1 = CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0)); // block.rotation
-        BoxCollider collider2 = CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0)); // Subtract 90-degree for the second collider
-            
-        GameObject meshObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        meshObj.transform.SetParent(blockInstance.transform);
-        meshObj.transform.localScale = new Vector3(collider1.size.x, 0, collider1.size.z);
-        meshObj.transform.localRotation = collider1.transform.localRotation;
-        meshObj.transform.position = new Vector3(0, 0.25f, 0);
+        // Determine if the colliders should be triggers
+        bool shouldCollideWithEntities = block.item.collidesWithEntities;
 
-        GameObject meshObj2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        meshObj2.transform.SetParent(blockInstance.transform);
-        meshObj2.transform.localScale = new Vector3(collider2.size.x, 0, collider2.size.z);
-        meshObj2.transform.localRotation = collider2.transform.localRotation;
-        meshObj2.transform.position = new Vector3(0, 0.25f, 0);
-
-        Mesh mesh1 = meshObj.GetComponent<MeshFilter>().mesh;
-        Mesh mesh2 = meshObj2.GetComponent<MeshFilter>().mesh;
-
-
-        // Combine meshes
-        CombineInstance[] combine = new CombineInstance[2];
-        combine[0].mesh = mesh1;
-        combine[0].transform = meshObj.transform.localToWorldMatrix;
-        combine[1].mesh = mesh2;
-        combine[1].transform = meshObj2.transform.localToWorldMatrix;
-
-        meshObj.transform.localPosition = collider1.transform.localPosition;
-        meshObj2.transform.localPosition = collider2.transform.localPosition;
-
-        block.meshFilter.mesh = new Mesh();
-        block.meshFilter.mesh.CombineMeshes(combine, true, true);
-        block.meshObject.transform.localRotation = Quaternion.Euler(0, -block.rotation, 0);
-
-        Mesh finalMesh = block.meshFilter.mesh;
-        Vector2[] uvs = finalMesh.uv;
-
-        for (int i = 0; i < uvs.Length; i++) {
-            uvs[i] = new Vector2(1 - uvs[i].y, uvs[i].x);
-        }
-        finalMesh.uv = uvs; // apply rotated UVs back to the mesh
-
-
-
-
-
-        Destroy(meshObj);
-        Destroy(meshObj2);
-
-        
+        BoxCollider collider1 = CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0), !shouldCollideWithEntities); // block.rotation
+        BoxCollider collider2 = CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0), !shouldCollideWithEntities); // Subtract 90-degree for the second collider
     }
+
 
 
     [Server]

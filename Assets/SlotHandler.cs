@@ -8,5 +8,6 @@ public class SlotHandler : MonoBehaviour
     public Inventory mainInventory; // Reference to the main inventory script.
     public RawImage slotImage;
     public RawImage emptyImage;
+    
 
 }

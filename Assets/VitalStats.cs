@@ -14,6 +14,7 @@ public class VitalStats : NetworkBehaviour
 
     [Server]
     public void HandleVitals(){
+        energy = 255;
         if (hunger <= 0){
             health -= 0.02f;
         }

@@ -13,7 +13,8 @@
         "name": "Wood",
         "description": "Found in trees, or on the ground.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood.png",
@@ -34,7 +35,8 @@
         "name": "Stone",
         "description": "Find it on the ground or on the rock.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-stone.png",
@@ -55,7 +57,8 @@
         "name": "Iron",
         "description": "Melt it on a Firepit or a Smelter",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-steel.png",
@@ -76,7 +79,8 @@
         "name": "Animal Fat",
         "description": "Useful to craft bullet and clothes",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-fat.png",
@@ -97,7 +101,8 @@
         "name": "Animal Tendon",
         "description": "Useful to make string",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-tendon.png",
@@ -118,7 +123,8 @@
         "name": "String",
         "description": "Useful to craft many items.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-string.png",
@@ -139,7 +145,8 @@
         "name": "Leather",
         "description": "Useful to make clothes",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-leather-boar.png",
@@ -160,7 +167,8 @@
         "name": "Shaped Metal",
         "description": "To craft improved items.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-metal.png",
@@ -181,7 +189,8 @@
         "name": "Raw Steak",
         "description": "#Vegan",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 10,
       "ground_img": "img/day-ground-raw-steak.png",
@@ -203,7 +212,8 @@
         "name": "Cooked Steak",
         "description": "Rare or medium?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 10,
       "ground_img": "img/day-ground-cooked-steak.png",
@@ -225,7 +235,8 @@
         "name": "Rotten Steak",
         "description": "Don't eat that.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 10,
       "ground_img": "img/day-ground-rotten-steak.png",
@@ -247,7 +258,8 @@
         "name": "Orange",
         "description": "A little hungry?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-orange.png",
@@ -269,7 +281,8 @@
         "name": "Rotten Orange",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 6
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-orange.png",
@@ -291,7 +304,8 @@
         "name": "Orange Seed",
         "description": "Fill up on Vitame C?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 6
       },
       "stack": 40,
       "width": [
@@ -335,7 +349,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 15,
@@ -350,7 +376,8 @@
         "name": "Hatchet",
         "description": "Harvest Wood and Stone.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-hachet.png",
@@ -372,7 +399,8 @@
         "name": "Stone Pickaxe",
         "description": "Mine Stone and Iron.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-pickaxe.png",
@@ -394,7 +422,8 @@
         "name": "Metal Pickaxe",
         "description": "Mine also Sulfur",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-steel-pickaxe.png",
@@ -416,7 +445,8 @@
         "name": "Metal Axe",
         "description": "Harvest a lot of Wood",
         "level": 5,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-axe.png",
@@ -438,7 +468,8 @@
         "name": "Workbench",
         "description": "Allow you to make new items.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "putableimg": {
@@ -453,7 +484,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-workbench.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 20,
@@ -468,7 +511,8 @@
         "name": "Wood Spear",
         "description": "Don't forget to pick it up.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-spear.png",
@@ -490,7 +534,8 @@
         "name": "Wood Bow",
         "description": "Where are the cowboys?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-bow.png",
@@ -512,7 +557,8 @@
         "name": "9MM",
         "description": "I hope you know how to aim.",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-9mm.png",
@@ -534,7 +580,8 @@
         "name": "Desert Eagle",
         "description": "Pretty useful for self-defense.",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-desert-eagle.png",
@@ -556,7 +603,8 @@
         "name": "Shotgun",
         "description": "He's dead now, don't you think?",
         "level": 11,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-shotgun.png",
@@ -578,7 +626,8 @@
         "name": "AK47",
         "description": "Revolution time",
         "level": 12,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-ak47.png",
@@ -600,7 +649,8 @@
         "name": "Sniper",
         "description": "For the very angry shy",
         "level": 13,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-sniper.png",
@@ -622,7 +672,8 @@
         "name": "Wooden Wall",
         "description": "Protected from the wind.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -652,7 +703,19 @@
       "inmap_image": null,
       "connection_type": "wall",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 28,
@@ -667,7 +730,8 @@
         "name": "Stone Wall",
         "description": "Saved the 3 little pigs.",
         "level": 3,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -697,7 +761,19 @@
       "inmap_image": null,
       "connection_type": "wall",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 29,
@@ -712,7 +788,8 @@
         "name": "Steel Wall",
         "description": "Afraid we'll find you?",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -742,7 +819,19 @@
       "inmap_image": null,
       "connection_type": "wall",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 30,
@@ -757,7 +846,8 @@
         "name": "Wooden Low Door",
         "description": "You can shoot through it.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -795,7 +885,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wood-door.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 31,
@@ -810,7 +912,8 @@
         "name": "Stone Low Door",
         "description": "You can shoot through it.",
         "level": 3,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -848,7 +951,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-stone-door.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 32,
@@ -863,7 +978,8 @@
         "name": "Metal Low Door",
         "description": "Killing at home, for more comfort.",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -901,7 +1017,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-steel-door.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 33,
@@ -916,7 +1044,8 @@
         "name": "Campfire",
         "description": "Warm you when you're cold.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -943,7 +1072,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-campfire.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 34,
@@ -958,7 +1099,8 @@
         "name": "Bullet",
         "description": "For 9MM, Desert Eagle, and MP5 ",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-9mm.png",
@@ -979,7 +1121,8 @@
         "name": "Cartridge",
         "description": "For Shotgun",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-shotgun.png",
@@ -1000,7 +1143,8 @@
         "name": "Heavy Bullet",
         "description": "For Sniper, and AK47",
         "level": 11,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-sniper.png",
@@ -1021,7 +1165,8 @@
         "name": "Medkit",
         "description": "Regenerate your life.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 2,
       "ground_img": "img/day-ground-medikit.png",
@@ -1043,7 +1188,8 @@
         "name": "Bandage",
         "description": "To heal the boo-boos.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 5,
       "ground_img": "img/day-ground-bandage.png",
@@ -1065,7 +1211,8 @@
         "name": "Soda",
         "description": "Give energy.",
         "level": 5,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 5,
       "ground_img": "img/day-ground-soda.png",
@@ -1087,7 +1234,8 @@
         "name": "MP5",
         "description": "Not bad.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-MP5.png",
@@ -1109,7 +1257,8 @@
         "name": "Headscarf",
         "description": "Warm you up.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-headscarf.png",
@@ -1130,7 +1279,8 @@
         "name": "Chapka",
         "description": "You look like a real woodcutter.",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-chapka.png",
@@ -1151,7 +1301,8 @@
         "name": "Winter Coat",
         "description": "Is the weather really that cold?",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-coat.png",
@@ -1172,7 +1323,8 @@
         "name": "Radiation Mask",
         "description": "Protect you from Radioactivity.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-mask.png",
@@ -1193,7 +1345,8 @@
         "name": "Min. Radiation Suit",
         "description": "Previously, on Breaking Bad.",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-protection.png",
@@ -1214,7 +1367,8 @@
         "name": "Radiation Suit",
         "description": "Let's not grow a second head.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-radiation-suit.png",
@@ -1235,7 +1389,8 @@
         "name": "Wood Arrow",
         "description": "Needed to use bow.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-arrow.png",
@@ -1256,7 +1411,8 @@
         "name": "Firepit",
         "description": "Warm up and melt iron slowly.",
         "level": 3,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -1283,7 +1439,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-campfire-bbq.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 49,
@@ -1298,7 +1466,8 @@
         "name": "Smelter",
         "description": "Melt iron, uranium and alloys",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -1339,7 +1508,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        -80,
+        0,
+        -80
+      ],
+      "inmapy": [
+        -80,
+        0,
+        -80,
+        0
+      ]
     },
     {
       "id": 50,
@@ -1354,7 +1535,8 @@
         "name": "Wooden Door",
         "description": "Let's hope it holds.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1392,7 +1574,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wood-door1.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 51,
@@ -1407,7 +1601,8 @@
         "name": "Stone Door",
         "description": "Not too heavy to open, I hope.",
         "level": 3,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1445,7 +1640,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-stone-door1.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 52,
@@ -1460,7 +1667,8 @@
         "name": "Metal Door",
         "description": "I guess you're safe.",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1498,7 +1706,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-steel-door1.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 53,
@@ -1513,7 +1733,8 @@
         "name": "Sulfur",
         "description": "Sulfur in such a cold landscape?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-sulfur.png",
@@ -1534,7 +1755,8 @@
         "name": "Shaped Uranium",
         "description": "Are you out of your mind?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-uranium.png",
@@ -1555,7 +1777,8 @@
         "name": "Research Bench",
         "description": "Allow you to make new items",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -1582,7 +1805,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-workbench2.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        -90,
+        0,
+        -90
+      ],
+      "inmapy": [
+        -90,
+        0,
+        -90,
+        0
+      ]
     },
     {
       "id": 56,
@@ -1597,7 +1832,8 @@
         "name": "Uranium",
         "description": "Do you want to end up as Marie Curie?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-uranium.png",
@@ -1618,7 +1854,8 @@
         "name": "Weaving Machine",
         "description": "Allow you to sew clothes",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -1645,7 +1882,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-weaving-machine.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 58,
@@ -1660,7 +1909,8 @@
         "name": "Gasoline",
         "description": "Fuel for Smelter",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-gasoline.png",
@@ -1681,7 +1931,8 @@
         "name": "Sulfur Pickaxe",
         "description": "Mine also Uranium",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-pickaxe.png",
@@ -1703,7 +1954,8 @@
         "name": "Wood chest",
         "description": "You can't store food in.",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1730,7 +1982,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-chest.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 61,
@@ -1745,7 +2009,8 @@
         "name": "Fridge",
         "description": "Save your food.",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1772,7 +2037,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-fridge.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        50,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        50
+      ]
     },
     {
       "id": 62,
@@ -1787,7 +2064,8 @@
         "name": "Wood floor",
         "description": "Players can't spawn on it",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -1975,7 +2253,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 63,
@@ -1990,7 +2280,8 @@
         "name": "Hammer",
         "description": "Destroy walls quickly.",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-hammer.png",
@@ -2012,7 +2303,8 @@
         "name": "Sleeping Bag",
         "description": "Once dead, you keep your base",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -2039,7 +2331,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-sleeping-bag.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 65,
@@ -2054,7 +2358,8 @@
         "name": "Repair Hammer",
         "description": "Repair walls but require nails.",
         "level": 5,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-repair-hammer.png",
@@ -2076,7 +2381,8 @@
         "name": "Nails",
         "description": "Needed to repair walls.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-nails.png",
@@ -2097,7 +2403,8 @@
         "name": "Light Wood Floor",
         "description": "Players can't spawn on it",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -2285,7 +2592,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 68,
@@ -2300,7 +2619,8 @@
         "name": "Wooden Low Wall",
         "description": "You can shoot through it.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -2462,7 +2782,19 @@
       "inmap_image": null,
       "connection_type": "low_wall",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 69,
@@ -2477,7 +2809,8 @@
         "name": "Stone Low Wall",
         "description": "You can shoot through it.",
         "level": 3,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -2637,7 +2970,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 70,
@@ -2652,7 +2997,8 @@
         "name": "Metal Low Wall",
         "description": "You can shoot through it.",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -2812,7 +3158,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        65
+      ],
+      "inmapy": [
+        65,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 71,
@@ -2837,7 +3195,8 @@
         "name": "Tomato Soup",
         "description": "Has not yet been opened.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 5,
       "ground_img": "img/day-ground-tomato-soup.png",
@@ -2859,7 +3218,8 @@
         "name": "Syringe",
         "description": "Useful to make drugs.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 20,
       "ground_img": "img/day-ground-syringe.png",
@@ -2880,7 +3240,8 @@
         "name": "Chemical Component",
         "description": "Useful to make a drugs.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-chemical-component.png",
@@ -2901,7 +3262,8 @@
         "name": "RadAway",
         "description": "Reduce your radioactivity a lot.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 5,
       "ground_img": "img/day-ground-radaway.png",
@@ -2923,7 +3285,8 @@
         "name": "Tomato Seed",
         "description": "A fruit or vegetable?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 6
       },
       "stack": 40,
       "width": [
@@ -2967,7 +3330,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 77,
@@ -2982,7 +3357,8 @@
         "name": "Tomato",
         "description": "Why did the tomato blush?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-tomato.png",
@@ -3004,7 +3380,8 @@
         "name": "Rotten Tomato",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-tomato.png",
@@ -3026,7 +3403,8 @@
         "name": "Can",
         "description": "Useful to craft food can.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-can.png",
@@ -3048,7 +3426,8 @@
         "name": "Wood Crossbow",
         "description": "Shoot faster, reload slower",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-crossbow.png",
@@ -3070,7 +3449,8 @@
         "name": "Crossbow Arrows",
         "description": "Needed to use crossbow.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-crossarrow.png",
@@ -3091,7 +3471,8 @@
         "name": "Nail Gun",
         "description": "Repair walls from a distance",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-nail-gun.png",
@@ -3113,7 +3494,8 @@
         "name": "Sawed Off",
         "description": "Shoot less far, do more damages",
         "level": 13,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-sawed-off-shotgun.png",
@@ -3135,7 +3517,8 @@
         "name": "Stone floor",
         "description": "Players can't spawn on it",
         "level": 4,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -3323,7 +3706,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 85,
@@ -3338,7 +3733,8 @@
         "name": "Tiling floor",
         "description": "Players can't spawn on it",
         "level": 4,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -3526,7 +3922,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 86,
@@ -3551,7 +3959,8 @@
         "name": "Crisps",
         "description": "You salty?",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 5,
       "ground_img": "img/day-ground-chips.png",
@@ -3573,7 +3982,8 @@
         "name": "Expired Crisps",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 5,
       "ground_img": "img/day-ground-rotten-chips.png",
@@ -3595,7 +4005,8 @@
         "name": "Electronic Parts",
         "description": "Break TV's and Computers to find it",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-electronic-part.png",
@@ -3616,7 +4027,8 @@
         "name": "Junk",
         "description": "Find it in houses",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-junk.png",
@@ -3637,7 +4049,8 @@
         "name": "Big Wire",
         "description": "Break big computers in power station (in the city)",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-wires.png",
@@ -3658,7 +4071,8 @@
         "name": "Energy Cells",
         "description": "Used for energy weapons/buildings",
         "level": 6,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-energy-cells.png",
@@ -3679,7 +4093,8 @@
         "name": "Laser Pistol",
         "description": "Bullets are faster.",
         "level": 14,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-pistol.png",
@@ -3701,7 +4116,8 @@
         "name": "Tesla Bench",
         "description": "Allow you to make powerful items",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -3742,7 +4158,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        -80,
+        0,
+        -80
+      ],
+      "inmapy": [
+        -80,
+        0,
+        -80,
+        0
+      ]
     },
     {
       "id": 95,
@@ -3757,7 +4185,8 @@
         "name": "Alloys",
         "description": "To craft powerful items",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 8
       },
       "stack": 255,
       "ground_img": "img/day-ground-alloys.png",
@@ -3778,7 +4207,8 @@
         "name": "Sulfur Axe",
         "description": "You look cool with it.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 4
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-axe.png",
@@ -3800,7 +4230,8 @@
         "name": "Landmine",
         "description": "When you feel it, it's too late",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 20,
       "width": [
@@ -3838,7 +4269,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "inmapy": [
+        25,
+        25,
+        25,
+        25
+      ]
     },
     {
       "id": 98,
@@ -3853,7 +4296,8 @@
         "name": "Dynamite",
         "description": "Get out of here, it gonna blow!",
         "level": 9,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 10,
       "width": [
@@ -3888,7 +4332,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 99,
@@ -3903,7 +4359,8 @@
         "name": "C4",
         "description": "Explode when you hit the trigger!",
         "level": 16,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 5,
       "width": [
@@ -3938,7 +4395,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 100,
@@ -3953,7 +4422,8 @@
         "name": "C4 Trigger",
         "description": "Don't press the button or else...",
         "level": 16,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-joystick.png",
@@ -3975,7 +4445,8 @@
         "name": "Compost",
         "description": "Allows to accelerate rotting",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -4010,7 +4481,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 102,
@@ -4025,7 +4508,8 @@
         "name": "Metal Helmet",
         "description": "Protects you from melee weapons",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-metal-helmet.png",
@@ -4046,7 +4530,8 @@
         "name": "Welding Helmet",
         "description": "Protects you from melee weapons",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-welding-helmet.png",
@@ -4067,7 +4552,8 @@
         "name": "Gladiator Helmet",
         "description": "Strength and honor.",
         "level": 17,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-gladiator-helmet.png",
@@ -4088,7 +4574,8 @@
         "name": "Leather Jacket",
         "description": "Protects you from guns",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-leather-jacket.png",
@@ -4109,7 +4596,8 @@
         "name": "Kevlar Suit",
         "description": "Protects you from guns",
         "level": 12,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-kevlar-suit.png",
@@ -4130,7 +4618,8 @@
         "name": "SWAT Suit",
         "description": "Protects you from guns",
         "level": 18,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-SWAT-suit.png",
@@ -4151,7 +4640,8 @@
         "name": "Protective Suit",
         "description": "Protects you from explosives",
         "level": 12,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-protective-suit.png",
@@ -4172,7 +4662,8 @@
         "name": "Power Armor",
         "description": "Protects you from energy weapons",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-0.png",
@@ -4193,7 +4684,8 @@
         "name": "Tesla Armor",
         "description": "Protects you from energy weapons",
         "level": 18,
-        "skillCost": 3
+        "skillCost": 3,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-armor.png",
@@ -4214,7 +4706,8 @@
         "name": "Wooden Spike",
         "description": "Hurt and slow down",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 40,
       "width": [
@@ -4241,7 +4734,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "inmapy": [
+        25,
+        25,
+        25,
+        25
+      ]
     },
     {
       "id": 112,
@@ -4256,7 +4761,8 @@
         "name": "Laser Submachine",
         "description": "It's the best weapon",
         "level": 14,
-        "skillCost": 2
+        "skillCost": 2,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-submachine.png",
@@ -4278,7 +4784,8 @@
         "name": "Grenade",
         "description": "Explodes when you throw it away.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 5
       },
       "stack": 10,
       "ground_img": "img/day-ground-grenade.png",
@@ -4300,7 +4807,8 @@
         "name": "Super Hammer",
         "description": "Destroy indestructible walls.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 1,
       "ground_img": "img/day-ground-super-hammer.png",
@@ -4322,7 +4830,8 @@
         "name": "Ghoul Blood",
         "description": "Find it on speedy ghouls",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-ghoul-blood.png",
@@ -4343,7 +4852,8 @@
         "name": "Camouflage Gear",
         "description": "Hide you in the forest",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 2
       },
       "stack": 1,
       "ground_img": "img/day-ground-camouflage-gear.png",
@@ -4364,7 +4874,8 @@
         "name": "Agitator",
         "description": "Allows to craft drugs",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -4405,7 +4916,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 118,
@@ -4420,7 +4943,8 @@
         "name": "Ghoul Drug",
         "description": "Ghouls does not attack you.",
         "level": 10,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 5,
       "ground_img": "img/day-ground-ghoul-drug.png",
@@ -4442,7 +4966,8 @@
         "name": "Amanita",
         "description": "Poisoned, really dangerous",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom1.png",
@@ -4464,7 +4989,8 @@
         "name": "Boletus",
         "description": "Can be eaten.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom2.png",
@@ -4486,7 +5012,8 @@
         "name": "Russula",
         "description": "Can be eaten.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom3.png",
@@ -4508,7 +5035,8 @@
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom1.png",
@@ -4530,7 +5058,8 @@
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom2.png",
@@ -4552,7 +5081,8 @@
         "name": "Rotten Mushroom",
         "description": "Go on, have a bite!",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom3.png",
@@ -4574,7 +5104,8 @@
         "name": "Lapadone",
         "description": "You are faster a certain time.",
         "level": 14,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 5,
       "ground_img": "img/day-ground-lapadoine.png",
@@ -4596,7 +5127,8 @@
         "name": "LapaBot",
         "description": "Repair your base for you",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 5,
       "width": [
@@ -4640,7 +5172,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 127,
@@ -4655,7 +5199,8 @@
         "name": "Small Wire",
         "description": "Find it on TV's and computers in abandonned houses",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-wire.png",
@@ -4676,7 +5221,8 @@
         "name": "Pumpkin",
         "description": "Eat it or craft a pumpkin ghoul",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-pumpkin.png",
@@ -4698,7 +5244,8 @@
         "name": "Rotten Pumpkin",
         "description": "You should not click",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-pumpkin.png",
@@ -4720,7 +5267,8 @@
         "name": "Ghoul Seed",
         "description": "Plant your pumpkin pet",
         "level": 99,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 40,
       "width": [
@@ -4764,7 +5312,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 131,
@@ -4779,7 +5339,8 @@
         "name": "Extractor",
         "description": "Allows you to extract minerals from the ground",
         "level": 12,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -4817,7 +5378,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 132,
@@ -4832,7 +5405,8 @@
         "name": "Antidote",
         "description": "Remove the withdrawal effects (pink skin)",
         "level": 14,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 7
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote.png",
@@ -4854,7 +5428,8 @@
         "name": "Rare Flower",
         "description": "Use it to make an antidote",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote-flower.png",
@@ -4875,7 +5450,8 @@
         "name": "Tree Seed",
         "description": "Plant your forest",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 6
       },
       "stack": 100,
       "width": [
@@ -4919,7 +5495,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 135,
@@ -4934,7 +5522,8 @@
         "name": "Acorn",
         "description": "Eat it or plant a tree",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-acorn.png",
@@ -4956,7 +5545,8 @@
         "name": "Rotten Acorn",
         "description": "Not really good",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-acorn.png",
@@ -4978,7 +5568,8 @@
         "name": "Laser Sniper",
         "description": "Faster than a sniper",
         "level": 14,
-        "skillCost": 2
+        "skillCost": 2,
+        "type": 5
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-sniper.png",
@@ -5000,7 +5591,8 @@
         "name": "HAL Bot",
         "description": "Protect you",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 5,
       "width": [
@@ -5044,7 +5636,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 139,
@@ -5059,7 +5663,8 @@
         "name": "Tesla Bot",
         "description": "Protect you",
         "level": 16,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 5,
       "width": [
@@ -5103,7 +5708,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        35,
+        35,
+        35,
+        35
+      ],
+      "inmapy": [
+        35,
+        35,
+        35,
+        35
+      ]
     },
     {
       "id": 140,
@@ -5118,7 +5735,8 @@
         "name": "Cable",
         "description": "Create automatic mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5145,7 +5763,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wire0.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 141,
@@ -5160,7 +5790,8 @@
         "name": "Cable",
         "description": "Create automatic mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5187,7 +5818,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wire1.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 142,
@@ -5202,7 +5845,8 @@
         "name": "Cable",
         "description": "Create automatic mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5229,7 +5873,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wire2.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 157,
@@ -5244,7 +5900,8 @@
         "name": "Cable",
         "description": "Create automatic mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5271,7 +5928,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wire3.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 144,
@@ -5286,7 +5955,8 @@
         "name": "Switch",
         "description": "Turn on/off mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5321,7 +5991,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 145,
@@ -5336,7 +6018,8 @@
         "name": "Gate OR",
         "description": "Activate only if an entry is on.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5363,7 +6046,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-switch-or.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 146,
@@ -5378,7 +6073,8 @@
         "name": "Gate AND",
         "description": "Activate only if all entries are on.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5405,7 +6101,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-switch-and.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 147,
@@ -5420,7 +6128,8 @@
         "name": "Gate NOT",
         "description": "Activate only if no entry is on.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5447,7 +6156,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-switch-reverse.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 148,
@@ -5462,7 +6183,8 @@
         "name": "Lamp",
         "description": "Turn on when connected, damage ghoul",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5489,7 +6211,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-lamp-off.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 149,
@@ -5504,7 +6238,8 @@
         "name": "Cable  - Wall",
         "description": "Wall that can be connected to a cable",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5545,7 +6280,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 150,
@@ -5560,7 +6307,8 @@
         "name": "Automatic Door",
         "description": "Connect it to a switch to open and close it.",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5591,7 +6339,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 151,
@@ -5606,7 +6366,8 @@
         "name": "Platform",
         "description": "Weight detector",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -5633,7 +6394,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-platform-off.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 152,
@@ -5648,7 +6421,8 @@
         "name": "Stone Cave",
         "description": "Build mountains.",
         "level": 99,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "width": [
@@ -5829,7 +6603,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 153,
@@ -5844,7 +6630,8 @@
         "name": "Bunker Wall",
         "description": "Good old memory of the wasteland.",
         "level": 99,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": -1
       },
       "stack": 255,
       "width": [
@@ -5880,7 +6667,19 @@
       "inmap_image": null,
       "connection_type": "wall",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 154,
@@ -5895,7 +6694,8 @@
         "name": "Golden Floor",
         "description": "Players can't spawn on it",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -6083,7 +6883,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 155,
@@ -6098,7 +6910,8 @@
         "name": "Red floor",
         "description": "Players can't spawn on it",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 3
       },
       "stack": 255,
       "width": [
@@ -6286,7 +7099,19 @@
       "inmap_image": null,
       "connection_type": "floor",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 156,
@@ -6301,7 +7126,8 @@
         "name": "Welding Machine",
         "description": "Allow you to make logic gates",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 1
       },
       "stack": 255,
       "width": [
@@ -6328,7 +7154,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-welding-machine.png",
       "hittable_by_projectiles": true,
-      "collidesWithEntities": true
+      "collidesWithEntities": true,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 157,
@@ -6343,7 +7181,8 @@
         "name": "Cable  - Bridge",
         "description": "Create automatic mechanisms",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -6370,7 +7209,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-wire4.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 158,
@@ -6385,7 +7236,8 @@
         "name": "Gate Timer",
         "description": "Emit a signal regularly.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -6426,7 +7278,19 @@
       "selection_type": 21,
       "inmap_image": null,
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 159,
@@ -6441,7 +7305,8 @@
         "name": "Gate Xor",
         "description": "Activate only if only one entry is on.",
         "level": -1,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 9
       },
       "stack": 255,
       "width": [
@@ -6468,7 +7333,19 @@
       "selection_type": 21,
       "inmap_image": "img/day-xor.png",
       "hittable_by_projectiles": false,
-      "collidesWithEntities": false
+      "collidesWithEntities": false,
+      "inmapx": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "inmapy": [
+        0,
+        0,
+        0,
+        0
+      ]
     },
     {
       "id": 160,
@@ -6483,7 +7360,8 @@
         "name": "Vision 1",
         "description": "Improve your vision",
         "level": 0,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-eye1.png",
       "inmap_image": null,
@@ -6503,7 +7381,8 @@
         "name": "Vision 2",
         "description": "Improve your vision",
         "level": 5,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-eye2.png",
       "inmap_image": null,
@@ -6523,7 +7402,8 @@
         "name": "Vision 3",
         "description": "Improve your vision",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-eye3.png",
       "inmap_image": null,
@@ -6543,7 +7423,8 @@
         "name": "Builder 1",
         "description": "Multiplies some craft by two",
         "level": 6,
-        "skillCost": 2
+        "skillCost": 2,
+        "type": 0
       },
       "ground_img": "img/skill-builder1.png",
       "inmap_image": null,
@@ -6563,7 +7444,8 @@
         "name": "Builder 2",
         "description": "Repair much faster",
         "level": 18,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-builder2.png",
       "inmap_image": null,
@@ -6583,7 +7465,8 @@
         "name": "Inventory 1",
         "description": "Add a slot in your inventory",
         "level": 0,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-inv1.png",
       "inmap_image": null,
@@ -6603,7 +7486,8 @@
         "name": "Inventory 2",
         "description": "Add a slot in your inventory",
         "level": 5,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-inv2.png",
       "inmap_image": null,
@@ -6623,7 +7507,8 @@
         "name": "Inventory 3",
         "description": "Add a slot in your bag",
         "level": 7,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-inv3.png",
       "inmap_image": null,
@@ -6643,7 +7528,8 @@
         "name": "Inventory 4",
         "description": "Add two slots in your bag",
         "level": 10,
-        "skillCost": 2
+        "skillCost": 2,
+        "type": 0
       },
       "ground_img": "img/skill-inv4.png",
       "inmap_image": null,
@@ -6663,7 +7549,8 @@
         "name": "Inventory 5",
         "description": "Add three slots in your bag",
         "level": 12,
-        "skillCost": 3
+        "skillCost": 3,
+        "type": 0
       },
       "ground_img": "img/skill-inv5.png",
       "inmap_image": null,
@@ -6683,7 +7570,8 @@
         "name": "Light Weight",
         "description": "Less likely to trigger traps.",
         "level": 8,
-        "skillCost": 1
+        "skillCost": 1,
+        "type": 0
       },
       "ground_img": "img/skill-lightweight.png",
       "inmap_image": null,

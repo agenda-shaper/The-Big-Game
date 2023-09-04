@@ -81,6 +81,8 @@ public class DetailData
     public string description;
     public int level;
     public int skillCost;
+    
+    public int type;
 }
 
 [System.Serializable]
