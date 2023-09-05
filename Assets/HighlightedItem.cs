@@ -10,7 +10,7 @@ public class HighlightedItem : MonoBehaviour
     public RawImage itemImage;
     public TextMeshPro itemName;
     public TextMeshPro description;
-    public TextMeshPro life;
+    public TextMeshPro LowestHeader;
     void Start()
     {
         
@@ -20,6 +20,25 @@ public class HighlightedItem : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public List<Item> getRequiredResources(Item itemToCheck){
+        List<Item> resources = new List<Item>();
+
+        Debug.Log(itemToCheck.detail.name);
+        Debug.Log(itemToCheck.detail.requiredResources);
+
+        foreach (RequiredResources resource in itemToCheck.detail.requiredResources)
+        {
+            Debug.Log(resource);
+            int id = resource.itemId;
+            int count = resource.count;
+            
+            Item resourceItem = craftingMenu.localPlayer.player.engine.blockManager.GetItemById(id);
+            resources.Add(resourceItem);
+        }
+        return resources;
+
     }
 
     public void LoadInfo(ItemSlot slot){
@@ -35,7 +54,16 @@ public class HighlightedItem : MonoBehaviour
         }
         itemName.text = slot.item.detail.name;
         description.text = slot.item.detail.description;
-        life.text = $"Life: {slot.item.health}";
+        if (slot.item.health > 0){
+            LowestHeader.text = $"Life: {slot.item.health}";
+        } else {
+            LowestHeader.text = $"";
+            // for now nothing
+        }
+        
+
+        craftingMenu.FillWithItems(getRequiredResources(slot.item),craftingMenu.requiredResourcesSlots,ItemSlotType.RequiredResources);
+
 
     }
 }

@@ -132,6 +132,10 @@ PrefabInstance:
       propertyPath: sceneId
       value: 3400460112
       objectReference: {fileID: 0}
+    - target: {fileID: 5287197740583953364, guid: 88ea1120d3e76cc41bea277584b1445c, type: 3}
+      propertyPath: port
+      value: 6666
+      objectReference: {fileID: 0}
     - target: {fileID: 5287197740583953366, guid: 88ea1120d3e76cc41bea277584b1445c, type: 3}
       propertyPath: m_Name
       value: NetworkManager

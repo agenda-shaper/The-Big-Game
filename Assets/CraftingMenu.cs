@@ -48,9 +48,7 @@ public class CraftingMenu : MonoBehaviour
         }
 
         List<Item> items = localPlayer.player.engine.blockManager.GetItemsByType(3);
-        FillWithItems(items,craftSlots);
-
-        FillWithItems(items,requiredResourcesSlots);
+        FillWithItems(items,craftSlots,ItemSlotType.CraftingMenuItems);
         
     }
 
@@ -59,7 +57,7 @@ public class CraftingMenu : MonoBehaviour
 
         GameObject newSlot = Instantiate(firstCraftPrefab, transform);
         ItemSlot craftSlotComponent = newSlot.GetComponent<ItemSlot>();
-        craftSlotComponent.type = 0;
+        craftSlotComponent.type = ItemSlotType.CraftingMenuItems;
         craftSlotComponent.craftingMenu = this;
 
         int currentTotalSlots = craftSlots.Count;
@@ -84,10 +82,10 @@ public class CraftingMenu : MonoBehaviour
 
         GameObject newSlot = Instantiate(firstCraftPrefab, transform);
         ItemSlot craftSlotComponent = newSlot.GetComponent<ItemSlot>();
-        craftSlotComponent.type = 1;
+        craftSlotComponent.type = ItemSlotType.RequiredResources;
         craftSlotComponent.craftingMenu = this;
 
-        int currentTotalSlots = craftSlots.Count;
+        int currentTotalSlots = requiredResourcesSlots.Count;
         int col = currentTotalSlots % maxSlotsPerRow;
 
         float posX = required_res_starting_pos_x + (col * required_res_slotSpacingX);
@@ -104,9 +102,9 @@ public class CraftingMenu : MonoBehaviour
         
 
     }
-    public void FillWithItems(List<Item> items, List<ItemSlot> slotsList)
+    public void FillWithItems(List<Item> items, List<ItemSlot> slotsList, ItemSlotType type)
     {
-        ClearAllCraftSlots();
+        ClearAllCraftSlots(type);
         for (int i = 0; i < items.Count && i < slotsList.Count; i++)
         {
             ItemSlot currentSlot = slotsList[i];
@@ -117,16 +115,29 @@ public class CraftingMenu : MonoBehaviour
             // Load the item into the slot
             LoadItemInSlot(currentSlot, items[i]);
         }
-        if (slotsList[0].type == 0){
+        if (type == 0){
             // highlight first
             highlightedItem.LoadInfo(slotsList[0]);
         }
         
     }
 
-    public void ClearAllCraftSlots()
+    public void ClearAllCraftSlots(ItemSlotType type)
     {
-        foreach (ItemSlot slot in craftSlots)
+        List<ItemSlot> slotsList;
+
+        switch(type){
+            case ItemSlotType.CraftingMenuItems:
+                slotsList = craftSlots;
+                break;
+            case ItemSlotType.RequiredResources:
+                slotsList = requiredResourcesSlots;
+                break;
+            default:
+                return;
+        }
+
+        foreach (ItemSlot slot in slotsList)
         {
             slot.item = null;  // Remove the item reference
 
@@ -145,10 +156,31 @@ public class CraftingMenu : MonoBehaviour
 
 
     public void LoadItemInSlot(ItemSlot slot, Item item)
+{
+    Debug.Log($"Slot: {slot}");
+    Debug.Log($"Item: {item}");
+    if (item != null)
     {
-        slot.item = item;
-        LoadItemTexture(slot, slot.item.img.source[0]);
+        Debug.Log($"Item Detail: {item.detail}");
+        if (item.detail != null)
+        {
+            Debug.Log($"Item Detail Name: {item.detail.name}");
+        }
+        Debug.Log($"Item Img: {item.img}");
+        if (item.img != null)
+        {
+            Debug.Log($"Item Img Source: {item.img.source}");
+            if (item.img.source != null && item.img.source.Length > 0)
+            {
+                Debug.Log($"Item Img Source[0]: {item.img.source[0]}");
+            }
+        }
     }
+    
+    slot.item = item;
+    LoadItemTexture(slot, slot.item.img.source[0]);
+}
+
 
     public void LoadItemTexture(ItemSlot slot,string image_source){
         Texture2D loadedTexture = localPlayer.player.inventory.LoadTextureFromPath(image_source);
@@ -175,7 +207,7 @@ public class CraftingMenu : MonoBehaviour
 
         LoadItemTexture(slot, slot.item.img.source[1]);
 
-        if (slot.type == 0){
+        if (slot.type == ItemSlotType.CraftingMenuItems){
             // add loading item
             highlightedItem.LoadInfo(slot);
         }

@@ -14,7 +14,8 @@
         "description": "Found in trees, or on the ground.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood.png",
@@ -36,7 +37,8 @@
         "description": "Find it on the ground or on the rock.",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-stone.png",
@@ -58,7 +60,8 @@
         "description": "Melt it on a Firepit or a Smelter",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-steel.png",
@@ -80,7 +83,8 @@
         "description": "Useful to craft bullet and clothes",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-fat.png",
@@ -102,7 +106,8 @@
         "description": "Useful to make string",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-animal-tendon.png",
@@ -124,7 +129,13 @@
         "description": "Useful to craft many items.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 5,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-string.png",
@@ -146,7 +157,8 @@
         "description": "Useful to make clothes",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-leather-boar.png",
@@ -168,7 +180,13 @@
         "description": "To craft improved items.",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": [
+          {
+            "itemId": 3,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-metal.png",
@@ -190,7 +208,8 @@
         "description": "#Vegan",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 10,
       "ground_img": "img/day-ground-raw-steak.png",
@@ -213,7 +232,13 @@
         "description": "Rare or medium?",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 9,
+            "count": 1
+          }
+        ]
       },
       "stack": 10,
       "ground_img": "img/day-ground-cooked-steak.png",
@@ -236,7 +261,8 @@
         "description": "Don't eat that.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 10,
       "ground_img": "img/day-ground-rotten-steak.png",
@@ -259,7 +285,8 @@
         "description": "A little hungry?",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-orange.png",
@@ -282,7 +309,13 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": 6
+        "type": 6,
+        "requiredResources": [
+          {
+            "itemId": 12,
+            "count": 4
+          }
+        ]
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-orange.png",
@@ -305,7 +338,13 @@
         "description": "Fill up on Vitame C?",
         "level": -1,
         "skillCost": 1,
-        "type": 6
+        "type": 6,
+        "requiredResources": [
+          {
+            "itemId": 12,
+            "count": 4
+          }
+        ]
       },
       "stack": 40,
       "width": [
@@ -377,7 +416,17 @@
         "description": "Harvest Wood and Stone.",
         "level": -1,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 10
+          },
+          {
+            "itemId": 2,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-hachet.png",
@@ -400,7 +449,17 @@
         "description": "Mine Stone and Iron.",
         "level": -1,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 100
+          },
+          {
+            "itemId": 2,
+            "count": 30
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-pickaxe.png",
@@ -423,7 +482,17 @@
         "description": "Mine also Sulfur",
         "level": 6,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 150
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-steel-pickaxe.png",
@@ -446,7 +515,17 @@
         "description": "Harvest a lot of Wood",
         "level": 5,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 150
+          },
+          {
+            "itemId": 8,
+            "count": 7
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-stone-axe.png",
@@ -469,7 +548,17 @@
         "description": "Allow you to make new items.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 40
+          },
+          {
+            "itemId": 2,
+            "count": 20
+          }
+        ]
       },
       "stack": 255,
       "putableimg": {
@@ -512,7 +601,13 @@
         "description": "Don't forget to pick it up.",
         "level": -1,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 70
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-spear.png",
@@ -535,7 +630,17 @@
         "description": "Where are the cowboys?",
         "level": -1,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 60
+          },
+          {
+            "itemId": 5,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-bow.png",
@@ -558,7 +663,17 @@
         "description": "I hope you know how to aim.",
         "level": 7,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 90,
+            "count": 6
+          },
+          {
+            "itemId": 8,
+            "count": 9
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-9mm.png",
@@ -581,7 +696,17 @@
         "description": "Pretty useful for self-defense.",
         "level": 9,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 4
+          },
+          {
+            "itemId": 8,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-desert-eagle.png",
@@ -604,7 +729,17 @@
         "description": "He's dead now, don't you think?",
         "level": 11,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 6
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-shotgun.png",
@@ -627,7 +762,17 @@
         "description": "Revolution time",
         "level": 12,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 14
+          },
+          {
+            "itemId": 8,
+            "count": 8
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-ak47.png",
@@ -650,7 +795,17 @@
         "description": "For the very angry shy",
         "level": 13,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 10
+          },
+          {
+            "itemId": 8,
+            "count": 8
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-sniper.png",
@@ -673,7 +828,13 @@
         "description": "Protected from the wind.",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 20
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -731,7 +892,13 @@
         "description": "Saved the 3 little pigs.",
         "level": 3,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 20
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -789,7 +956,13 @@
         "description": "Afraid we'll find you?",
         "level": 6,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 3
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -847,7 +1020,13 @@
         "description": "You can shoot through it.",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 40
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -913,7 +1092,13 @@
         "description": "You can shoot through it.",
         "level": 3,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 40
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -979,7 +1164,13 @@
         "description": "Killing at home, for more comfort.",
         "level": 6,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1045,7 +1236,17 @@
         "description": "Warm you when you're cold.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 30
+          },
+          {
+            "itemId": 2,
+            "count": 5
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1100,7 +1301,21 @@
         "description": "For 9MM, Desert Eagle, and MP5 ",
         "level": 6,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 53,
+            "count": 3
+          },
+          {
+            "itemId": 8,
+            "count": 3
+          },
+          {
+            "itemId": 4,
+            "count": 3
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-9mm.png",
@@ -1122,7 +1337,21 @@
         "description": "For Shotgun",
         "level": 10,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 1
+          },
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 4,
+            "count": 4
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-shotgun.png",
@@ -1144,7 +1373,21 @@
         "description": "For Sniper, and AK47",
         "level": 11,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 1
+          },
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 4,
+            "count": 4
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-bullet-sniper.png",
@@ -1166,7 +1409,25 @@
         "description": "Regenerate your life.",
         "level": 10,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 2
+          },
+          {
+            "itemId": 38,
+            "count": 1
+          },
+          {
+            "itemId": 7,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 2
+          }
+        ]
       },
       "stack": 2,
       "ground_img": "img/day-ground-medikit.png",
@@ -1189,7 +1450,17 @@
         "description": "To heal the boo-boos.",
         "level": -1,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 1
+          },
+          {
+            "itemId": 7,
+            "count": 2
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-bandage.png",
@@ -1212,7 +1483,21 @@
         "description": "Give energy.",
         "level": 5,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 115,
+            "count": 1
+          },
+          {
+            "itemId": 74,
+            "count": 1
+          },
+          {
+            "itemId": 79,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-soda.png",
@@ -1235,7 +1520,17 @@
         "description": "Not bad.",
         "level": 10,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 6
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-MP5.png",
@@ -1258,7 +1553,17 @@
         "description": "Warm you up.",
         "level": -1,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 1
+          },
+          {
+            "itemId": 7,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-headscarf.png",
@@ -1280,7 +1585,21 @@
         "description": "You look like a real woodcutter.",
         "level": 7,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 6
+          },
+          {
+            "itemId": 7,
+            "count": 8
+          },
+          {
+            "itemId": 41,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-chapka.png",
@@ -1302,7 +1621,21 @@
         "description": "Is the weather really that cold?",
         "level": 9,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 15
+          },
+          {
+            "itemId": 7,
+            "count": 20
+          },
+          {
+            "itemId": 42,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-coat.png",
@@ -1324,7 +1657,21 @@
         "description": "Protect you from Radioactivity.",
         "level": -1,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 6,
+            "count": 1
+          },
+          {
+            "itemId": 7,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-mask.png",
@@ -1346,7 +1693,29 @@
         "description": "Previously, on Breaking Bad.",
         "level": 8,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 2
+          },
+          {
+            "itemId": 6,
+            "count": 4
+          },
+          {
+            "itemId": 7,
+            "count": 4
+          },
+          {
+            "itemId": 44,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-gaz-protection.png",
@@ -1368,7 +1737,29 @@
         "description": "Let's not grow a second head.",
         "level": 10,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 6
+          },
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 6,
+            "count": 8
+          },
+          {
+            "itemId": 7,
+            "count": 20
+          },
+          {
+            "itemId": 45,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-radiation-suit.png",
@@ -1390,7 +1781,13 @@
         "description": "Needed to use bow.",
         "level": -1,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 40
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-arrow.png",
@@ -1412,7 +1809,21 @@
         "description": "Warm up and melt iron slowly.",
         "level": 3,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 120
+          },
+          {
+            "itemId": 2,
+            "count": 20
+          },
+          {
+            "itemId": 3,
+            "count": 4
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1467,7 +1878,17 @@
         "description": "Melt iron, uranium and alloys",
         "level": 10,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1536,7 +1957,13 @@
         "description": "Let's hope it holds.",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 60
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1602,7 +2029,13 @@
         "description": "Not too heavy to open, I hope.",
         "level": 3,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 60
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1668,7 +2101,13 @@
         "description": "I guess you're safe.",
         "level": 6,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 9
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1734,7 +2173,8 @@
         "description": "Sulfur in such a cold landscape?",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-sulfur.png",
@@ -1756,7 +2196,13 @@
         "description": "Are you out of your mind?",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": [
+          {
+            "itemId": 56,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-shaped-uranium.png",
@@ -1778,7 +2224,17 @@
         "description": "Allow you to make new items",
         "level": 6,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1833,7 +2289,8 @@
         "description": "Do you want to end up as Marie Curie?",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-uranium.png",
@@ -1855,7 +2312,21 @@
         "description": "Allow you to sew clothes",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 80
+          },
+          {
+            "itemId": 2,
+            "count": 20
+          },
+          {
+            "itemId": 6,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -1910,7 +2381,17 @@
         "description": "Fuel for Smelter",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 13,
+            "count": 4
+          },
+          {
+            "itemId": 53,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-gasoline.png",
@@ -1932,7 +2413,21 @@
         "description": "Mine also Uranium",
         "level": 9,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 53,
+            "count": 6
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-pickaxe.png",
@@ -1955,7 +2450,17 @@
         "description": "You can't store food in.",
         "level": 8,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 50
+          },
+          {
+            "itemId": 2,
+            "count": 20
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2010,7 +2515,17 @@
         "description": "Save your food.",
         "level": 9,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 5
+          },
+          {
+            "itemId": 92,
+            "count": 4
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2065,7 +2580,13 @@
         "description": "Players can't spawn on it",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 15
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2281,7 +2802,17 @@
         "description": "Destroy walls quickly.",
         "level": 7,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 100
+          },
+          {
+            "itemId": 8,
+            "count": 10
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-hammer.png",
@@ -2304,7 +2835,21 @@
         "description": "Once dead, you keep your base",
         "level": 9,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 7,
+            "count": 7
+          },
+          {
+            "itemId": 4,
+            "count": 7
+          },
+          {
+            "itemId": 6,
+            "count": 7
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2359,7 +2904,17 @@
         "description": "Repair walls but require nails.",
         "level": 5,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 120
+          },
+          {
+            "itemId": 8,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-repair-hammer.png",
@@ -2382,7 +2937,13 @@
         "description": "Needed to repair walls.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-nails.png",
@@ -2404,7 +2965,13 @@
         "description": "Players can't spawn on it",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 15
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2620,7 +3187,13 @@
         "description": "You can shoot through it.",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 10
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2810,7 +3383,13 @@
         "description": "You can shoot through it.",
         "level": 3,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 10
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -2998,7 +3577,13 @@
         "description": "You can shoot through it.",
         "level": 6,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -3175,7 +3760,10 @@
     {
       "id": 71,
       "img": {},
-      "detail": {},
+      "detail": {
+        "type": -2,
+        "requiredResources": []
+      },
       "isDoor": 0,
       "ground_img": "",
       "inmap_image": null,
@@ -3196,7 +3784,17 @@
         "description": "Has not yet been opened.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 79,
+            "count": 1
+          },
+          {
+            "itemId": 77,
+            "count": 2
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-tomato-soup.png",
@@ -3219,7 +3817,13 @@
         "description": "Useful to make drugs.",
         "level": -1,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 90,
+            "count": 1
+          }
+        ]
       },
       "stack": 20,
       "ground_img": "img/day-ground-syringe.png",
@@ -3241,7 +3845,8 @@
         "description": "Useful to make a drugs.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-chemical-component.png",
@@ -3263,7 +3868,21 @@
         "description": "Reduce your radioactivity a lot.",
         "level": -1,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 73,
+            "count": 1
+          },
+          {
+            "itemId": 74,
+            "count": 1
+          },
+          {
+            "itemId": 120,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-radaway.png",
@@ -3286,7 +3905,13 @@
         "description": "A fruit or vegetable?",
         "level": -1,
         "skillCost": 1,
-        "type": 6
+        "type": 6,
+        "requiredResources": [
+          {
+            "itemId": 77,
+            "count": 4
+          }
+        ]
       },
       "stack": 40,
       "width": [
@@ -3358,7 +3983,8 @@
         "description": "Why did the tomato blush?",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-tomato.png",
@@ -3381,7 +4007,8 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-tomato.png",
@@ -3404,7 +4031,13 @@
         "description": "Useful to craft food can.",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-can.png",
@@ -3427,7 +4060,21 @@
         "description": "Shoot faster, reload slower",
         "level": 6,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 200
+          },
+          {
+            "itemId": 6,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-wood-crossbow.png",
@@ -3450,7 +4097,17 @@
         "description": "Needed to use crossbow.",
         "level": -1,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 40
+          },
+          {
+            "itemId": 8,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-wood-crossarrow.png",
@@ -3472,7 +4129,25 @@
         "description": "Repair walls from a distance",
         "level": 7,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 3
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          },
+          {
+            "itemId": 90,
+            "count": 1
+          },
+          {
+            "itemId": 92,
+            "count": 4
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-nail-gun.png",
@@ -3495,7 +4170,21 @@
         "description": "Shoot less far, do more damages",
         "level": 13,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 24,
+            "count": 1
+          },
+          {
+            "itemId": 95,
+            "count": 6
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-sawed-off-shotgun.png",
@@ -3518,7 +4207,13 @@
         "description": "Players can't spawn on it",
         "level": 4,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 15
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -3734,7 +4429,13 @@
         "description": "Players can't spawn on it",
         "level": 4,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 15
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -3939,7 +4640,10 @@
     {
       "id": 86,
       "img": {},
-      "detail": {},
+      "detail": {
+        "type": -2,
+        "requiredResources": []
+      },
       "isDoor": 0,
       "ground_img": "",
       "inmap_image": null,
@@ -3960,7 +4664,8 @@
         "description": "You salty?",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 5,
       "ground_img": "img/day-ground-chips.png",
@@ -3983,7 +4688,8 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 5,
       "ground_img": "img/day-ground-rotten-chips.png",
@@ -4006,7 +4712,8 @@
         "description": "Break TV's and Computers to find it",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-electronic-part.png",
@@ -4028,7 +4735,8 @@
         "description": "Find it in houses",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-junk.png",
@@ -4050,7 +4758,8 @@
         "description": "Break big computers in power station (in the city)",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-wires.png",
@@ -4072,7 +4781,17 @@
         "description": "Used for energy weapons/buildings",
         "level": 6,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 1
+          },
+          {
+            "itemId": 54,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-energy-cells.png",
@@ -4094,7 +4813,29 @@
         "description": "Bullets are faster.",
         "level": 14,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 54,
+            "count": 2
+          },
+          {
+            "itemId": 91,
+            "count": 1
+          },
+          {
+            "itemId": 89,
+            "count": 2
+          },
+          {
+            "itemId": 95,
+            "count": 1
+          },
+          {
+            "itemId": 8,
+            "count": 4
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-pistol.png",
@@ -4117,7 +4858,29 @@
         "description": "Allow you to make powerful items",
         "level": 10,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 4
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 3
+          },
+          {
+            "itemId": 91,
+            "count": 4
+          },
+          {
+            "itemId": 54,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -4186,7 +4949,21 @@
         "description": "To craft powerful items",
         "level": -1,
         "skillCost": 1,
-        "type": 8
+        "type": 8,
+        "requiredResources": [
+          {
+            "itemId": 3,
+            "count": 1
+          },
+          {
+            "itemId": 90,
+            "count": 1
+          },
+          {
+            "itemId": 53,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "ground_img": "img/day-ground-alloys.png",
@@ -4208,7 +4985,25 @@
         "description": "You look cool with it.",
         "level": 10,
         "skillCost": 1,
-        "type": 4
+        "type": 4,
+        "requiredResources": [
+          {
+            "itemId": 18,
+            "count": 1
+          },
+          {
+            "itemId": 95,
+            "count": 8
+          },
+          {
+            "itemId": 8,
+            "count": 10
+          },
+          {
+            "itemId": 53,
+            "count": 20
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-sulfur-axe.png",
@@ -4231,7 +5026,25 @@
         "description": "When you feel it, it's too late",
         "level": 9,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 90,
+            "count": 1
+          },
+          {
+            "itemId": 53,
+            "count": 2
+          },
+          {
+            "itemId": 4,
+            "count": 2
+          }
+        ]
       },
       "stack": 20,
       "width": [
@@ -4297,7 +5110,25 @@
         "description": "Get out of here, it gonna blow!",
         "level": 9,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 1
+          },
+          {
+            "itemId": 4,
+            "count": 2
+          },
+          {
+            "itemId": 53,
+            "count": 2
+          },
+          {
+            "itemId": 90,
+            "count": 1
+          }
+        ]
       },
       "stack": 10,
       "width": [
@@ -4360,7 +5191,25 @@
         "description": "Explode when you hit the trigger!",
         "level": 16,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 98,
+            "count": 2
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          },
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "width": [
@@ -4423,7 +5272,25 @@
         "description": "Don't press the button or else...",
         "level": 16,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 5
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          },
+          {
+            "itemId": 92,
+            "count": 8
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-joystick.png",
@@ -4446,7 +5313,17 @@
         "description": "Allows to accelerate rotting",
         "level": 8,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -4509,7 +5386,25 @@
         "description": "Protects you from melee weapons",
         "level": -1,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 3
+          },
+          {
+            "itemId": 5,
+            "count": 3
+          },
+          {
+            "itemId": 7,
+            "count": 3
+          },
+          {
+            "itemId": 66,
+            "count": 80
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-metal-helmet.png",
@@ -4531,7 +5426,29 @@
         "description": "Protects you from melee weapons",
         "level": 7,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 10
+          },
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 7,
+            "count": 3
+          },
+          {
+            "itemId": 66,
+            "count": 160
+          },
+          {
+            "itemId": 102,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-welding-helmet.png",
@@ -4553,7 +5470,29 @@
         "description": "Strength and honor.",
         "level": 17,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 12
+          },
+          {
+            "itemId": 95,
+            "count": 6
+          },
+          {
+            "itemId": 7,
+            "count": 4
+          },
+          {
+            "itemId": 66,
+            "count": 255
+          },
+          {
+            "itemId": 103,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-gladiator-helmet.png",
@@ -4575,7 +5514,17 @@
         "description": "Protects you from guns",
         "level": -1,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 6,
+            "count": 2
+          },
+          {
+            "itemId": 7,
+            "count": 4
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-leather-jacket.png",
@@ -4597,7 +5546,29 @@
         "description": "Protects you from guns",
         "level": 12,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 6,
+            "count": 4
+          },
+          {
+            "itemId": 7,
+            "count": 6
+          },
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 105,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-kevlar-suit.png",
@@ -4619,7 +5590,29 @@
         "description": "Protects you from guns",
         "level": 18,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 10
+          },
+          {
+            "itemId": 6,
+            "count": 10
+          },
+          {
+            "itemId": 7,
+            "count": 10
+          },
+          {
+            "itemId": 95,
+            "count": 4
+          },
+          {
+            "itemId": 106,
+            "count": 1
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-SWAT-suit.png",
@@ -4641,7 +5634,25 @@
         "description": "Protects you from explosives",
         "level": 12,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 6,
+            "count": 6
+          },
+          {
+            "itemId": 7,
+            "count": 6
+          },
+          {
+            "itemId": 95,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-protective-suit.png",
@@ -4663,7 +5674,29 @@
         "description": "Protects you from energy weapons",
         "level": 10,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 20
+          },
+          {
+            "itemId": 54,
+            "count": 2
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          },
+          {
+            "itemId": 91,
+            "count": 2
+          },
+          {
+            "itemId": 95,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-0.png",
@@ -4685,7 +5718,29 @@
         "description": "Protects you from energy weapons",
         "level": 18,
         "skillCost": 3,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 109,
+            "count": 1
+          },
+          {
+            "itemId": 54,
+            "count": 10
+          },
+          {
+            "itemId": 89,
+            "count": 5
+          },
+          {
+            "itemId": 91,
+            "count": 5
+          },
+          {
+            "itemId": 95,
+            "count": 10
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-tesla-armor.png",
@@ -4707,7 +5762,13 @@
         "description": "Hurt and slow down",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 80
+          }
+        ]
       },
       "stack": 40,
       "width": [
@@ -4762,7 +5823,29 @@
         "description": "It's the best weapon",
         "level": 14,
         "skillCost": 2,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 10
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 54,
+            "count": 6
+          },
+          {
+            "itemId": 91,
+            "count": 2
+          },
+          {
+            "itemId": 89,
+            "count": 3
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-submachine.png",
@@ -4785,7 +5868,25 @@
         "description": "Explodes when you throw it away.",
         "level": 10,
         "skillCost": 1,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 2
+          },
+          {
+            "itemId": 90,
+            "count": 2
+          },
+          {
+            "itemId": 53,
+            "count": 2
+          },
+          {
+            "itemId": 4,
+            "count": 2
+          }
+        ]
       },
       "stack": 10,
       "ground_img": "img/day-ground-grenade.png",
@@ -4808,7 +5909,8 @@
         "description": "Destroy indestructible walls.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 1,
       "ground_img": "img/day-ground-super-hammer.png",
@@ -4831,7 +5933,8 @@
         "description": "Find it on speedy ghouls",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-ghoul-blood.png",
@@ -4853,7 +5956,21 @@
         "description": "Hide you in the forest",
         "level": -1,
         "skillCost": 1,
-        "type": 2
+        "type": 2,
+        "requiredResources": [
+          {
+            "itemId": 1,
+            "count": 90
+          },
+          {
+            "itemId": 6,
+            "count": 2
+          },
+          {
+            "itemId": 7,
+            "count": 2
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-camouflage-gear.png",
@@ -4875,7 +5992,17 @@
         "description": "Allows to craft drugs",
         "level": 8,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -4944,7 +6071,29 @@
         "description": "Ghouls does not attack you.",
         "level": 10,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 73,
+            "count": 1
+          },
+          {
+            "itemId": 74,
+            "count": 1
+          },
+          {
+            "itemId": 120,
+            "count": 1
+          },
+          {
+            "itemId": 121,
+            "count": 1
+          },
+          {
+            "itemId": 115,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-ghoul-drug.png",
@@ -4967,7 +6116,8 @@
         "description": "Poisoned, really dangerous",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom1.png",
@@ -4990,7 +6140,8 @@
         "description": "Can be eaten.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom2.png",
@@ -5013,7 +6164,8 @@
         "description": "Can be eaten.",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-mushroom3.png",
@@ -5036,7 +6188,8 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom1.png",
@@ -5059,7 +6212,8 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom2.png",
@@ -5082,7 +6236,8 @@
         "description": "Go on, have a bite!",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-mushroom3.png",
@@ -5105,7 +6260,25 @@
         "description": "You are faster a certain time.",
         "level": 14,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 73,
+            "count": 1
+          },
+          {
+            "itemId": 74,
+            "count": 1
+          },
+          {
+            "itemId": 119,
+            "count": 1
+          },
+          {
+            "itemId": 115,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-lapadoine.png",
@@ -5128,7 +6301,25 @@
         "description": "Repair your base for you",
         "level": 8,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          },
+          {
+            "itemId": 95,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "width": [
@@ -5200,7 +6391,8 @@
         "description": "Find it on TV's and computers in abandonned houses",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 255,
       "ground_img": "img/day-ground-small-wire.png",
@@ -5222,7 +6414,8 @@
         "description": "Eat it or craft a pumpkin ghoul",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -2,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-pumpkin.png",
@@ -5245,7 +6438,8 @@
         "description": "You should not click",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -2,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-pumpkin.png",
@@ -5268,7 +6462,17 @@
         "description": "Plant your pumpkin pet",
         "level": 99,
         "skillCost": 1,
-        "type": -1
+        "type": -2,
+        "requiredResources": [
+          {
+            "itemId": 128,
+            "count": 1
+          },
+          {
+            "itemId": 115,
+            "count": 1
+          }
+        ]
       },
       "stack": 40,
       "width": [
@@ -5340,7 +6544,29 @@
         "description": "Allows you to extract minerals from the ground",
         "level": 12,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 10
+          },
+          {
+            "itemId": 54,
+            "count": 2
+          },
+          {
+            "itemId": 127,
+            "count": 2
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -5406,7 +6632,25 @@
         "description": "Remove the withdrawal effects (pink skin)",
         "level": 14,
         "skillCost": 1,
-        "type": 7
+        "type": 7,
+        "requiredResources": [
+          {
+            "itemId": 73,
+            "count": 1
+          },
+          {
+            "itemId": 74,
+            "count": 1
+          },
+          {
+            "itemId": 119,
+            "count": 1
+          },
+          {
+            "itemId": 133,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote.png",
@@ -5429,7 +6673,8 @@
         "description": "Use it to make an antidote",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 5,
       "ground_img": "img/day-ground-antidote-flower.png",
@@ -5451,7 +6696,13 @@
         "description": "Plant your forest",
         "level": -1,
         "skillCost": 1,
-        "type": 6
+        "type": 6,
+        "requiredResources": [
+          {
+            "itemId": 135,
+            "count": 1
+          }
+        ]
       },
       "stack": 100,
       "width": [
@@ -5523,7 +6774,8 @@
         "description": "Eat it or plant a tree",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-acorn.png",
@@ -5546,7 +6798,8 @@
         "description": "Not really good",
         "level": -1,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": []
       },
       "stack": 20,
       "ground_img": "img/day-ground-rotten-acorn.png",
@@ -5569,7 +6822,29 @@
         "description": "Faster than a sniper",
         "level": 14,
         "skillCost": 2,
-        "type": 5
+        "type": 5,
+        "requiredResources": [
+          {
+            "itemId": 95,
+            "count": 8
+          },
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 54,
+            "count": 5
+          },
+          {
+            "itemId": 91,
+            "count": 3
+          },
+          {
+            "itemId": 89,
+            "count": 3
+          }
+        ]
       },
       "stack": 1,
       "ground_img": "img/day-ground-laser-sniper.png",
@@ -5592,7 +6867,25 @@
         "description": "Protect you",
         "level": 8,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 6
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          },
+          {
+            "itemId": 95,
+            "count": 1
+          }
+        ]
       },
       "stack": 5,
       "width": [
@@ -5664,7 +6957,29 @@
         "description": "Protect you",
         "level": 16,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 54,
+            "count": 3
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 3
+          },
+          {
+            "itemId": 91,
+            "count": 3
+          },
+          {
+            "itemId": 95,
+            "count": 3
+          }
+        ]
       },
       "stack": 5,
       "width": [
@@ -5736,7 +7051,13 @@
         "description": "Create automatic mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -5791,7 +7112,13 @@
         "description": "Create automatic mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -5846,7 +7173,13 @@
         "description": "Create automatic mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -5901,7 +7234,13 @@
         "description": "Create automatic mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -5956,7 +7295,17 @@
         "description": "Turn on/off mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6019,7 +7368,17 @@
         "description": "Activate only if an entry is on.",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6074,7 +7433,17 @@
         "description": "Activate only if all entries are on.",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6129,7 +7498,17 @@
         "description": "Activate only if no entry is on.",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6184,7 +7563,17 @@
         "description": "Turn on when connected, damage ghoul",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6239,7 +7628,17 @@
         "description": "Wall that can be connected to a cable",
         "level": 7,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 8
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6308,7 +7707,21 @@
         "description": "Connect it to a switch to open and close it.",
         "level": 7,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 8
+          },
+          {
+            "itemId": 127,
+            "count": 2
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6367,7 +7780,17 @@
         "description": "Weight detector",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6422,7 +7845,13 @@
         "description": "Build mountains.",
         "level": 99,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 140
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6631,7 +8060,17 @@
         "description": "Good old memory of the wasteland.",
         "level": 99,
         "skillCost": 1,
-        "type": -1
+        "type": -1,
+        "requiredResources": [
+          {
+            "itemId": 2,
+            "count": 150
+          },
+          {
+            "itemId": 8,
+            "count": 12
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6695,7 +8134,13 @@
         "description": "Players can't spawn on it",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 7,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -6911,7 +8356,13 @@
         "description": "Players can't spawn on it",
         "level": -1,
         "skillCost": 1,
-        "type": 3
+        "type": 3,
+        "requiredResources": [
+          {
+            "itemId": 7,
+            "count": 2
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -7127,7 +8578,21 @@
         "description": "Allow you to make logic gates",
         "level": -1,
         "skillCost": 1,
-        "type": 1
+        "type": 1,
+        "requiredResources": [
+          {
+            "itemId": 90,
+            "count": 2
+          },
+          {
+            "itemId": 8,
+            "count": 4
+          },
+          {
+            "itemId": 89,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -7182,7 +8647,13 @@
         "description": "Create automatic mechanisms",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -7237,7 +8708,17 @@
         "description": "Emit a signal regularly.",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -7306,7 +8787,17 @@
         "description": "Activate only if only one entry is on.",
         "level": -1,
         "skillCost": 1,
-        "type": 9
+        "type": 9,
+        "requiredResources": [
+          {
+            "itemId": 8,
+            "count": 1
+          },
+          {
+            "itemId": 127,
+            "count": 1
+          }
+        ]
       },
       "stack": 255,
       "width": [
@@ -7361,7 +8852,8 @@
         "description": "Improve your vision",
         "level": 0,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-eye1.png",
       "inmap_image": null,
@@ -7382,7 +8874,8 @@
         "description": "Improve your vision",
         "level": 5,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-eye2.png",
       "inmap_image": null,
@@ -7403,7 +8896,8 @@
         "description": "Improve your vision",
         "level": 7,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-eye3.png",
       "inmap_image": null,
@@ -7424,7 +8918,8 @@
         "description": "Multiplies some craft by two",
         "level": 6,
         "skillCost": 2,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-builder1.png",
       "inmap_image": null,
@@ -7445,7 +8940,8 @@
         "description": "Repair much faster",
         "level": 18,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-builder2.png",
       "inmap_image": null,
@@ -7466,7 +8962,8 @@
         "description": "Add a slot in your inventory",
         "level": 0,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-inv1.png",
       "inmap_image": null,
@@ -7487,7 +8984,8 @@
         "description": "Add a slot in your inventory",
         "level": 5,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-inv2.png",
       "inmap_image": null,
@@ -7508,7 +9006,8 @@
         "description": "Add a slot in your bag",
         "level": 7,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-inv3.png",
       "inmap_image": null,
@@ -7529,7 +9028,8 @@
         "description": "Add two slots in your bag",
         "level": 10,
         "skillCost": 2,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-inv4.png",
       "inmap_image": null,
@@ -7550,7 +9050,8 @@
         "description": "Add three slots in your bag",
         "level": 12,
         "skillCost": 3,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-inv5.png",
       "inmap_image": null,
@@ -7571,7 +9072,8 @@
         "description": "Less likely to trigger traps.",
         "level": 8,
         "skillCost": 1,
-        "type": 0
+        "type": 0,
+        "requiredResources": []
       },
       "ground_img": "img/skill-lightweight.png",
       "inmap_image": null,

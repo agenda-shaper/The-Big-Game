@@ -57,7 +57,7 @@ const items = [
     detail: {
       name: "Stone",
       description: "Find it on the ground or on the rock.",
-      WVn: [],
+      requiredResources: [],
       stack: 0,
       stwindowid: [10],
       NMMmV: [80000],
@@ -95,7 +95,7 @@ const items = [
     detail: {
       name: "Iron",
       description: "Melt it on a Firepit or a Smelter",
-      WVn: [],
+      requiredResources: [],
       stack: 0,
       stwindowid: [10],
       NMMmV: [120000],
@@ -197,7 +197,7 @@ const items = [
     detail: {
       name: "String",
       description: "Useful to craft many items.",
-      WVn: [[5, 2]],
+      requiredResources: [[5, 2]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [20000],
@@ -264,7 +264,7 @@ const items = [
     detail: {
       name: "Shaped Metal",
       description: "To craft improved items.",
-      WVn: [[3, 2]],
+      requiredResources: [[3, 2]],
       stack: 1,
       stwindowid: [6, 3],
       NMMmV: [3000, 30000],
@@ -335,7 +335,7 @@ const items = [
     detail: {
       name: "Cooked Steak",
       description: "Rare or medium?",
-      WVn: [[9, 1]],
+      requiredResources: [[9, 1]],
       stack: 1,
       stwindowid: [1, 3],
       NMMmV: [20000, 10000],
@@ -444,7 +444,7 @@ const items = [
     detail: {
       name: "Rotten Orange",
       description: "Go on, have a bite!",
-      WVn: [[12, 4]],
+      requiredResources: [[12, 4]],
       stack: 8,
       stwindowid: [8],
       NMMmV: [40000],
@@ -482,7 +482,7 @@ const items = [
     detail: {
       name: "Orange Seed",
       description: "Fill up on Vitame C?",
-      WVn: [[12, 4]],
+      requiredResources: [[12, 4]],
       stack: 1,
       stwindowid: [1, 3],
       NMMmV: [20000, 15000],
@@ -588,7 +588,7 @@ const items = [
     detail: {
       name: "Hatchet",
       description: "Harvest Wood and Stone.",
-      WVn: [
+      requiredResources: [
         [1, 10],
         [2, 2],
       ],
@@ -628,7 +628,7 @@ const items = [
     detail: {
       name: "Stone Pickaxe",
       description: "Mine Stone and Iron.",
-      WVn: [
+      requiredResources: [
         [1, 100],
         [2, 30],
       ],
@@ -668,7 +668,7 @@ const items = [
     detail: {
       name: "Metal Pickaxe",
       description: "Mine also Sulfur",
-      WVn: [
+      requiredResources: [
         [2, 150],
         [8, 6],
       ],
@@ -708,7 +708,7 @@ const items = [
     detail: {
       name: "Metal Axe",
       description: "Harvest a lot of Wood",
-      WVn: [
+      requiredResources: [
         [1, 150],
         [8, 7],
       ],
@@ -748,7 +748,7 @@ const items = [
     detail: {
       name: "Workbench",
       description: "Allow you to make new items.",
-      WVn: [
+      requiredResources: [
         [1, 40],
         [2, 20],
       ],
@@ -843,7 +843,7 @@ const items = [
     detail: {
       name: "Wood Spear",
       description: "Don't forget to pick it up.",
-      WVn: [[1, 70]],
+      requiredResources: [[1, 70]],
       stack: 1,
       stwindowid: [0, 2],
       NMMmV: [15000, 20000],
@@ -880,7 +880,7 @@ const items = [
     detail: {
       name: "Wood Bow",
       description: "Where are the cowboys?",
-      WVn: [
+      requiredResources: [
         [1, 60],
         [5, 2],
       ],
@@ -922,7 +922,7 @@ const items = [
     detail: {
       name: "9MM",
       description: "I hope you know how to aim.",
-      WVn: [
+      requiredResources: [
         [90, 6],
         [8, 9],
       ],
@@ -963,7 +963,7 @@ const items = [
     detail: {
       name: "Desert Eagle",
       description: "Pretty useful for self-defense.",
-      WVn: [
+      requiredResources: [
         [95, 4],
         [8, 2],
       ],
@@ -1004,7 +1004,7 @@ const items = [
     detail: {
       name: "Shotgun",
       description: "He's dead now, don't you think?",
-      WVn: [
+      requiredResources: [
         [95, 6],
         [8, 6],
       ],
@@ -1045,7 +1045,7 @@ const items = [
     detail: {
       name: "AK47",
       description: "Revolution time",
-      WVn: [
+      requiredResources: [
         [95, 14],
         [8, 8],
       ],
@@ -1086,7 +1086,7 @@ const items = [
     detail: {
       name: "Sniper",
       description: "For the very angry shy",
-      WVn: [
+      requiredResources: [
         [95, 10],
         [8, 8],
       ],
@@ -1127,7 +1127,7 @@ const items = [
     detail: {
       name: "Wooden Wall",
       description: "Protected from the wind.",
-      WVn: [[1, 20]],
+      requiredResources: [[1, 20]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [10000],
@@ -1205,7 +1205,7 @@ const items = [
     detail: {
       name: "Stone Wall",
       description: "Saved the 3 little pigs.",
-      WVn: [[2, 20]],
+      requiredResources: [[2, 20]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [15000],
@@ -1283,7 +1283,7 @@ const items = [
     detail: {
       name: "Steel Wall",
       description: "Afraid we'll find you?",
-      WVn: [[8, 3]],
+      requiredResources: [[8, 3]],
       stack: 1,
       stwindowid: [5],
       NMMmV: [20000],
@@ -1361,7 +1361,7 @@ const items = [
     detail: {
       name: "Wooden Low Door",
       description: "You can shoot through it.",
-      WVn: [[1, 40]],
+      requiredResources: [[1, 40]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [15000],
@@ -1484,7 +1484,7 @@ const items = [
     detail: {
       name: "Stone Low Door",
       description: "You can shoot through it.",
-      WVn: [[2, 40]],
+      requiredResources: [[2, 40]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [15000],
@@ -1607,7 +1607,7 @@ const items = [
     detail: {
       name: "Metal Low Door",
       description: "Killing at home, for more comfort.",
-      WVn: [[8, 6]],
+      requiredResources: [[8, 6]],
       stack: 1,
       stwindowid: [5],
       NMMmV: [30000],
@@ -1730,7 +1730,7 @@ const items = [
     detail: {
       name: "Campfire",
       description: "Warm you when you're cold.",
-      WVn: [
+      requiredResources: [
         [1, 30],
         [2, 5],
       ],
@@ -1823,7 +1823,7 @@ const items = [
     detail: {
       name: "Bullet",
       description: "For 9MM, Desert Eagle, and MP5 ",
-      WVn: [
+      requiredResources: [
         [53, 3],
         [8, 3],
         [4, 3],
@@ -1862,7 +1862,7 @@ const items = [
     detail: {
       name: "Cartridge",
       description: "For Shotgun",
-      WVn: [
+      requiredResources: [
         [95, 1],
         [8, 4],
         [4, 4],
@@ -1901,7 +1901,7 @@ const items = [
     detail: {
       name: "Heavy Bullet",
       description: "For Sniper, and AK47",
-      WVn: [
+      requiredResources: [
         [95, 1],
         [8, 4],
         [4, 4],
@@ -1940,7 +1940,7 @@ const items = [
     detail: {
       name: "Medkit",
       description: "Regenerate your life.",
-      WVn: [
+      requiredResources: [
         [6, 2],
         [38, 1],
         [7, 2],
@@ -1982,7 +1982,7 @@ const items = [
     detail: {
       name: "Bandage",
       description: "To heal the boo-boos.",
-      WVn: [
+      requiredResources: [
         [6, 1],
         [7, 2],
       ],
@@ -2022,7 +2022,7 @@ const items = [
     detail: {
       name: "Soda",
       description: "Give energy.",
-      WVn: [
+      requiredResources: [
         [115, 1],
         [74, 1],
         [79, 1],
@@ -2065,7 +2065,7 @@ const items = [
     detail: {
       name: "MP5",
       description: "Not bad.",
-      WVn: [
+      requiredResources: [
         [95, 6],
         [8, 6],
       ],
@@ -2106,7 +2106,7 @@ const items = [
     detail: {
       name: "Headscarf",
       description: "Warm you up.",
-      WVn: [
+      requiredResources: [
         [6, 1],
         [7, 1],
       ],
@@ -2153,7 +2153,7 @@ const items = [
     detail: {
       name: "Chapka",
       description: "You look like a real woodcutter.",
-      WVn: [
+      requiredResources: [
         [6, 6],
         [7, 8],
         [41, 1],
@@ -2201,7 +2201,7 @@ const items = [
     detail: {
       name: "Winter Coat",
       description: "Is the weather really that cold?",
-      WVn: [
+      requiredResources: [
         [6, 15],
         [7, 20],
         [42, 1],
@@ -2249,7 +2249,7 @@ const items = [
     detail: {
       name: "Radiation Mask",
       description: "Protect you from Radioactivity.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [6, 1],
         [7, 2],
@@ -2297,7 +2297,7 @@ const items = [
     detail: {
       name: "Min. Radiation Suit",
       description: "Previously, on Breaking Bad.",
-      WVn: [
+      requiredResources: [
         [95, 2],
         [8, 2],
         [6, 4],
@@ -2347,7 +2347,7 @@ const items = [
     detail: {
       name: "Radiation Suit",
       description: "Let's not grow a second head.",
-      WVn: [
+      requiredResources: [
         [95, 6],
         [8, 4],
         [6, 8],
@@ -2397,7 +2397,7 @@ const items = [
     detail: {
       name: "Wood Arrow",
       description: "Needed to use bow.",
-      WVn: [[1, 40]],
+      requiredResources: [[1, 40]],
       stack: 5,
       stwindowid: [0, 2],
       NMMmV: [15000, 10000],
@@ -2432,7 +2432,7 @@ const items = [
     detail: {
       name: "Firepit",
       description: "Warm up and melt iron slowly.",
-      WVn: [
+      requiredResources: [
         [1, 120],
         [2, 20],
         [3, 4],
@@ -2526,7 +2526,7 @@ const items = [
     detail: {
       name: "Smelter",
       description: "Melt iron, uranium and alloys",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [89, 1],
       ],
@@ -2645,7 +2645,7 @@ const items = [
     detail: {
       name: "Wooden Door",
       description: "Let's hope it holds.",
-      WVn: [[1, 60]],
+      requiredResources: [[1, 60]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [20000],
@@ -2768,7 +2768,7 @@ const items = [
     detail: {
       name: "Stone Door",
       description: "Not too heavy to open, I hope.",
-      WVn: [[2, 60]],
+      requiredResources: [[2, 60]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [20000],
@@ -2891,7 +2891,7 @@ const items = [
     detail: {
       name: "Metal Door",
       description: "I guess you're safe.",
-      WVn: [[8, 9]],
+      requiredResources: [[8, 9]],
       stack: 1,
       stwindowid: [5],
       NMMmV: [40000],
@@ -3014,7 +3014,7 @@ const items = [
     detail: {
       name: "Sulfur",
       description: "Sulfur in such a cold landscape?",
-      WVn: [],
+      requiredResources: [],
       stack: 0,
       stwindowid: [10],
       NMMmV: [240000],
@@ -3052,7 +3052,7 @@ const items = [
     detail: {
       name: "Shaped Uranium",
       description: "Are you out of your mind?",
-      WVn: [[56, 1]],
+      requiredResources: [[56, 1]],
       stack: 1,
       stwindowid: [6],
       NMMmV: [20000],
@@ -3088,7 +3088,7 @@ const items = [
     detail: {
       name: "Research Bench",
       description: "Allow you to make new items",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [89, 1],
       ],
@@ -3183,7 +3183,7 @@ const items = [
     detail: {
       name: "Uranium",
       description: "Do you want to end up as Marie Curie?",
-      WVn: [],
+      requiredResources: [],
       stack: 0,
       stwindowid: [10],
       NMMmV: [240000],
@@ -3221,7 +3221,7 @@ const items = [
     detail: {
       name: "Weaving Machine",
       description: "Allow you to sew clothes",
-      WVn: [
+      requiredResources: [
         [1, 80],
         [2, 20],
         [6, 2],
@@ -3315,7 +3315,7 @@ const items = [
     detail: {
       name: "Gasoline",
       description: "Fuel for Smelter",
-      WVn: [
+      requiredResources: [
         [13, 4],
         [53, 1],
       ],
@@ -3353,7 +3353,7 @@ const items = [
     detail: {
       name: "Sulfur Pickaxe",
       description: "Mine also Uranium",
-      WVn: [
+      requiredResources: [
         [95, 2],
         [8, 6],
         [53, 6],
@@ -3394,7 +3394,7 @@ const items = [
     detail: {
       name: "Wood chest",
       description: "You can't store food in.",
-      WVn: [
+      requiredResources: [
         [1, 50],
         [2, 20],
       ],
@@ -3487,7 +3487,7 @@ const items = [
     detail: {
       name: "Fridge",
       description: "Save your food.",
-      WVn: [
+      requiredResources: [
         [8, 5],
         [92, 4],
       ],
@@ -3581,7 +3581,7 @@ const items = [
     detail: {
       name: "Wood floor",
       description: "Players can't spawn on it",
-      WVn: [[1, 15]],
+      requiredResources: [[1, 15]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -3969,7 +3969,7 @@ const items = [
     detail: {
       name: "Hammer",
       description: "Destroy walls quickly.",
-      WVn: [
+      requiredResources: [
         [1, 100],
         [8, 10],
       ],
@@ -4009,7 +4009,7 @@ const items = [
     detail: {
       name: "Sleeping Bag",
       description: "Once dead, you keep your base",
-      WVn: [
+      requiredResources: [
         [7, 7],
         [4, 7],
         [6, 7],
@@ -4092,7 +4092,7 @@ const items = [
     detail: {
       name: "Repair Hammer",
       description: "Repair walls but require nails.",
-      WVn: [
+      requiredResources: [
         [1, 120],
         [8, 2],
       ],
@@ -4132,7 +4132,7 @@ const items = [
     detail: {
       name: "Nails",
       description: "Needed to repair walls.",
-      WVn: [[8, 2]],
+      requiredResources: [[8, 2]],
       stack: 85,
       stwindowid: [2],
       NMMmV: [20000],
@@ -4167,7 +4167,7 @@ const items = [
     detail: {
       name: "Light Wood Floor",
       description: "Players can't spawn on it",
-      WVn: [[1, 15]],
+      requiredResources: [[1, 15]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -4555,7 +4555,7 @@ const items = [
     detail: {
       name: "Wooden Low Wall",
       description: "You can shoot through it.",
-      WVn: [[1, 10]],
+      requiredResources: [[1, 10]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [10000],
@@ -4909,7 +4909,7 @@ const items = [
     detail: {
       name: "Stone Low Wall",
       description: "You can shoot through it.",
-      WVn: [[2, 10]],
+      requiredResources: [[2, 10]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [15000],
@@ -5256,7 +5256,7 @@ const items = [
     detail: {
       name: "Metal Low Wall",
       description: "You can shoot through it.",
-      WVn: [[8, 2]],
+      requiredResources: [[8, 2]],
       stack: 1,
       stwindowid: [5],
       NMMmV: [20000],
@@ -5609,7 +5609,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -5667,7 +5667,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -5725,7 +5725,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -5783,7 +5783,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -5841,7 +5841,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -5899,7 +5899,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 200],
             [7, 20],
           ],
@@ -5956,7 +5956,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 200],
             [7, 20],
           ],
@@ -6013,7 +6013,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6067,7 +6067,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [89, 4],
             [8, 16],
             [127, 4],
@@ -6126,7 +6126,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [127, 4],
             [8, 16],
             [90, 12],
@@ -6189,7 +6189,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [7, 8],
             [8, 8],
           ],
@@ -6246,7 +6246,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 150],
             [8, 8],
           ],
@@ -6307,7 +6307,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6378,7 +6378,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6449,7 +6449,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 100]],
+          requiredResources: [[1, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6520,7 +6520,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 100]],
+          requiredResources: [[1, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6591,7 +6591,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [],
+          requiredResources: [],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6663,7 +6663,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [],
+          requiredResources: [],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -6735,7 +6735,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 32],
             [53, 32],
           ],
@@ -6811,7 +6811,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [53, 16],
           ],
@@ -6876,7 +6876,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [53, 16],
           ],
@@ -6941,7 +6941,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 4],
             [2, 100],
           ],
@@ -7003,7 +7003,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 8]],
+          requiredResources: [[8, 8]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -7069,7 +7069,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [2, 40],
             [1, 40],
           ],
@@ -7140,7 +7140,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 8]],
+          requiredResources: [[8, 8]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -7195,7 +7195,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [56, 8],
             [8, 8],
           ],
@@ -7266,7 +7266,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [],
+          requiredResources: [],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -7338,7 +7338,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -7409,7 +7409,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 8],
             [2, 60],
           ],
@@ -7472,7 +7472,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -7560,7 +7560,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 32],
             [53, 12],
           ],
@@ -7651,7 +7651,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 32],
             [53, 12],
           ],
@@ -7742,7 +7742,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 32],
             [53, 12],
           ],
@@ -7833,7 +7833,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [92, 8],
             [89, 4],
             [8, 4],
@@ -7896,7 +7896,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [92, 16],
             [89, 16],
             [91, 8],
@@ -7959,7 +7959,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 16]],
+          requiredResources: [[8, 16]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8025,7 +8025,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [89, 4],
           ],
@@ -8097,7 +8097,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 16]],
+          requiredResources: [[8, 16]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8166,7 +8166,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 16]],
+          requiredResources: [[8, 16]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8232,7 +8232,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [53, 16],
           ],
@@ -8296,7 +8296,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [89, 4],
           ],
@@ -8357,7 +8357,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 40]],
+          requiredResources: [[8, 40]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8415,7 +8415,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [1, 99],
             [7, 9],
             [6, 6],
@@ -8473,7 +8473,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 40]],
+          requiredResources: [[1, 40]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8545,7 +8545,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 40]],
+          requiredResources: [[1, 40]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8617,7 +8617,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 40]],
+          requiredResources: [[1, 40]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8689,7 +8689,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8745,7 +8745,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 100]],
+          requiredResources: [[1, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8816,7 +8816,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 12],
             [7, 20],
             [4, 12],
@@ -8874,7 +8874,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 200]],
+          requiredResources: [[1, 200]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -8945,7 +8945,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 100]],
+          requiredResources: [[1, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -9016,7 +9016,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[1, 100]],
+          requiredResources: [[1, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -9087,7 +9087,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [7, 8],
             [8, 8],
           ],
@@ -9144,7 +9144,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [7, 8],
             [8, 8],
           ],
@@ -9201,7 +9201,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [53, 16],
           ],
@@ -9266,7 +9266,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 8],
             [2, 60],
           ],
@@ -9323,7 +9323,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[8, 8]],
+          requiredResources: [[8, 8]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -9377,7 +9377,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [90, 2],
             [8, 1],
             [73, 1],
@@ -9453,7 +9453,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [
+          requiredResources: [
             [8, 16],
             [89, 4],
           ],
@@ -9510,7 +9510,9 @@ const items = [
         },
       },
     ],
-    detail: {},
+    detail: {
+      type: -2,
+    },
     NWm: -1,
   },
   {
@@ -9536,7 +9538,7 @@ const items = [
     detail: {
       name: "Tomato Soup",
       description: "Has not yet been opened.",
-      WVn: [
+      requiredResources: [
         [79, 1],
         [77, 2],
       ],
@@ -9578,7 +9580,7 @@ const items = [
     detail: {
       name: "Syringe",
       description: "Useful to make drugs.",
-      WVn: [[90, 1]],
+      requiredResources: [[90, 1]],
       stack: 1,
       stwindowid: [5],
       NMMmV: [30000],
@@ -9646,7 +9648,7 @@ const items = [
     detail: {
       name: "RadAway",
       description: "Reduce your radioactivity a lot.",
-      WVn: [
+      requiredResources: [
         [73, 1],
         [74, 1],
         [120, 1],
@@ -9687,7 +9689,7 @@ const items = [
     detail: {
       name: "Tomato Seed",
       description: "A fruit or vegetable?",
-      WVn: [[77, 4]],
+      requiredResources: [[77, 4]],
       stack: 1,
       stwindowid: [1, 3],
       NMMmV: [30000, 20000],
@@ -9863,7 +9865,7 @@ const items = [
     detail: {
       name: "Can",
       description: "Useful to craft food can.",
-      WVn: [[8, 1]],
+      requiredResources: [[8, 1]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [20000],
@@ -9899,7 +9901,7 @@ const items = [
     detail: {
       name: "Wood Crossbow",
       description: "Shoot faster, reload slower",
-      WVn: [
+      requiredResources: [
         [1, 200],
         [6, 2],
         [8, 1],
@@ -9941,7 +9943,7 @@ const items = [
     detail: {
       name: "Crossbow Arrows",
       description: "Needed to use crossbow.",
-      WVn: [
+      requiredResources: [
         [1, 40],
         [8, 1],
       ],
@@ -9979,7 +9981,7 @@ const items = [
     detail: {
       name: "Nail Gun",
       description: "Repair walls from a distance",
-      WVn: [
+      requiredResources: [
         [8, 3],
         [127, 1],
         [90, 1],
@@ -10022,7 +10024,7 @@ const items = [
     detail: {
       name: "Sawed Off",
       description: "Shoot less far, do more damages",
-      WVn: [
+      requiredResources: [
         [24, 1],
         [95, 6],
         [8, 6],
@@ -10064,7 +10066,7 @@ const items = [
     detail: {
       name: "Stone floor",
       description: "Players can't spawn on it",
-      WVn: [[2, 15]],
+      requiredResources: [[2, 15]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -10452,7 +10454,7 @@ const items = [
     detail: {
       name: "Tiling floor",
       description: "Players can't spawn on it",
-      WVn: [[2, 15]],
+      requiredResources: [[2, 15]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -10846,7 +10848,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -10896,7 +10898,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -10946,7 +10948,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -10996,7 +10998,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11046,7 +11048,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11096,7 +11098,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11146,7 +11148,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11196,7 +11198,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11246,7 +11248,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11296,7 +11298,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11346,7 +11348,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11396,7 +11398,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11446,7 +11448,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11496,7 +11498,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11546,7 +11548,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11596,7 +11598,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11646,7 +11648,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11696,7 +11698,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11746,7 +11748,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11796,7 +11798,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11846,7 +11848,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11896,7 +11898,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11946,7 +11948,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -11996,7 +11998,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12046,7 +12048,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12096,7 +12098,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12146,7 +12148,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12196,7 +12198,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12246,7 +12248,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12296,7 +12298,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12346,7 +12348,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12396,7 +12398,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12446,7 +12448,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12496,7 +12498,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12546,7 +12548,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12596,7 +12598,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12646,7 +12648,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12696,7 +12698,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12746,7 +12748,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12796,7 +12798,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12846,7 +12848,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12896,7 +12898,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12946,7 +12948,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -12996,7 +12998,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -13046,7 +13048,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -13096,7 +13098,7 @@ const items = [
         detail: {
           name: "",
           description: "",
-          WVn: [[2, 100]],
+          requiredResources: [[2, 100]],
           type: -1,
           level: -1,
           WnNmW: -1,
@@ -13132,7 +13134,7 @@ const items = [
       },
     ],
     Nvw: [],
-    detail: {},
+    detail: { type: -2 },
     NWm: -1,
   },
   {
@@ -13323,7 +13325,7 @@ const items = [
     detail: {
       name: "Energy Cells",
       description: "Used for energy weapons/buildings",
-      WVn: [
+      requiredResources: [
         [95, 1],
         [54, 1],
       ],
@@ -13361,7 +13363,7 @@ const items = [
     detail: {
       name: "Laser Pistol",
       description: "Bullets are faster.",
-      WVn: [
+      requiredResources: [
         [54, 2],
         [91, 1],
         [89, 2],
@@ -13405,7 +13407,7 @@ const items = [
     detail: {
       name: "Tesla Bench",
       description: "Allow you to make powerful items",
-      WVn: [
+      requiredResources: [
         [95, 4],
         [8, 6],
         [89, 3],
@@ -13581,7 +13583,7 @@ const items = [
     detail: {
       name: "Alloys",
       description: "To craft powerful items",
-      WVn: [
+      requiredResources: [
         [3, 1],
         [90, 1],
         [53, 1],
@@ -13620,7 +13622,7 @@ const items = [
     detail: {
       name: "Sulfur Axe",
       description: "You look cool with it.",
-      WVn: [
+      requiredResources: [
         [18, 1],
         [95, 8],
         [8, 10],
@@ -13662,7 +13664,7 @@ const items = [
     detail: {
       name: "Landmine",
       description: "When you feel it, it's too late",
-      WVn: [
+      requiredResources: [
         [8, 4],
         [90, 1],
         [53, 2],
@@ -13762,7 +13764,7 @@ const items = [
     detail: {
       name: "Dynamite",
       description: "Get out of here, it gonna blow!",
-      WVn: [
+      requiredResources: [
         [6, 1],
         [4, 2],
         [53, 2],
@@ -13856,7 +13858,7 @@ const items = [
     detail: {
       name: "C4",
       description: "Explode when you hit the trigger!",
-      WVn: [
+      requiredResources: [
         [98, 2],
         [127, 1],
         [95, 2],
@@ -13950,7 +13952,7 @@ const items = [
     detail: {
       name: "C4 Trigger",
       description: "Don't press the button or else...",
-      WVn: [
+      requiredResources: [
         [8, 5],
         [89, 1],
         [92, 8],
@@ -13993,7 +13995,7 @@ const items = [
     detail: {
       name: "Compost",
       description: "Allows to accelerate rotting",
-      WVn: [
+      requiredResources: [
         [8, 4],
         [89, 1],
       ],
@@ -14094,7 +14096,7 @@ const items = [
     detail: {
       name: "Metal Helmet",
       description: "Protects you from melee weapons",
-      WVn: [
+      requiredResources: [
         [8, 3],
         [5, 3],
         [7, 3],
@@ -14143,7 +14145,7 @@ const items = [
     detail: {
       name: "Welding Helmet",
       description: "Protects you from melee weapons",
-      WVn: [
+      requiredResources: [
         [8, 10],
         [95, 2],
         [7, 3],
@@ -14193,7 +14195,7 @@ const items = [
     detail: {
       name: "Gladiator Helmet",
       description: "Strength and honor.",
-      WVn: [
+      requiredResources: [
         [8, 12],
         [95, 6],
         [7, 4],
@@ -14243,7 +14245,7 @@ const items = [
     detail: {
       name: "Leather Jacket",
       description: "Protects you from guns",
-      WVn: [
+      requiredResources: [
         [6, 2],
         [7, 4],
       ],
@@ -14290,7 +14292,7 @@ const items = [
     detail: {
       name: "Kevlar Suit",
       description: "Protects you from guns",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [6, 4],
         [7, 6],
@@ -14340,7 +14342,7 @@ const items = [
     detail: {
       name: "SWAT Suit",
       description: "Protects you from guns",
-      WVn: [
+      requiredResources: [
         [8, 10],
         [6, 10],
         [7, 10],
@@ -14390,7 +14392,7 @@ const items = [
     detail: {
       name: "Protective Suit",
       description: "Protects you from explosives",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [6, 6],
         [7, 6],
@@ -14439,7 +14441,7 @@ const items = [
     detail: {
       name: "Power Armor",
       description: "Protects you from energy weapons",
-      WVn: [
+      requiredResources: [
         [8, 20],
         [54, 2],
         [89, 1],
@@ -14489,7 +14491,7 @@ const items = [
     detail: {
       name: "Tesla Armor",
       description: "Protects you from energy weapons",
-      WVn: [
+      requiredResources: [
         [109, 1],
         [54, 10],
         [89, 5],
@@ -14539,7 +14541,7 @@ const items = [
     detail: {
       name: "Wooden Spike",
       description: "Hurt and slow down",
-      WVn: [[1, 80]],
+      requiredResources: [[1, 80]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [25000],
@@ -14650,7 +14652,7 @@ const items = [
     detail: {
       name: "Laser Submachine",
       description: "It's the best weapon",
-      WVn: [
+      requiredResources: [
         [95, 10],
         [8, 6],
         [54, 6],
@@ -14694,7 +14696,7 @@ const items = [
     detail: {
       name: "Grenade",
       description: "Explodes when you throw it away.",
-      WVn: [
+      requiredResources: [
         [8, 2],
         [90, 2],
         [53, 2],
@@ -14803,7 +14805,7 @@ const items = [
     detail: {
       name: "Camouflage Gear",
       description: "Hide you in the forest",
-      WVn: [
+      requiredResources: [
         [1, 90],
         [6, 2],
         [7, 2],
@@ -14851,7 +14853,7 @@ const items = [
     detail: {
       name: "Agitator",
       description: "Allows to craft drugs",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [89, 1],
       ],
@@ -14970,7 +14972,7 @@ const items = [
     detail: {
       name: "Ghoul Drug",
       description: "Ghouls does not attack you.",
-      WVn: [
+      requiredResources: [
         [73, 1],
         [74, 1],
         [120, 1],
@@ -15223,7 +15225,7 @@ const items = [
     detail: {
       name: "Lapadone",
       description: "You are faster a certain time.",
-      WVn: [
+      requiredResources: [
         [73, 1],
         [74, 1],
         [119, 1],
@@ -15265,7 +15267,7 @@ const items = [
     detail: {
       name: "LapaBot",
       description: "Repair your base for you",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [89, 1],
         [127, 1],
@@ -15419,7 +15421,7 @@ const items = [
     detail: {
       name: "Pumpkin",
       description: "Eat it or craft a pumpkin ghoul",
-      type: -1,
+      type: -2,
       level: -1,
       WnNmW: -1,
       pointreq: 1,
@@ -15455,7 +15457,7 @@ const items = [
     detail: {
       name: "Rotten Pumpkin",
       description: "You should not click",
-      type: -1,
+      type: -2,
       level: -1,
       WnNmW: -1,
       pointreq: 1,
@@ -15489,14 +15491,14 @@ const items = [
     detail: {
       name: "Ghoul Seed",
       description: "Plant your pumpkin pet",
-      WVn: [
+      requiredResources: [
         [128, 1],
         [115, 1],
       ],
       stack: 1,
       stwindowid: [1, 3],
       NMMmV: [30000, 20000],
-      type: -1,
+      type: -2,
       level: 99,
       WnNmW: -1,
       pointreq: 1,
@@ -15603,7 +15605,7 @@ const items = [
     detail: {
       name: "Extractor",
       description: "Allows you to extract minerals from the ground",
-      WVn: [
+      requiredResources: [
         [95, 2],
         [8, 10],
         [54, 2],
@@ -15719,7 +15721,7 @@ const items = [
     detail: {
       name: "Antidote",
       description: "Remove the withdrawal effects (pink skin)",
-      WVn: [
+      requiredResources: [
         [73, 1],
         [74, 1],
         [119, 1],
@@ -15793,7 +15795,7 @@ const items = [
     detail: {
       name: "Tree Seed",
       description: "Plant your forest",
-      WVn: [[135, 1]],
+      requiredResources: [[135, 1]],
       stack: 5,
       stwindowid: [1, 3],
       NMMmV: [60000, 40000],
@@ -15969,7 +15971,7 @@ const items = [
     detail: {
       name: "Laser Sniper",
       description: "Faster than a sniper",
-      WVn: [
+      requiredResources: [
         [95, 8],
         [8, 6],
         [54, 5],
@@ -16013,7 +16015,7 @@ const items = [
     detail: {
       name: "HAL Bot",
       description: "Protect you",
-      WVn: [
+      requiredResources: [
         [8, 6],
         [89, 1],
         [127, 1],
@@ -16135,7 +16137,7 @@ const items = [
     detail: {
       name: "Tesla Bot",
       description: "Protect you",
-      WVn: [
+      requiredResources: [
         [54, 3],
         [89, 1],
         [127, 3],
@@ -16258,7 +16260,7 @@ const items = [
     detail: {
       name: "Cable",
       description: "Create automatic mechanisms",
-      WVn: [[127, 1]],
+      requiredResources: [[127, 1]],
       stack: 3,
       stwindowid: [11],
       NMMmV: [15000],
@@ -16346,7 +16348,7 @@ const items = [
     detail: {
       name: "Cable",
       description: "Create automatic mechanisms",
-      WVn: [[127, 1]],
+      requiredResources: [[127, 1]],
       stack: 3,
       stwindowid: [11],
       NMMmV: [15000],
@@ -16434,7 +16436,7 @@ const items = [
     detail: {
       name: "Cable",
       description: "Create automatic mechanisms",
-      WVn: [[127, 1]],
+      requiredResources: [[127, 1]],
       stack: 3,
       stwindowid: [11],
       NMMmV: [15000],
@@ -16522,7 +16524,7 @@ const items = [
     detail: {
       name: "Cable",
       description: "Create automatic mechanisms",
-      WVn: [[127, 1]],
+      requiredResources: [[127, 1]],
       stack: 3,
       stwindowid: [11],
       NMMmV: [15000],
@@ -16610,7 +16612,7 @@ const items = [
     detail: {
       name: "Switch",
       description: "Turn on/off mechanisms",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -16716,7 +16718,7 @@ const items = [
     detail: {
       name: "Gate OR",
       description: "Activate only if an entry is on.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -16807,7 +16809,7 @@ const items = [
     detail: {
       name: "Gate AND",
       description: "Activate only if all entries are on.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -16898,7 +16900,7 @@ const items = [
     detail: {
       name: "Gate NOT",
       description: "Activate only if no entry is on.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -16989,7 +16991,7 @@ const items = [
     detail: {
       name: "Lamp",
       description: "Turn on when connected, damage ghoul",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -17176,7 +17178,7 @@ const items = [
     detail: {
       name: "Cable  - Wall",
       description: "Wall that can be connected to a cable",
-      WVn: [
+      requiredResources: [
         [8, 8],
         [127, 1],
       ],
@@ -17287,7 +17289,7 @@ const items = [
     detail: {
       name: "Automatic Door",
       description: "Connect it to a switch to open and close it.",
-      WVn: [
+      requiredResources: [
         [8, 8],
         [127, 2],
         [89, 1],
@@ -17427,7 +17429,7 @@ const items = [
     detail: {
       name: "Platform",
       description: "Weight detector",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -17518,7 +17520,7 @@ const items = [
     detail: {
       name: "Stone Cave",
       description: "Build mountains.",
-      WVn: [[2, 140]],
+      requiredResources: [[2, 140]],
       stack: 1,
       stwindowid: [2],
       NMMmV: [30000],
@@ -17903,7 +17905,7 @@ const items = [
     detail: {
       name: "Bunker Wall",
       description: "Good old memory of the wasteland.",
-      WVn: [
+      requiredResources: [
         [2, 150],
         [8, 12],
       ],
@@ -17996,7 +17998,7 @@ const items = [
     detail: {
       name: "Golden Floor",
       description: "Players can't spawn on it",
-      WVn: [[7, 2]],
+      requiredResources: [[7, 2]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -18384,7 +18386,7 @@ const items = [
     detail: {
       name: "Red floor",
       description: "Players can't spawn on it",
-      WVn: [[7, 2]],
+      requiredResources: [[7, 2]],
       stack: 2,
       stwindowid: [2],
       NMMmV: [15000],
@@ -18772,7 +18774,7 @@ const items = [
     detail: {
       name: "Welding Machine",
       description: "Allow you to make logic gates",
-      WVn: [
+      requiredResources: [
         [90, 2],
         [8, 4],
         [89, 1],
@@ -18866,7 +18868,7 @@ const items = [
     detail: {
       name: "Cable  - Bridge",
       description: "Create automatic mechanisms",
-      WVn: [[127, 1]],
+      requiredResources: [[127, 1]],
       stack: 3,
       stwindowid: [11],
       NMMmV: [15000],
@@ -18954,7 +18956,7 @@ const items = [
     detail: {
       name: "Gate Timer",
       description: "Emit a signal regularly.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -19072,7 +19074,7 @@ const items = [
     detail: {
       name: "Gate Xor",
       description: "Activate only if only one entry is on.",
-      WVn: [
+      requiredResources: [
         [8, 1],
         [127, 1],
       ],
@@ -19469,11 +19471,11 @@ const items = [
   },
 ];
 
-const ClearedItems = items.map((item) => {
+let ClearedItems = items.map((item) => {
   let {
     id,
     img: { source = [] } = {},
-    detail: { name, description, level, pointreq, type },
+    detail: { name, description, level, pointreq, type, requiredResources },
     stack,
     width,
     height,
@@ -19523,10 +19525,25 @@ const ClearedItems = items.map((item) => {
     inmap_image = instation.source;
   }
 
+  let resources = [];
+  if (requiredResources && requiredResources.length > 0) {
+    resources = requiredResources.map((arr) => ({
+      itemId: arr[0],
+      count: arr[1],
+    }));
+  }
+
   return {
     id,
     img: { source: source.length > 0 ? source : undefined },
-    detail: { name, description, level, skillCost, type },
+    detail: {
+      name,
+      description,
+      level,
+      skillCost,
+      type,
+      requiredResources: resources,
+    },
     stack,
     width,
     height,

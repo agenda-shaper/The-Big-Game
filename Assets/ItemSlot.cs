@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+    public enum ItemSlotType{
+        CraftingMenuItems,
+        RequiredResources,
+        RequiredMachines,
+        ItemsInChest,
+
+    }
 public class ItemSlot : MonoBehaviour
 {
 
@@ -10,7 +17,8 @@ public class ItemSlot : MonoBehaviour
     public RawImage slotImage;
     public Item item;
 
-    public int type;
+    public ItemSlotType type;
+
     // 0 - C menu | 1 - required resources for craft | 2 - Item IN chest | 3 - highlight mesh of crafting menu selected item 
 
 

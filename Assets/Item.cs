@@ -81,8 +81,14 @@ public class DetailData
     public string description;
     public int level;
     public int skillCost;
-    
     public int type;
+    public RequiredResources[] requiredResources;
+}
+[System.Serializable]
+public class RequiredResources
+{
+    public int itemId;
+    public int count;
 }
 
 [System.Serializable]

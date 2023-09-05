@@ -300,8 +300,20 @@ public class BlockManager : NetworkBehaviour
 
     public List<Item> GetItemsByType(int type)
     {
-        return ItemDatabase.FindAll(item => item.detail.type == type);
+        Debug.Log($"Fetching items of type: {type}");
+        List<Item> foundItems = ItemDatabase.FindAll(item => item.detail.type == type);
+        Debug.Log($"Found {foundItems.Count} items of type: {type}");
+
+        foreach(var item in foundItems)
+        {
+            Debug.Log($"ID: {item.id}, Name: {item.detail.name}, First Image Source: {item.img?.source?[0] ?? "None"}");
+        }
+
+
+        return foundItems;
     }
+
+
 
 
     public Texture2D LoadTextureFromPath(string pathWithExtension)
