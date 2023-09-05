@@ -10,10 +10,23 @@ public class CraftingMenu : MonoBehaviour
 
     public HighlightedItem highlightedItem;
 
-    public List<CraftSlot> craftSlots = new List<CraftSlot>();
+    public List<ItemSlot> craftSlots = new List<ItemSlot>();
+
+    private const int MaxCraftSlots = 30;
+
+    public List<ItemSlot> requiredResourcesSlots = new List<ItemSlot>();
+
+    private const int MaxrequiredResourcesSlots = 5;
+
+
 
     private float starting_pos_x = -485f;
     private float starting_pos_y = 287.5f;
+
+    private float required_res_starting_pos_x = 158f;
+    private float required_res_starting_pos_y = 150f;
+
+    private float required_res_slotSpacingX = 90f;
 
     private float slotSpacingX = 116f; // The space between slots in the X direction.
     private float slotSpacingY = 116f; // The space between slots in the Y direction.
@@ -24,20 +37,29 @@ public class CraftingMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int numberOfSlotsToFill = 30;
-
-        for(int i = 0; i < numberOfSlotsToFill; i++)
+        for(int i = 0; i < MaxCraftSlots; i++)
         {
             CreateNewCraftSlot();
         }
+
+        for(int i = 0; i < MaxrequiredResourcesSlots; i++)
+        {
+            CreateRequiredResourceSlot();
+        }
+
         List<Item> items = localPlayer.player.engine.blockManager.GetItemsByType(3);
-        FillWithItems(items);
+        FillWithItems(items,craftSlots);
+
+        FillWithItems(items,requiredResourcesSlots);
+        
     }
 
     public void CreateNewCraftSlot()
     {
+
         GameObject newSlot = Instantiate(firstCraftPrefab, transform);
-        CraftSlot craftSlotComponent = newSlot.GetComponent<CraftSlot>();
+        ItemSlot craftSlotComponent = newSlot.GetComponent<ItemSlot>();
+        craftSlotComponent.type = 0;
         craftSlotComponent.craftingMenu = this;
 
         int currentTotalSlots = craftSlots.Count;
@@ -57,12 +79,37 @@ public class CraftingMenu : MonoBehaviour
         
 
     }
-    public void FillWithItems(List<Item> items)
+    public void CreateRequiredResourceSlot()
+    {
+
+        GameObject newSlot = Instantiate(firstCraftPrefab, transform);
+        ItemSlot craftSlotComponent = newSlot.GetComponent<ItemSlot>();
+        craftSlotComponent.type = 1;
+        craftSlotComponent.craftingMenu = this;
+
+        int currentTotalSlots = craftSlots.Count;
+        int col = currentTotalSlots % maxSlotsPerRow;
+
+        float posX = required_res_starting_pos_x + (col * required_res_slotSpacingX);
+        float posY = required_res_starting_pos_y;
+
+        newSlot.GetComponent<RectTransform>().localPosition = new Vector3(posX, posY, 0f);
+        newSlot.GetComponent<RectTransform>().localScale = new Vector3(0.8f, 0.8f, 0f);
+
+
+        requiredResourcesSlots.Add(craftSlotComponent);
+
+        //// inactive for now
+        craftSlotComponent.gameObject.SetActive(false);
+        
+
+    }
+    public void FillWithItems(List<Item> items, List<ItemSlot> slotsList)
     {
         ClearAllCraftSlots();
-        for (int i = 0; i < items.Count && i < craftSlots.Count; i++)
+        for (int i = 0; i < items.Count && i < slotsList.Count; i++)
         {
-            CraftSlot currentSlot = craftSlots[i];
+            ItemSlot currentSlot = slotsList[i];
 
             // Enable the slot's game object
             currentSlot.gameObject.SetActive(true);
@@ -70,13 +117,16 @@ public class CraftingMenu : MonoBehaviour
             // Load the item into the slot
             LoadItemInSlot(currentSlot, items[i]);
         }
-        // highlight first
-        highlightedItem.LoadInfo(craftSlots[0]);
+        if (slotsList[0].type == 0){
+            // highlight first
+            highlightedItem.LoadInfo(slotsList[0]);
+        }
+        
     }
 
     public void ClearAllCraftSlots()
     {
-        foreach (CraftSlot slot in craftSlots)
+        foreach (ItemSlot slot in craftSlots)
         {
             slot.item = null;  // Remove the item reference
 
@@ -94,13 +144,13 @@ public class CraftingMenu : MonoBehaviour
 
 
 
-    public void LoadItemInSlot(CraftSlot slot, Item item)
+    public void LoadItemInSlot(ItemSlot slot, Item item)
     {
         slot.item = item;
         LoadItemTexture(slot, slot.item.img.source[0]);
     }
 
-    public void LoadItemTexture(CraftSlot slot,string image_source){
+    public void LoadItemTexture(ItemSlot slot,string image_source){
         Texture2D loadedTexture = localPlayer.player.inventory.LoadTextureFromPath(image_source);
         if (loadedTexture != null)
         {
@@ -112,20 +162,25 @@ public class CraftingMenu : MonoBehaviour
             Debug.LogError($"Failed to load texture from path: {image_source}");
         }
     }
-    public void HandleItemEnter(CraftSlot slot){
+    public void HandleItemEnter(ItemSlot slot){
         LoadItemTexture(slot, slot.item.img.source[1]);
     }
-    public void HandleItemExit(CraftSlot slot){
+    public void HandleItemExit(ItemSlot slot){
         LoadItemTexture(slot, slot.item.img.source[0]);
     }
-    public void HandleItemDown(CraftSlot slot){
+    public void HandleItemDown(ItemSlot slot){
         LoadItemTexture(slot, slot.item.img.source[2]);
     }
-    public void HandleItemUp(CraftSlot slot){
+    public void HandleItemUp(ItemSlot slot){
+
         LoadItemTexture(slot, slot.item.img.source[1]);
 
-        // add loading item
-        highlightedItem.LoadInfo(slot);
+        if (slot.type == 0){
+            // add loading item
+            highlightedItem.LoadInfo(slot);
+        }
+
+        
     }
 
 

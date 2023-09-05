@@ -22,7 +22,7 @@ public class HighlightedItem : MonoBehaviour
         
     }
 
-    public void LoadInfo(CraftSlot slot){
+    public void LoadInfo(ItemSlot slot){
         Texture2D loadedTexture = craftingMenu.localPlayer.player.inventory.LoadTextureFromPath(slot.item.img.source[0]);
         if (loadedTexture != null)
         {

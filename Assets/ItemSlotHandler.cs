@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MenuSlotHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
+public class ItemSlotHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
 {
 
-    public CraftSlot craftSlot;
+    public ItemSlot craftSlot;
     public void OnPointerEnter(PointerEventData eventData)
     {
         craftSlot.craftingMenu.HandleItemEnter(craftSlot);
