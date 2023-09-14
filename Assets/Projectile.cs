@@ -46,33 +46,33 @@ public class Projectile : NetworkBehaviour {
 
     [Server]
     public void MoveProjectile() {
+        //Debug.Log("moving projectile");
         if (despawnDuration > 0) {
             transform.position += transform.forward * speed;
             despawnDuration-=1;
-        } else {
-            despawn();
-        }
+        } 
         
     }
 
-    [Server]
     void OnTriggerEnter(Collider other) {
         // Apply damage to player or building
         
-
         if (other.CompareTag("Player")) {
             other.GetComponent<Character>().vitalStats.health -= playerDamage;
+            //Debug.Log("triggered bullet Player");
             // Despawn bullet
             despawn();
 
         } 
-        else if (other.CompareTag("Block")) {
-            Block block = other.GetComponent<Block>();
-            if (block.item.hittable_by_projectiles){
-                block.health -= buildingDamage;
-                block.AnimateHit(owner.rotation);
-                despawn();
-            }
+        else if (other.transform.parent != null){
+            if(other.transform.parent.CompareTag("Block")) {
+                Block block = other.transform.parent.GetComponent<Block>();
+                if (block.item.hittable_by_projectiles){
+                    block.health -= buildingDamage;
+                    block.AnimateHit(owner.rotation);
+                    despawn();
+                    }
+                }
         }
     }
 

@@ -43,15 +43,26 @@ public class Engine : NetworkBehaviour
       player.HandlePlayer(); // You would define this method in your Player class
       if (player.inventory.slots.Count < 8){
         player.inventory.SpawnNewSlot();
-        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+53),1);
+        player.inventory.AddItemToSlot(player.inventory.slots.Count-1,blockManager.GetItemById(player.inventory.slots.Count+20),1);
 
         //player.inventory.DropItem(player.inventory.slots.Count-1);
       }
       player.vitalStats.cold = Mathf.Max(0, player.vitalStats.cold - 0.03f);
       player.vitalStats.hunger = Mathf.Max(0, player.vitalStats.hunger - 0.03f);
 
+      List<Projectile> projectilesToRemove = new List<Projectile>();
       foreach (Projectile projectile in player.projectiles) {
         projectile.MoveProjectile();
+        if (projectile.despawnDuration <= 0)
+        {
+          projectilesToRemove.Add(projectile);
+        }
+      }
+
+      foreach (Projectile projectile in projectilesToRemove)
+      {
+        player.projectiles.Remove(projectile);
+        NetworkServer.Destroy(projectile.gameObject);
       }
 
       player.localPlayer.vitalStatsUI.UpdateVitalStats(player.vitalStats);

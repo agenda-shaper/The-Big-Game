@@ -49,12 +49,15 @@ public class ActionHandler : MonoBehaviour
                 break;
         }
         string holdingSource = "img/day-" + slotItem.item.detail.name.ToLower().Replace(" ", "-");
+        //holdingSource = slotItem.item.inmap_image;
+        holdingSource = slotItem.item.ground_img;
+
         //Debug.Log(holdingSource);
 
         inventory.holdingItem.gameObject.SetActive(true);
         isActing = true;
         currentSlotItem = slotItem;
-        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(slotItem.item.inmap_image));
+        inventory.holdingItem.LoadImage(inventory.LoadTextureFromPath(holdingSource));
 
     }
 

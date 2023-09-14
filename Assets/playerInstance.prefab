@@ -233,6 +233,8 @@ MonoBehaviour:
         description: 
         level: 0
         skillCost: 0
+        type: 0
+        requiredResources: []
       stack: 0
       width: 
       height: 
@@ -619,6 +621,8 @@ MonoBehaviour:
         description: 
         level: 0
         skillCost: 0
+        type: 0
+        requiredResources: []
       stack: 0
       width: 
       height: 
