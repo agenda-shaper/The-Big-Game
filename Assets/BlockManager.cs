@@ -1,3 +1,4 @@
+//using System.Numerics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -114,12 +115,43 @@ public class BlockManager : NetworkBehaviour
 
         Debug.LogError("Texture not loaded!");
     }
+    private Mesh LoadBlockMesh(string meshSource)
+    {
+        return Resources.Load<Mesh>("Meshes/" + meshSource);
+    }
 
     [Server]
     public void UpdateBlock(Block block)
     {
         if (block.item.connection_type == null){
             //Debug.Log("null connection type of: "+ block.item.details.name);
+            return;
+        } else if (block.item.connection_type == "base_building") {
+            Mesh mesh = LoadBlockMesh(block.item.blockMeshes.building);  // This will load the Mesh
+            block.meshFilter.mesh = mesh;
+            block.meshFilter.transform.rotation = Quaternion.Euler(0,block.rotation,0);
+            Matrix4x4 scaleMatrix = Matrix4x4.Scale(new Vector3(0.25f, 0.25f, 0.25f));
+            float finalRotation = block.rotation;
+
+            // Set rotation
+            block.meshFilter.transform.rotation = Quaternion.Euler(0, finalRotation, 0);
+
+            // Set scale
+            block.meshFilter.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
+
+            block.meshFilter.transform.localPosition = new Vector3(0f, -0.5f, 0f);
+
+
+            Vector3[] vertices = block.meshFilter.mesh.vertices;  // Get all vertices
+            Vector2[] newUVs = new Vector2[vertices.Length]; // Initialize new UV array
+
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                Vector3 vertex = vertices[i];
+                newUVs[i] = new Vector2(vertex.x, vertex.z);  // Planar projection
+            }
+
+            block.meshFilter.mesh.uv = newUVs; // Set the mesh's UVs
             return;
         }
 
@@ -211,10 +243,7 @@ public class BlockManager : NetworkBehaviour
         block.meshFilter.mesh.uv = newUVs; // Set the mesh's UVs
 
     }
-    private Mesh LoadBlockMesh(string meshSource)
-    {
-        return Resources.Load<Mesh>("Meshes/" + meshSource);
-    }
+    
 
 
     private (string, float) SelectMesh(Item item, bool side1, bool side2, bool diag)

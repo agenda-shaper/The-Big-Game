@@ -1371,6 +1371,7 @@ const items = [
       pointreq: 1,
     },
     selection_type: 21,
+    connection_type: "base_building",
     fuelleft: -1,
     WvV: 0,
     cantShootThrough: 0,
@@ -1494,6 +1495,8 @@ const items = [
       pointreq: 1,
     },
     selection_type: 21,
+    connection_type: "base_building",
+
     fuelleft: -1,
     WvV: 0,
     cantShootThrough: 0,
@@ -1605,7 +1608,7 @@ const items = [
       ],
     },
     detail: {
-      name: "Metal Low Door",
+      name: "Steel Low Door",
       description: "Killing at home, for more comfort.",
       requiredResources: [[8, 6]],
       stack: 1,
@@ -1617,6 +1620,8 @@ const items = [
       pointreq: 1,
     },
     selection_type: 21,
+    connection_type: "base_building",
+
     fuelleft: -1,
     WvV: 0,
     cantShootThrough: 0,
@@ -2654,6 +2659,12 @@ const items = [
       WnNmW: -1,
       pointreq: 1,
     },
+    blockMeshes: {
+      building: "door_building",
+    },
+    texture: "wooden_wall",
+    connection_type: "base_building",
+
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
@@ -2777,6 +2788,12 @@ const items = [
       WnNmW: -1,
       pointreq: 1,
     },
+    blockMeshes: {
+      building: "door_building",
+    },
+    texture: "stone_wall",
+    connection_type: "base_building",
+
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
@@ -2889,7 +2906,7 @@ const items = [
       ],
     },
     detail: {
-      name: "Metal Door",
+      name: "Steel Door",
       description: "I guess you're safe.",
       requiredResources: [[8, 9]],
       stack: 1,
@@ -2900,6 +2917,11 @@ const items = [
       WnNmW: 51,
       pointreq: 1,
     },
+    blockMeshes: {
+      building: "door_building",
+    },
+    texture: "steel_wall",
+    connection_type: "base_building",
     selection_type: 21,
     fuelleft: -1,
     WvV: 1,
