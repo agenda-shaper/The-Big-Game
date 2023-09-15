@@ -78,8 +78,8 @@ public class Engine : NetworkBehaviour
     if (values.Length == 4) // Ensure there are 4 values provided
     {
         int itemId = int.Parse(values[0]);
-        float x = float.Parse(values[1]);
-        float z = float.Parse(values[2]);
+        int x = int.Parse(values[1]);
+        int z = int.Parse(values[2]);
         int rotation = int.Parse(values[3]);
         
         blockManager.SpawnBlock(itemId, x, z, rotation);

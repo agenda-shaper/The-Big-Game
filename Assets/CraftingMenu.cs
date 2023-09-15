@@ -19,7 +19,6 @@ public class CraftingMenu : MonoBehaviour
     private const int MaxrequiredResourcesSlots = 5;
 
 
-
     private float starting_pos_x = -485f;
     private float starting_pos_y = 287.5f;
 

@@ -94,14 +94,49 @@ public class Character : NetworkBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            inventory.SortActionSpaceObjects();
             inventory.HandleActionSpace(1);
         }
-
         // Handle 'F' key for action space object 2
         if (Input.GetKeyDown(KeyCode.F))
         {
+            inventory.SortActionSpaceObjects();
             inventory.HandleActionSpace(2);
         }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            // Generate a random number between 0 and 2
+            int randomNumber = UnityEngine.Random.Range(0, 3);
+
+            // Use the random number to pick a resource type
+            ResourceType resourceType;
+            switch (randomNumber)
+            {
+                case 0:
+                    resourceType = ResourceType.Stone;
+                    break;
+                case 1:
+                    resourceType = ResourceType.Sulfur;
+                    break;
+                case 2:
+                    resourceType = ResourceType.Uranium;
+                    break;
+                default:
+                    resourceType = ResourceType.Stone; // Default to Stone if something goes wrong
+                    break;
+            }
+
+            // Spawn the resource
+            engine.blockManager.SpawnResource(resourceType, (int)gameObject.transform.position.x, (int)gameObject.transform.position.z, 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            localPlayer.craftingMenu.gameObject.SetActive(!localPlayer.craftingMenu.gameObject.activeSelf);
+        }
+
+
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {

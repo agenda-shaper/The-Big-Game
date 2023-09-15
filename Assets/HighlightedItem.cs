@@ -11,6 +11,8 @@ public class HighlightedItem : MonoBehaviour
     public TextMeshPro itemName;
     public TextMeshPro description;
     public TextMeshPro LowestHeader;
+
+    public Item item;
     void Start()
     {
         
@@ -52,8 +54,10 @@ public class HighlightedItem : MonoBehaviour
         {
             Debug.LogError($"Failed to load texture from path: {slot.item.img.source[0]}");
         }
+        item = slot.item;
         itemName.text = slot.item.detail.name;
         description.text = slot.item.detail.description;
+        
         if (slot.item.health > 0){
             LowestHeader.text = $"Life: {slot.item.health}";
         } else {

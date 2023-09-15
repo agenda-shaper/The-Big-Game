@@ -55,7 +55,7 @@ public class Projectile : NetworkBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        // Apply damage to player or building
+        Debug.Log(other.tag);
         
         if (other.CompareTag("Player")) {
             other.GetComponent<Character>().vitalStats.health -= playerDamage;
@@ -64,16 +64,28 @@ public class Projectile : NetworkBehaviour {
             despawn();
 
         } 
-        else if (other.transform.parent != null){
-            if(other.transform.parent.CompareTag("Block")) {
-                Block block = other.transform.parent.GetComponent<Block>();
-                if (block.item.hittable_by_projectiles){
-                    block.health -= buildingDamage;
-                    block.AnimateHit(owner.rotation);
-                    despawn();
-                    }
+        else if (other.transform.parent != null && other.transform.parent.CompareTag("BlockCollider")){
+            Block block = other.transform.parent.GetComponent<BlockCollider>().block;
+            if (block.item.hittable_by_projectiles){
+                block.health -= buildingDamage;
+                block.AnimateHit(owner.rotation);
+                despawn();
+                }
+
+        } else if(other.transform.CompareTag("Mesh")) {
+            Block block = other.transform.GetComponent<MeshNavigator>().block;
+            if (block.isResource){
+                block.health -= buildingDamage;
+                block.AnimateHit(owner.rotation);
+                despawn();
+            }
+            if (block.item.hittable_by_projectiles){
+                block.health -= buildingDamage;
+                block.AnimateHit(owner.rotation);
+                despawn();
                 }
         }
+
     }
 
     void despawn(){

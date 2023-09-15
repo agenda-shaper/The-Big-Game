@@ -42,9 +42,6 @@ public class Inventory : NetworkBehaviour
 
     public HoldingItem holdingItem;
 
-
-    
-
     public void SpawnNewSlot()
     {
         //Debug.Log("spawning");
@@ -59,6 +56,15 @@ public class Inventory : NetworkBehaviour
         slots.Add(slotScript.slotNumber, newSlot); // Add the new slot to the dictionary.
         OrganizeSlots();
         
+    }
+    public void SortActionSpaceObjects()
+    {
+        actionSpaceObjects.Sort((obj1, obj2) =>
+        {
+            float dist1 = Vector3.Distance(player.transform.position, obj1.transform.position);
+            float dist2 = Vector3.Distance(player.transform.position, obj2.transform.position);
+            return dist1.CompareTo(dist2);
+        });
     }
 
     public void OrganizeSlots()
@@ -171,6 +177,8 @@ public class Inventory : NetworkBehaviour
                 actionSpaceObjects.Remove(objectToHandle);
             }
             
+        } else if (objectToHandle.GetComponent<Door>() != null){
+            objectToHandle.GetComponent<Door>().ToggleDoor();
         }
         // Perform other actions with objectToHandle...
     }

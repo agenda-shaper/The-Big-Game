@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
 using System.Linq;
 
 [System.Serializable]
@@ -20,18 +21,104 @@ public class BlockManager : NetworkBehaviour
     [SyncVar]
     public GameObject blockPrefab; // Assign your Block prefab in the Inspector
 
-    public Dictionary<Vector2, List<Block>> blockMap = new Dictionary<Vector2, List<Block>>();
-
-
+    public Dictionary<Tuple<int, int>, List<Block>> blockMap = new Dictionary<Tuple<int, int>, List<Block>>();
 
     [Server]
-    public void SpawnBlock(int itemId, float x, float z, int rotation)
-    {
+    public void SpawnResource(ResourceType type, int posX, int posZ, int rotation){
         rotation *= 90;
 
-        Vector2 coord = new Vector2(x, z);
+
+        Tuple<int, int> coord = new Tuple<int, int>(posX, posZ);
+        
+        // Check if the coordinate is already occupied by any blocks.
+        if (blockMap.ContainsKey(coord))
+        {
+            List<Block> existingBlocks = blockMap[coord]; // Retrieve the list of blocks at the location
+
+            foreach (Block existingBlock in existingBlocks)
+            {
+                // Check if the new block and the existing block have the same collision type
+                if (existingBlock.item.collidesWithEntities)
+                {
+                    return; // Prevent spawning if collides
+                }
+            }
+        }
+
+        Vector3 position = new Vector3(posX, 1, posZ);
+
+        // spawn blank prefab
+        GameObject blockInstance = Instantiate(blockPrefab, position, Quaternion.Euler(0, 0, 0));
+
+        Block block = blockInstance.GetComponent<Block>(); 
+
+        block.mainBodyObj.transform.rotation = Quaternion.Euler(0, rotation, 0);
+
+        //block.health = item.health;
+        block.rotation = rotation;
+        block.door.gameObject.SetActive(false);
+        block.resource.InitResource(type);
+        Mesh mesh = block.resource.PickMesh();
+
+        block.meshFilter.mesh = mesh;
+        float finalRotation = block.rotation;
+
+        // Set rotation
+        block.meshFilter.transform.rotation = Quaternion.Euler(0, finalRotation, 0);
+
+        // Set scale
+        block.meshFilter.transform.localScale = new Vector3(0.6f,  0.6f, 0.6f);
+
+        block.meshFilter.transform.localPosition = new Vector3(0f, 0f, 0f);
+
+        Vector3[] vertices = block.meshFilter.mesh.vertices;  // Get all vertices
+        Vector2[] newUVs = new Vector2[vertices.Length]; // Initialize new UV array
+
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            Vector3 vertex = vertices[i];
+            newUVs[i] = new Vector2(vertex.x * 0.5f, vertex.z * 0.5f);  // Planar projection with tiling
+        }
+
+        block.meshFilter.mesh.uv = newUVs; // Set the mesh's UVs
+
+        // Add a MeshCollider to the blockInstance
+        MeshCollider meshCollider = block.meshObject.gameObject.AddComponent<MeshCollider>();
+
+        // Set the sharedMesh property of the MeshCollider to the picked mesh
+        meshCollider.sharedMesh = mesh;
+
+        Texture2D texture;
+
+        texture = LoadTextureFromPath("Materials/Resource_" + type);
+        if(texture != null)
+        {
+            block.loadTexture(texture);
+            return;
+        }
+        
+
+        
+    }
+
+    [Server]
+    public void SpawnBlock(int itemId, int x, int z, int rotation,Character owner=null)
+    {
+
+        rotation *= 90;
+
+        Tuple<int, int> coord = new Tuple<int, int>(x, z);
+
 
         Item item = GetItemById(itemId);
+
+        if (item == null) {
+            Debug.Log("not found"+itemId);  
+            return;
+        }
+        if (item.connection_type == "wall" || item.connection_type == "floor"){
+            rotation = 0;
+        }
 
 
         // Check if the coordinate is already occupied by any blocks.
@@ -42,6 +129,10 @@ public class BlockManager : NetworkBehaviour
             foreach (Block existingBlock in existingBlocks)
             {
                 // Check if the new block and the existing block have the same collision type
+                if (existingBlock.item == null){
+                    return;
+                    // probably resource or smh
+                }
                 if (item.collidesWithEntities == existingBlock.item.collidesWithEntities)
                 {
                     return; // Prevent spawning if they are the same
@@ -57,13 +148,51 @@ public class BlockManager : NetworkBehaviour
         Vector3 position = new Vector3(x, 1, z);
 
         // spawn blank prefab
-        GameObject blockInstance = Instantiate(blockPrefab, position, Quaternion.Euler(0, rotation, 0));
+        GameObject blockInstance = Instantiate(blockPrefab, position, Quaternion.Euler(0, 0, 0));
 
-        Block block = blockInstance.GetComponent<Block>();  
+        Block block = blockInstance.GetComponent<Block>(); 
 
+        block.mainBodyObj.transform.rotation =  Quaternion.Euler(0, rotation, 0);
+
+        block.resource.gameObject.SetActive(false);
         block.item = item;  
         block.health = item.health;
         block.rotation = rotation;
+        block.owner = owner;
+
+        if (block.item.isDoor){
+            block.doorObj.SetActive(true);
+            float offsetX, offsetZ;
+            switch (rotation)
+            {
+                
+                case 0:
+                    offsetX = 0.5f;
+                    offsetZ = 0.5f;
+                    break;
+                case 90:
+                    offsetX = 0.5f;
+                    offsetZ = -0.5f;
+                    break;
+                case 180:
+                    offsetX = -0.5f;
+                    offsetZ = -0.5f;
+                    break;
+                case 270:
+                    offsetX = -0.5f;
+                    offsetZ = 0.5f;
+                    break;
+                default:
+                    offsetX = 0f;
+                    offsetZ = 0f;
+                    break;
+            }
+            block.objectNode.transform.position = new Vector3(position.x + offsetX, 1, position.z + offsetZ);
+            block.mainBodyObj.transform.localPosition = new Vector3(-offsetX, 0, -offsetZ);
+        } else {
+            block.doorObj.SetActive(false);
+        }
+
 
         if (blockMap.ContainsKey(coord))
         {
@@ -94,6 +223,9 @@ public class BlockManager : NetworkBehaviour
 
         UpdateBlock(block);
 
+        // if (block.item.isDoor){
+        //     block.meshObject.transform.Rotate(0, -90, 0);
+        // }
         Texture2D texture;
         if (block.item.texture != null ){
             texture = LoadTextureFromPath("Materials/" + block.item.texture);
@@ -129,9 +261,10 @@ public class BlockManager : NetworkBehaviour
         } else if (block.item.connection_type == "base_building") {
             Mesh mesh = LoadBlockMesh(block.item.blockMeshes.building);  // This will load the Mesh
             block.meshFilter.mesh = mesh;
-            block.meshFilter.transform.rotation = Quaternion.Euler(0,block.rotation,0);
-            Matrix4x4 scaleMatrix = Matrix4x4.Scale(new Vector3(0.25f, 0.25f, 0.25f));
             float finalRotation = block.rotation;
+            if (block.door.isOpen){
+                finalRotation+=180f;
+            }
 
             // Set rotation
             block.meshFilter.transform.rotation = Quaternion.Euler(0, finalRotation, 0);
@@ -169,8 +302,7 @@ public class BlockManager : NetworkBehaviour
         if (block.animating) {
             //Debug.Log("animating disconnected");
             return false;}
-
-        Vector2 coord = new Vector2(block.transform.position.x + offset.x, block.transform.position.z + offset.y);
+        Tuple<int, int> coord = new Tuple<int, int>((int)(block.transform.position.x + offset.x), (int)(block.transform.position.z + offset.y)); 
         if (blockMap.TryGetValue(coord, out List<Block> neighborBlocks))
         {
             return neighborBlocks.Any(b => b.item.id == block.item.id && !b.animating);
@@ -307,7 +439,7 @@ public class BlockManager : NetworkBehaviour
 
         foreach (Vector2 offset in offsets)
         {
-            Vector2 neighborCoord = new Vector2(x + offset.x, z + offset.y);
+            Tuple<int, int> neighborCoord = new Tuple<int, int>((int)(x + offset.x), (int)(z + offset.y)); 
             if (blockMap.TryGetValue(neighborCoord, out List<Block> neighborBlocks))
             {
                 // Filter blocks with the same item.id
@@ -362,10 +494,10 @@ public class BlockManager : NetworkBehaviour
 
 
     [Server]
-    BoxCollider CreateBoxColliderChild(GameObject blockInstance, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3(), bool isTrigger = false)
+    BoxCollider CreateBoxColliderChild(Block block, string childName, Vector3 localPosition, Vector3 size, Vector3 rotation = new Vector3(), bool isTrigger = false)
     {
         GameObject colliderChild = new GameObject(childName);
-        colliderChild.transform.SetParent(blockInstance.transform);
+        colliderChild.transform.SetParent(block.collidersNode.transform);
         colliderChild.transform.localPosition = localPosition;
         colliderChild.transform.localRotation = Quaternion.Euler(rotation); // Rotation added here
 
@@ -399,8 +531,8 @@ public class BlockManager : NetworkBehaviour
         // Determine if the colliders should be triggers
         bool shouldCollideWithEntities = block.item.collidesWithEntities;
 
-        BoxCollider collider1 = CreateBoxColliderChild(blockInstance, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0), !shouldCollideWithEntities); // block.rotation
-        BoxCollider collider2 = CreateBoxColliderChild(blockInstance, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0), !shouldCollideWithEntities); // Subtract 90-degree for the second collider
+        BoxCollider collider1 = CreateBoxColliderChild(block, "BoxCollider1", new Vector3(0, 0, 0), new Vector3(floatWidths[0], 1, floatHeights[0]), new Vector3(0, 0, 0), !shouldCollideWithEntities); // block.rotation
+        BoxCollider collider2 = CreateBoxColliderChild(block, "BoxCollider2", new Vector3(0, 0, 0), new Vector3(floatWidths[1], 1, floatHeights[1]), new Vector3(0, 90, 0), !shouldCollideWithEntities); // Subtract 90-degree for the second collider
     }
 
 

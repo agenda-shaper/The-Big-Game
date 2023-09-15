@@ -15,7 +15,8 @@ public class ActionSpace : MonoBehaviour
     // }
 
     void OnTriggerEnter(Collider other)
-    {
+    {   
+        Debug.Log("entered: "+other.tag);
         if (other.CompareTag("ActionSpace") && !player.inventory.actionSpaceObjects.Contains(other.gameObject))
         {
             player.inventory.actionSpaceObjects.Add(other.gameObject);

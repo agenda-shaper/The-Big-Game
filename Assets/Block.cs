@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using System;
 
 public class Block : NetworkBehaviour
 {
@@ -30,12 +31,27 @@ public class Block : NetworkBehaviour
     [SyncVar]
     public int health;
 
+    public GameObject objectNode;
+
     private Coroutine currentMoveCoroutine; // Store the current running coroutine
 
     public bool animating;
 
+    public Door door;
+    public GameObject doorObj;
 
-    public void loadImageTexture(Texture2D tex,Item item)
+    public GameObject mainBodyObj;
+
+    public GameObject collidersNode;
+
+    public Resource resource;
+
+    public Character owner;
+
+    public bool isResource;
+
+
+    public void loadImageTexture(Texture2D tex, Item item)
     {
         //image.texture = tex;
         imageMeshRenderer.material.mainTexture = tex;
@@ -80,6 +96,12 @@ public class Block : NetworkBehaviour
             meshParent.transform.localPosition = new Vector3(0, 0, 0); // Reset mesh position
         }
 
+        // Adjust the angle based on whether the door is open
+        if (door.isOpen)
+        {
+            angle += 180;
+        }
+
         Vector3 direction = Quaternion.Euler(0, -(angle-90), 0) * Vector3.forward;
         currentMoveCoroutine = StartCoroutine(MoveBlock(direction, 0.1f, 0.15f));
     }
@@ -114,6 +136,36 @@ public class Block : NetworkBehaviour
         animating = false;
         Engine.Instance.blockManager.UpdateBlock(this);
     }
+
+    public void Despawn()
+    {
+        // Form the block position using the x and y properties of the gameObject
+        Tuple<int, int> blockPosition = new Tuple<int, int>((int)gameObject.transform.position.x, (int)gameObject.transform.position.y);
+
+        // Check if the block position exists in the dictionary
+        if (Engine.Instance.blockManager.blockMap.ContainsKey(blockPosition))
+        {
+            // Get the list of blocks at this position
+            List<Block> blocksAtPosition = Engine.Instance.blockManager.blockMap[blockPosition];
+
+            // Check if this block is in the list
+            if (blocksAtPosition.Contains(this))
+            {
+                // Remove this block from the list
+                blocksAtPosition.Remove(this);
+
+                // If there are no more blocks at this position, remove the entry from the dictionary
+                if (blocksAtPosition.Count == 0)
+                {
+                    Engine.Instance.blockManager.blockMap.Remove(blockPosition);
+                }
+            }
+        }
+
+        NetworkServer.Destroy(gameObject);
+    }
+
+
 
 
 }

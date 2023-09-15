@@ -19,6 +19,8 @@ public enum ButtonType
     Medicine,
     Materials,
     Cables,
+
+    CraftItem,
 }
 
 public class ButtonHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler, IPointerUpHandler
